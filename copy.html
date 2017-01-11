@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>js复制</title>
+    <script type="text/javascript">
+    function copyUrl2() {
+        var Url2 = document.getElementById("biao1");
+        Url2.select(); // 选择对象
+        document.execCommand("Copy"); // 执行浏览器复制命令
+        alert("已复制好，可贴粘。");
+    }
+    </script>
+</head>
+
+<body>
+    <input type="file" name="contractFileName" style="width: 500px;" onchange="fileChange(this);" />
+    <textarea cols="20" rows="10" id="biao1">用户定义的代码111区域</textarea>
+    <input type="button" onClick="copyUrl2()" value="点击复制代码" />
+</body>
+
+</html>

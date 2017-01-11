@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>分享按钮</title>
+    <style type="text/css">
+    .diliver {
+        line-height: 31px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .diliver::before {
+        position: absolute;
+        width: 100%;
+        content: "";
+        background-color: #eee;
+        height: 1px;
+        left: 0;
+        top: 15px;
+        z-index: -1;
+    }
+    
+    .diliver span {
+        padding: 10px;
+        background-color: #fff;
+        font-size: 14px;
+    }
+    
+    ul.container {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+    
+    ul.container > li {
+        list-style: none;
+        width: 25%;
+        margin: 0;
+        float: left;
+    }
+    
+    ul.container > li > img {
+        border-radius: 25px;
+        border: 1px solid #dddddd;
+        width: 48px;
+        height: 48px;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    ul.container > li > p {
+        text-align: center;
+        font-size: 12px;
+    }
+    /*------ 推广层 ------*/
+    
+    .advert {
+        border: 1px solid #eee;
+        padding: 10px;
+        border-radius: 3px;
+        box-shadow: 0 1px 1px 0 #ddd;
+        height: 150px;
+        position: relative;
+    }
+    
+    .advert .header {
+        margin: 0 15px 10px 40px;
+        height: 24px;
+        position: relative;
+    }
+    
+    .advert .header::before {
+        content: "";
+        width: 34px;
+        height: 24px;
+        /*--- 图片替换掉：34 * 24 ---*/
+        /*background: url("right.png") no-repeat 0 0;*/
+        background-color: #7FCCCE;
+        top: 0;
+        left: -40px;
+        position: absolute;
+    }
+    
+    .advert .header::after {
+        content: "";
+        width: 10px;
+        height: 14px;
+        background: url("right.png") no-repeat;
+        background-size: auto 14px;
+        top: 5px;
+        right: -14px;
+        position: absolute;
+    }
+    
+    .advert .header .mark {
+        padding: 3px 4px;
+        font-size: 12px;
+        border: 1px solid #eee;
+        margin-left: -40px;
+        float: left;
+        line-height: 16px;
+    }
+    
+    .advert .header .title {
+        display: inline-block;
+        font-size: 13px;
+        height: 24px;
+        line-height: 24px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%;
+    }
+    
+    .advert .content {
+        height: 116px;
+    }
+    
+    .advert .content img {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .advert .marsk {
+        background-color: rgba(1,2,3,.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="diliver">
+        <span>分享</span>
+    </div>
+    <ul class="container">
+        <li>
+            <img src="https://web.grouk.com/img/integration/teamcity.png" />
+            <p>微信</p>
+        </li>
+        <li>
+            <img src="https://web.grouk.com/img/integration/teamcity.png" />
+            <p>微博</p>
+        </li>
+        <li>
+            <img src="https://web.grouk.com/img/integration/teamcity.png" />
+            <p>QQ</p>
+        </li>
+        <li>
+            <img src="https://web.grouk.com/img/integration/teamcity.png" />
+            <p>空间</p>
+        </li>
+    </ul>
+    <!-- 推广 -->
+    <div class="advert">
+        <div class="header">
+            <!-- <span class="mark">推广</span> -->
+            <span class="title">超帅帕加尼，闪亮登场，速来围观！</span>
+        </div>
+        <div class="content">
+            <img src="http://img3.cache.netease.com/photo/0008/2016-02-22/BGEFDQQ42ODN0008.550x.0.jpg" />
+        </div>
+        <a class="marsk" href="#" onclick="show();"></a>
+    </div>
+</body>
+<script type="text/javascript">
+function show() {
+    alert("this is 00000");
+}
+</script>
+
+</html>

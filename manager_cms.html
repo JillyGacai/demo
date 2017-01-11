@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>后台模板管理</title>
+    <link rel="stylesheet" type="text/css" href="css/manager_cms.css">
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/jquery.dragsort.min.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="main-page">
+            <div class="page-view">
+                <section>
+                    <fieldset class="header">
+                        <fieldset class="index-top" data-type="top"><span>头部</span></fieldset>
+                        <fieldset class="index-search" data-type="search"><span>搜索栏</span></fieldset>
+                        <fieldset class="index-navigator" data-type="navigator"><span>导航栏</span></fieldset>
+                    </fieldset>
+                    <fieldset class="body">
+                        <!-- Content F1 -->
+                        <fieldset class="index-main" data-type="main" data-row="3">
+                            <fieldset class="index-main-left drag-side" data-type="main_left">
+                                <fieldset class="index-my-history drag-child" data-type="my_history"><span>最近阅读</span></fieldset>
+                                <fieldset class="index-my-recom drag-child" data-type="my_recom"><span>私人推荐</span></fieldset>
+                            </fieldset>
+                            <fieldset class="index-main-center drag-center" data-type="main_center">
+                                <fieldset class="index-banner-lg drag-child" data-type="banner_lg"><span>轮播图</span></fieldset>
+                                <fieldset class="index-hot-link drag-child" data-type="hot_link"><span>热链</span></fieldset>
+                            </fieldset>
+                            <fieldset class="index-main-right drag-side" data-type="main_right">
+                                <fieldset class="index-rank-click drag-child" data-type="rank-click"><span>周点击 & 月点击</span></fieldset>
+                            </fieldset>
+                        </fieldset>
+                        <!-- Content F2 -->
+                        <fieldset class="index-main" data-type="main" data-row="1">
+                            <fieldset class="index-main-center" data-type="main_center">
+                                <fieldset class="index-ad-lg drag-child" data-type="ad_lg"><span>广告位</span></fieldset>
+                            </fieldset>
+                        </fieldset>
+                        <!-- Content F3 -->
+                        <fieldset class="index-main" data-type="main" data-row="3">
+                            <fieldset class="index-main-left drag-side" data-type="main_left">
+                                <fieldset class="index-recom-week drag-child" data-type="recom_week"><span>本周强推</span></fieldset>
+                            </fieldset>
+                            <fieldset class="index-main-center drag-center" data-type="main_center">
+                                <fieldset class="index-recom-cover drag-child" data-type="recom_cover"><span>封面推荐</span></fieldset>
+                                <fieldset class="index-recom-new-free drag-child" data-type="recom_new_free"><span>新书速递 & 限免书籍</span></fieldset>
+                            </fieldset>
+                            <fieldset class="index-main-right drag-side" data-type="main_right">
+                                <fieldset class="index-rank-hot drag-child" data-type="rank_hot"><span>热门作品</span></fieldset>
+                            </fieldset>
+                        </fieldset>
+                        <!-- Content F4 -->
+                        <fieldset class="index-main" data-type="main" data-row="2">
+                            <fieldset class="index-main-left" data-type="main_left">
+                                <fieldset class="index-ad-sm drag-child" data-type="ad_sm"><span>广告位</span></fieldset>
+                            </fieldset>
+                            <fieldset class="index-main-right" data-type="main_right">
+                                <fieldset class="index-ad-sm drag-child" data-type="ad_sm"><span>广告位</span></fieldset>
+                            </fieldset>
+                        </fieldset>
+                        <!-- Content F5 -->
+                        <fieldset class="index-main" data-type="main" data-row="3">
+                            <fieldset class="index-main-left drag-side" data-type="main_left">
+                                <fieldset class="index-recom-notvip drag-child" data-type="recom_notvip"><span>非VIP推荐</span></fieldset>
+                                <fieldset class="index-rank-month drag-child" data-type="rank_month"><span>月票榜</span></fieldset>
+                            </fieldset>
+                            <fieldset class="index-main-center drag-center" data-type="main_center">
+                                <fieldset class="index-recom-catagory drag-child" data-type="recom_catagory"><span>推荐分类</span></fieldset>
+                            </fieldset>
+                            <fieldset class="index-main-right drag-side" data-type="main_right">
+                                <fieldset class="index-recom-author drag-child" data-type="recom_author"><span>作家推荐</span></fieldset>
+                                <fieldset class="index-recom-notice drag-child" data-type="recom_notice"><span>最新资讯</span></fieldset>
+                            </fieldset>
+                        </fieldset>
+                    </fieldset>
+                    <fieldset class="footer">
+                        <fieldset class="index-links"><span>友情链接</span></fieldset>
+                        <fieldset class="index-bottom"><span>&copy;咪咕数媒</span></fieldset>
+                    </fieldset>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+$(function() {
+    $('.drag-side').dragsort({
+        dragSelector: 'fieldset.drag-child',
+        dragBetween: true,
+        placeHolderTemplate: '<fieldset class="placeholder"></fieldset>'
+    });
+    $('.drag-center').dragsort({
+        dragSelector: 'fieldset.drag-child',
+        dragBetween: true,
+        placeHolderTemplate: '<fieldset class="placeholder"></fieldset>'
+    });
+});
+</script>
+</html>

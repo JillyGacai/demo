@@ -1,0 +1,122 @@
+/* ------ animation ------ */
+
+a {
+    transition: color .3s;
+}
+
+.btn {
+    transition: background-color .3s, border-color .3s;
+}
+
+.form-control {
+    transition: border-color .3s;
+}
+
+.motion-ipt .form-count {
+    transition: opacity .3s;
+}
+
+.navigator-navi .navigator-list a {
+    transition: border-bottom-color .3s;
+}
+
+.navigator-navi .navigator-user .info .user-menu li {
+    transition: background-color .3s;
+}
+
+.navigator-navi .navigator-menu:hover .navigator-float {
+    animation: fadeIn .3s;
+}
+
+.navigator-navi .navigator-user .info:hover .user-menu {
+    animation: fadeIn .3s;
+}
+
+.fix-bar .line-top:hover > .line-title,
+.fix-bar .line-mid:hover > .line-title,
+.fix-bar .line-btm:hover > .line-title {
+    animation: fadeIn .3s;
+}
+
+.pagination li {
+    transition: background-color .3s;
+}
+
+.group-topic-bar .bar-tab {
+    transition: border-bottom-color .3s;
+}
+
+.topic-comment-item .item-right .status span.like i.zoomIn {
+    animation: zoomIn .3s;
+}
+
+.topic-comment-item .item-right .status span.delete {
+    animation: fadeIn .3s;
+}
+
+.sidebar-navi .navi-list > li .navi-title {
+    transition: background-color .3s;
+}
+
+.sidebar-navi .navi-list > li .navi-child li a {
+    transition: color .3s;
+}
+
+.content-header .tab-bar .btn-tab {
+    transition: color .3s, border-color .3s, background-color .3s;
+}
+
+.topic-content .topic-item {
+    transition: background-color .3s;
+}
+
+.topic-content .topic-item .btn-delete {
+    transition: color .3s, border-color .3s;
+}
+
+.discover-group .page-navi {
+    transition: background-color .3s, opacity .3s;
+}
+
+.edui-default .edui-editor {
+    transition: border-color .3s;
+}
+
+
+/* ------ animation keyframes ------ */
+
+
+/* fadeIn */
+
+@keyframes fadeIn {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    1% {
+        display: block;
+        opacity: 0;
+    }
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+
+/* zoomIn */
+
+@keyframes zoomIn {
+    0% {
+        margin-top: 0;
+        transform: scale(1);
+    }
+    50% {
+        margin-top: -2px;
+        transform: scale(1.1);
+    }
+    100% {
+        margin-top: 0;
+        transform: scale(1);
+    }
+}

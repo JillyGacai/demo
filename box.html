@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>CSS 之 BOX</title>
+    <style type="text/css">
+    h1 {
+        color: #2C3E50;
+        font-weight: 100;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    .hide {
+        display: none;
+    }
+    
+    .box {
+        position: relative;
+        width: 0;
+        height: 0;
+        margin: 160px auto;
+    }
+    
+    .subline {
+        position: absolute;
+        border-style: dashed;
+        border-color: #E74C3C;
+    }
+    
+    .subline.x {
+        height: 320px;
+        border-width: 0 0 0 1px;
+        left: 0;
+        top: -160px;
+    }
+    
+    .subline.y {
+        width: 320px;
+        top: 0;
+        left: -160px;
+        border-width: 1px 0 0 0;
+    }
+    
+    .subline.z {
+        width: 320px;
+        top: 0;
+        left: -160px;
+        border-width: 1px 0 0 0;
+        transform: skewY(-30deg);
+    }
+    
+    .board {
+        position: absolute;
+        opacity: 0;
+    }
+    
+    .box-outside .board {
+        width: 160px;
+        height: 160px;
+        background-color: #34495E;
+        border: 1px solid #2C3E50;
+    }
+    
+    .box-inside .board {
+        width: 140px;
+        height: 140px;
+        background-color: #34495E;
+        border: 1px solid #2C3E50;
+    }
+    
+    .box-head {
+        width: 160px;
+        height: 160px;
+        border: 10px solid #34495E;
+    }
+    
+    .board.left {
+        left: -59px;
+        top: -143px;
+        width: 60px;
+        transform: skewY(-30deg);
+        animation: fadeIn 1s ease 1s;
+    }
+    
+    .board.right {
+        left: 100px;
+        top: -143px;
+        width: 60px;
+        transform: skewY(-30deg);
+        animation: fadeIn 1s ease 2s;
+    }
+    
+    .board.back {
+        left: 0;
+        top: -160px;
+        animation: fadeIn 1s ease 3s;
+    }
+    
+    .board.front {
+        left: -59px;
+        top: -126px;
+        animation: fadeIn 1s ease 4s;
+    }
+    
+    .board.bottom {
+        left: -30px;
+        height: 35px;
+        transform: skewX(-60deg);
+        animation: fadeIn 1s ease 5s;
+    }
+    /* ------  animation ------ */
+    
+    @keyframes fadeIn {
+        0% {
+            display: none;
+            opacity: 0;
+        }
+        1% {
+            display: block;
+            opacity: 0;
+        }
+        100% {
+            display: block;
+            opacity: .88;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Box</h1>
+    <div class="box">
+        <div class="subline x"></div>
+        <div class="subline y"></div>
+        <div class="subline z"></div>
+        <div class="box-head hide"></div>
+        <div class="box-body">
+            <div class="box-outside">
+                <div class="board front"></div>
+                <div class="board back"></div>
+                <div class="board left"></div>
+                <div class="board right"></div>
+                <div class="board bottom"></div>
+            </div>
+            <div class="box-inside">
+                <div class="board front hide"></div>
+                <div class="board back hide"></div>
+                <div class="board left hide"></div>
+                <div class="board right hide"></div>
+                <div class="board bottom hide"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

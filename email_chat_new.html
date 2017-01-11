@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="renderer" content="webkit" />
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <style type="text/css">
+    .title {
+        margin: 15px;
+        line-height: 23px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #f1f1f1;
+    }
+    
+    .container {
+        margin: 5px 20px 15px 20px;
+        font-size: 14px;
+        clear: both;
+    }
+    
+    .container .avatar {
+        float: left;
+        width: 80px;
+        height: 80px;
+        text-align: center;
+    }
+    
+    .container .avatar img {
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        border: 1px solid #f1f1f1;
+    }
+    
+    .container .content {
+        margin-left: 85px;
+        margin-top: 5px;
+    }
+    
+    .container .content .message {
+        background-color: #EBF7FB;
+        padding: 12px;
+        margin-top: 5px;
+        border-radius: 3px;
+        position: relative;
+        word-wrap: break-word;
+        word-break: break-all;
+        line-height: 18px;
+        display: inline-block;
+    }
+    
+    .container .content .message::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 0;
+        border: 10px solid;
+        border-color: transparent #EBF7FB transparent transparent;
+        left: -20px;
+        top: 10px;
+    }
+    
+    .container .content .message .mail {
+        width: 18px;
+        height: 16px;
+        background: url("https://grouk.com/img/default/reply-icon.png") no-repeat center center;
+        background-size: 18px 16px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        opacity: .6;
+    }
+    
+    .container .content .message .mail:hover {
+        opacity: 1;
+    }
+    
+    .button-bar {
+        clear: both;
+    }
+    
+    .button-bar .mail_to_all {
+        margin: 0 15px 15px 15px;
+        display: inline-block;
+        font-size: 12px;
+        border: 1px solid #BDC3C7;
+        padding: 6px 10px;
+        border-radius: 3px;
+        color: #BDC3C7;
+        text-decoration: none;
+        transition: color .3s, border-color .3s;
+    }
+    
+    .button-bar .mail_to_all:hover {
+        color: #999;
+        border-color: #999;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="title">xupiao</div>
+    <div class="container">
+        <div class="avatar">
+            <img src="http://192.168.31.228:8080/avatar/u/piao?w=xupiao" width="50" height="50" />
+        </div>
+        <div class="content">
+            <div class="name">xupiao</div>
+            <div class="message">
+                <div>null</div>
+                <a class="mail" href="mailto:10871458800631809-xupiao@test.com.grouk.com?subject=null"></a>
+            </div>
+        </div>
+    </div>
+    <div class="button-bar"> <a class="mail_to_all" href="mailto:xupiao@test.com.grouk.com?subject=xupiao">回复</a></div>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>Form</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <style type="text/css">
+    .range {
+        width: 150px;
+        height: 8px;
+        border-radius: 8px;
+        background-color: #eee;
+        cursor: pointer;
+        margin: 50px;
+    }
+    
+    .range .value {
+        width: 0;
+        height: 8px;
+        border-radius: 8px;
+        float: left;
+        background-color: red;
+        position: relative;
+        transition: width .3s;
+    }
+    
+    .range .value i {
+        width: 18px;
+        height: 18px;
+        border-radius: 18px;
+        background-color: #ddd;
+        position: absolute;
+        top: -5px;
+        right: -9px;
+        font-size: 8px;
+        text-align: center;
+        line-height: 18px;
+        color: #fff;
+        font-style: normal;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="range">
+        <span class="value"><i>0</i></span>
+    </div>
+</body>
+<script type="text/javascript" src="lib/jquery.min.js"></script>
+<script type="text/javascript">
+$(function() {
+    $('.range').on('click', function(event) {
+        var $this = $(this);
+        var w = $this.width();
+        var e = event || window.event;
+        var x = e.offsetX;
+        $('.value').css({
+            width: x
+        }).find('i').html(Math.floor(x / w * 100));
+    });
+});
+</script>
+
+</html>

@@ -1,0 +1,253 @@
+html {
+    font-family: 'Microsoft YaHei', 'PingFang SC', 'Arial';
+    /*font-weight: 300;*/
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* ------ page-view ------ */
+
+.page-view {
+    width: 768px;
+    margin: 0 auto;
+}
+
+section {
+    width: 100%;
+    border: 1px solid #eee;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border: none;
+}
+
+fieldset span {
+    font-size: 12px;
+    padding: 2px 5px;
+    opacity: .65;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #1abc9c;
+}
+
+
+/* ------ page-view header ------ */
+
+fieldset.header .index-top {
+    line-height: 24px;
+    height: 24px;
+    background-color: #f7f7f7;
+}
+
+fieldset.header .index-search {
+    line-height: 62px;
+    height: 62px;
+    background: url('../img/manager_cms/search_bar.jpg') center center no-repeat;
+}
+
+fieldset.header .index-navigator {
+    line-height: 30px;
+    height: 30px;
+    background-color: #959595;
+    background-image: url('../img/manager_cms/navigator.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* ------ page-view body ------ */
+
+fieldset.body .index-main {
+    width: 640px;
+    margin: 10px auto 0;
+}
+
+fieldset.body .index-main-left fieldset,
+fieldset.body .index-main-center fieldset,
+fieldset.body .index-main-right fieldset {
+    margin-bottom: 10px;
+    background-color: #f2f2f2;
+}
+
+fieldset.body .index-main-left {
+    float: left;
+}
+
+fieldset.body .index-main-center {
+    float: left;
+    margin: 0 10px;
+}
+
+fieldset.body .index-main-right {
+    float: right;
+}
+
+
+/* ------ row 1 ------ */
+
+fieldset.body .index-main[data-row='1'] .index-main-center {
+    width: 640px;
+    margin: 0;
+}
+
+
+/* ------ row 2 ------ */
+
+fieldset.body .index-main[data-row='2'] .index-main-left,
+fieldset.body .index-main[data-row='2'] .index-main-right {
+    width: 315px;
+}
+
+
+/* ------ row 3 ------ */
+
+fieldset.body .index-main[data-row='3'] .index-main-left,
+fieldset.body .index-main[data-row='3'] .index-main-right {
+    width: 140px;
+}
+
+fieldset.body .index-main[data-row='3'] .index-main-center {
+    width: 340px;
+}
+
+fieldset.body .index-main .index-my-history {
+    line-height: 110px;
+    height: 110px;
+    /*background: url('../img/manager_cms/my_history.jpg') center center no-repeat;*/
+}
+
+fieldset.body .index-main .index-my-recom {
+    line-height: 115px;
+    height: 115px;
+    /*background: url('../img/manager_cms/my_recom.jpg') center center no-repeat;*/
+}
+
+fieldset.body .index-main .index-banner-lg {
+    line-height: 185px;
+    height: 185px;
+    /*background: url('../img/manager_cms/banner_lg.jpg') center center no-repeat;*/
+    background-color: #BFBFBF;
+}
+
+fieldset.body .index-main .index-hot-link {
+    line-height: 40px;
+    height: 40px;
+    /*background: url('../img/manager_cms/hot_link.jpg') center center no-repeat;*/
+}
+
+fieldset.body .index-main .index-rank-click {
+    line-height: 235px;
+    height: 235px;
+    /*background: url('../img/manager_cms/rank_click.jpg') center center no-repeat;*/
+}
+
+fieldset.body .index-main .index-recom-week {
+    line-height: 250px;
+    height: 250px;
+    /*background: url('../img/manager_cms/recom_week.jpg') center center no-repeat;*/
+}
+
+fieldset.body .index-main .index-recom-cover {
+    line-height: 145px;
+    height: 145px;
+    /*background: url('../img/manager_cms/recom_cover.jpg') center center no-repeat;*/
+}
+
+fieldset.body .index-main .index-recom-new-free {
+    line-height: 95px;
+    height: 95px;
+    /*background: url('../img/manager_cms/recom_new_free.jpg') center center no-repeat;*/
+}
+
+fieldset.body .index-main .index-rank-hot {
+    line-height: 250px;
+    height: 250px;
+    /*background: url('../img/manager_cms/rank_hot.jpg') center center no-repeat;*/
+}
+
+fieldset.body .index-main .index-ad-sm {
+    line-height: 60px;
+    height: 60px;
+    /*background: url('../img/manager_cms/banner_sm.jpg') center center no-repeat;*/
+    background-color: #BFBFBF;
+}
+
+fieldset.body .index-main .index-ad-lg {
+    line-height: 60px;
+    height: 60px;
+    /*background: url('../img/manager_cms/banner_sm.jpg') center center no-repeat;*/
+    background-color: #BFBFBF;
+}
+
+fieldset.body .index-main .index-recom-notvip {
+    line-height: 245px;
+    height: 245px;
+    /*background: url('../img/manager_cms/recom_notvip.jpg') center center no-repeat;*/
+}
+
+fieldset.body .index-main .index-rank-month {
+    line-height: 155px;
+    height: 155px;
+    /*background: url('../img/manager_cms/rank_month.jpg') center center no-repeat;*/
+}
+
+fieldset.body .index-main .index-recom-catagory {
+    line-height: 410px;
+    height: 410px;
+    /*background: url('../img/manager_cms/recom_catagory.jpg') center center no-repeat;*/
+}
+
+fieldset.body .index-main .index-recom-author {
+    line-height: 270px;
+    height: 270px;
+    /*background: url('../img/manager_cms/recom_author.jpg') center center no-repeat;*/
+}
+
+fieldset.body .index-main .index-recom-notice {
+    line-height: 130px;
+    height: 130px;
+    /*background: url('../img/manager_cms/recom_notice.jpg') center center no-repeat;*/
+}
+
+
+/* ------ page-view footer ------ */
+
+fieldset.footer {
+    margin-top: 10px;
+}
+
+fieldset.index-links {
+    line-height: 50px;
+    height: 50px;
+    width: 640px;
+    margin: 0 auto 10px;
+    background-color: #f2f2f2;
+}
+
+fieldset.index-bottom {
+    line-height: 100px;
+    height: 100px;
+    background-color: #f2f2f2;
+}
+
+
+/* ------ drag ------ */
+
+fieldset.drag-child {
+    transition: box-shadow .3s;
+}
+
+fieldset.drag-child:hover {
+    box-shadow: 0 0 3px 1px #1abc9c;
+}
+
+fieldset.placeholder {
+    border: 1px dashed #1abc9c;
+    background-color: #ffffff !important;
+    margin: -1px;
+}
