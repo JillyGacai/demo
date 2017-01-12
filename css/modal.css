@@ -102,29 +102,40 @@
 }
 
 .modal-dialog .modal-body .row .hint {
+    margin-bottom: 10px;
     padding: 10px;
-    background-color: #ed5565;
     color: #fff;
     border-radius: 2px;
-    margin-bottom: 10px;
+    background-color: #ed5565;
 }
 
-.modal-dialog .modal-body .row label {
+.modal-dialog .modal-body .row .control-label {
     line-height: 20px;
-    padding: 5px 10px 0 0;
     float: left;
     width: 80px;
+    padding: 5px 10px 0 0;
     text-align: right;
 }
 
-.modal-dialog .modal-body .row .control-input {
-    line-height: 30px;
-    height: 30px;
+.modal-dialog .modal-body .row .tags-list {
+    overflow: hidden;
+}
+
+.modal-dialog .modal-body .row .tags-list label {
+    line-height: 20px;
     float: left;
-    border: 1px solid #ddd;
+    width: 100px;
+    margin-top: 5px;
+}
+
+.modal-dialog .modal-body .row .control-input {
     font-size: 12px;
-    border-radius: 2px;
+    line-height: 30px;
+    float: left;
+    height: 30px;
     resize: vertical;
+    border: 1px solid #ddd;
+    border-radius: 2px;
 }
 
 .modal-dialog .modal-body .row textarea.control-input {
@@ -146,7 +157,7 @@
     display: inline-block;
     height: 28px;
     margin-left: 8px;
-    padding: 0 12px;
+    padding: 0 15px;
     cursor: pointer;
     transition: border-color .3s, background-color .3s;
     text-align: center;

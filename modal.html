@@ -51,7 +51,7 @@
                         <div class="hint">提示：您提交有疑问的稿酬后，相关的编辑会联系您，若您对未发放的稿酬提交了疑问，该稿酬可能会延迟发放.</div>
                     </div>
                     <div class="row">
-                        <label class="label"><span>*</span>书名</label>
+                        <label class="control-label"><span>*</span>书名</label>
                         <select class="control-input" name="bookid">
                             <option value="-1">请选择</option>
                             <option value="-1">请选择</option>
@@ -62,7 +62,7 @@
                         <div class="clear"></div>
                     </div>
                     <div class="row">
-                        <label class="label"><span>*</span>时间</label>
+                        <label class="control-label"><span>*</span>时间</label>
                         <select class="control-input" name="month">
                             <option value="-1">请选择</option>
                             <option value="-1">请选择</option>
@@ -72,9 +72,30 @@
                         <div class="clear"></div>
                     </div>
                     <div class="row">
-                        <label class="label"><span>*</span>理由</label>
+                        <label class="control-label"><span>*</span>理由</label>
                         <textarea class="control-input" name="complain" maxlength="200" placeholder="疑问详细，200个字符以内"></textarea>
                         <div class="clear"></div>
+                    </div>
+                    <div class="row">
+                        <label class="control-label"><span>*</span>选择标签</label>
+                        <div class="tags-list">
+                            <label><input type="checkbox" name="biaoqian" value="1" /> 你好吗哈</label>
+                            <label><input type="checkbox" name="biaoqian" value="1" /> 你好吗哈</label>
+                            <label><input type="checkbox" name="biaoqian" value="1" /> 你好吗</label>
+                            <label><input type="checkbox" name="biaoqian" value="1" /> 你好吗哈</label>
+                            <label><input type="checkbox" name="biaoqian" value="1" /> 你好吗哈</label>
+                            <label><input type="checkbox" name="biaoqian" value="1" /> 你好吗哈</label>
+                            <label><input type="checkbox" name="biaoqian" value="1" /> 你好吗哈</label>
+                            <label><input type="checkbox" name="biaoqian" value="1" /> 好的</label>
+                            <label><input type="checkbox" name="biaoqian" value="1" /> 不好</label>
+                            <label><input type="checkbox" name="biaoqian" value="1" /> 你好吗哈</label>
+                            <label><input type="checkbox" name="biaoqian" value="1" /> 你好吗哈</label>
+                            <label><input type="checkbox" name="biaoqian" value="1" /> 不好</label>
+                            <label><input type="checkbox" name="biaoqian" value="1" /> 不好</label>
+                            <label><input type="checkbox" name="biaoqian" value="1" /> 你好吗哈</label>
+                            <label><input type="checkbox" name="biaoqian" value="1" /> 你好吗哈</label>
+                            <label><input type="checkbox" name="biaoqian" value="1" /> 不好</label>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -123,6 +144,7 @@
         </div>
     </div>
 
+    <!-- 提示框-小 -->
     <div class="modal fade hide" data-type="alert">
         <div class="modal-dialog small">
             <div class="modal-content">
