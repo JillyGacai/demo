@@ -42,6 +42,22 @@ $(function() {
         }
     });
 
+    // 判断遮罩问题
+    var isModalBack = function() {
+        var $body = $('body'),
+            $backdrop = $('.modal-backdrop'),
+            $modal = $('.modal.in');
+        if ($modal.length) {
+            $body.addClass('modal-open');
+            if (!$backdrop.hasClass('in')) {
+                $backdrop.addClass('in');
+            }
+        } else {
+            $body.removeClass('modal-open');
+            $backdrop.removeClass('in');
+        }
+    };
+
     // modal
     $('.modal').bind('modal.show', function() {
         var $this = $(this);
@@ -59,22 +75,6 @@ $(function() {
 
     // backdrop
     $('.modal-backdrop').on('click', function() {});
-
-    // 判断遮罩问题
-    var isModalBack = function() {
-        var $body = $('body'),
-            $backdrop = $('.modal-backdrop'),
-            $modal = $('.modal.in');
-        if ($modal.length) {
-            $body.addClass('modal-open');
-            if (!$backdrop.hasClass('in')) {
-                $backdrop.addClass('in');
-            }
-        } else {
-            $body.removeClass('modal-open');
-            $backdrop.removeClass('in');
-        }
-    };
 
 });
 
