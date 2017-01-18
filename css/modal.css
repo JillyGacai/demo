@@ -18,6 +18,7 @@
 .modal-backdrop.in {
     display: block;
     opacity: .5;
+    filter: alpha(opacity=50);
 }
 
 
@@ -36,6 +37,14 @@
     outline: 0;
 }
 
+.modal[data-type='confirm'] {
+    z-index: 1150;
+}
+
+.modal[data-type='alert'] {
+    z-index: 1250;
+}
+
 .modal.in {
     display: block;
 }
@@ -47,6 +56,11 @@
     border-radius: 2px;
     background-color: #fff;
     box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+}
+
+.modal[data-type='confirm'] .modal-dialog,
+.modal[data-type='alert'] .modal-dialog {
+    margin-top: 150px;
 }
 
 .modal-dialog.small {
@@ -80,23 +94,20 @@
 }
 
 .modal-dialog .modal-header .modal-close {
-    font-size: 12px;
     position: absolute;
-    top: 0;
+    top: 6px;
     right: 0;
     float: right;
     width: 24px;
-    height: 30px;
+    height: 24px;
     cursor: pointer;
-    transition: color .3s, transform .3s;
+    transition: transform .3s;
     transform: rotateZ(0deg);
-    text-align: center;
-    color: #ccc;
+    background: url('../img/modal/close.png') 0 0 no-repeat;
 }
 
 .modal-dialog .modal-header .modal-close:hover {
     transform: rotateZ(90deg);
-    color: #ed5565;
 }
 
 .modal-dialog .modal-body {
@@ -138,8 +149,6 @@
 }
 
 .modal-dialog .modal-body .row .hint .hint-close {
-    font-size: 10px;
-    line-height: 24px;
     position: absolute;
     top: 8px;
     right: 0;
@@ -148,11 +157,18 @@
     cursor: pointer;
     transition: transform .3s;
     transform: rotateZ(0deg);
-    text-align: center;
+    background: url('../img/modal/close.png') 0 -24px no-repeat;
 }
 
 .modal-dialog .modal-body .row .hint .hint-close:hover {
     transform: rotateZ(90deg);
+}
+
+.modal-dialog .modal-body .row .output {
+    font-size: 12px;
+    line-height: 20px;
+    margin: 5px 0 0 90px;
+    color: #999;
 }
 
 .modal-dialog .modal-body .row .control-label {
@@ -173,14 +189,43 @@
     border-radius: 2px;
 }
 
+.modal-dialog .modal-body .row input[type='radio'],
+.modal-dialog .modal-body .row input[type='checkbox'] {
+    margin: 0 1px 2px 1px;
+}
+
+.modal-dialog .modal-body .row input[type='text'].control-input,
+.modal-dialog .modal-body .row input[type='password'].control-input,
+.modal-dialog .modal-body .row input[type='number'].control-input,
+.modal-dialog .modal-body .row input[type='mail'].control-input,
+.modal-dialog .modal-body .row textarea.control-input {
+    line-height: 20px;
+    padding: 5px;
+}
+
+.modal-dialog .modal-body .row input[type='text'].control-input,
+.modal-dialog .modal-body .row input[type='password'].control-input,
+.modal-dialog .modal-body .row input[type='number'].control-input,
+.modal-dialog .modal-body .row input[type='mail'].control-input {
+    width: 138px;
+    height: 18px;
+}
+
+.modal-dialog .modal-body .row select.control-input {
+    width: 150px;
+}
+
 .modal-dialog .modal-body .row textarea.control-input {
     width: 400px;
-    height: 80px;
-    padding: 0 5px;
+    height: 88px;
 }
 
 .modal-dialog .modal-body .margin-auto .row textarea.control-input {
     width: 468px;
+}
+
+.modal-dialog .modal-body .margin-auto .row .output {
+    margin-left: 0;
 }
 
 .modal-dialog .modal-footer {
@@ -244,12 +289,12 @@
     height: 24px;
 }
 
-.modal-dialog .modal-body .row .hint-img[data-for='monthly'] {
-    background: url('../img/modal/img_67.jpg') 0 center no-repeat;
-}
-
 .modal-dialog .modal-body .row .hint-img[data-for='reward'] {
     background: url('../img/modal/img_68.jpg') 0 center no-repeat;
+}
+
+.modal-dialog .modal-body .row .hint-img[data-for='monthly'] {
+    background: url('../img/modal/img_67.jpg') 0 center no-repeat;
 }
 
 .modal-dialog .modal-body .row .radio-list {
