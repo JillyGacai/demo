@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>textarea</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+</head>
+
+<body>
+    <textarea name="text" id="" cols="30" rows="10"></textarea>
+    <input type="button" name="input" value="输入" />
+    <input type="button" name="val" value="val" />
+    <input type="button" name="text" value="text" />
+    <input type="button" name="html" value="html" />
+</body>
+<script type="text/javascript" src="lib/jquery.min.js"></script>
+<script type="text/javascript">
+$(function() {
+    $('input[type="button"]').on('click', function() {
+        var $this = $(this),
+            name = $this.attr('name'),
+            $textarea = $('textarea[name="text"]'),
+            string = $textarea.val();
+
+        switch (name) {
+            case 'input':
+                console.log('val == ', $textarea.val());
+                console.log('text == ', $textarea.text());
+                console.log('html == ', $textarea.html());
+                break;
+            case 'val':
+                $textarea.val(string);
+                break;
+            case 'text':
+                $textarea.text(string);
+                break;
+            case 'html':
+                $textarea.html(string);
+
+
+                break;
+        }
+    });
+});
+</script>
+
+</html>
