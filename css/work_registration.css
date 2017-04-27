@@ -1,0 +1,24 @@
+table.MsoNormalTable {
+    border-color: black;
+    border-collapse: collapse;
+    /*width: 443.0500pt;*/
+    margin-left: -29.9500pt;
+    mso-table-layout-alt: fixed;
+    mso-padding-alt: 0.0000pt 5.4000pt 0.0000pt 5.4000pt;
+    margin: 0 auto;
+    font-family:宋体;
+}
+
+table.MsoNormalTable td {
+    padding: 0.0000pt 5.4000pt 0.0000pt 5.4000pt;
+    border: 0.7500pt solid rgb(51, 51, 51);
+    mso-border-left-alt: 0.7500pt solid rgb(51, 51, 51);
+    mso-border-right-alt: 0.7500pt solid rgb(51, 51, 51);
+    mso-border-top-alt: 0.7500pt solid rgb(51, 51, 51);
+    mso-border-bottom-alt: 0.7500pt solid rgb(51, 51, 51);
+}
+
+p.MsoNormal {
+    text-align: center;
+    mso-pagination: widow-orphan;
+}
