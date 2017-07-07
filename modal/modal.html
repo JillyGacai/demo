@@ -17,9 +17,27 @@
     <span class="btn demo" data-type="modal" data-name="small">摸态框-小</span>
     <span class="btn demo" data-type="confirm">确认框</span>
     <span class="btn demo" data-type="alert">提示框</span>
-
-    <!-- 摸态框-默认 -->
+    <span class="btn demo" data-type="fullscreen">全屏弹框</span>
+    <!-- 模态框-默认 -->
     <div class="modal default" data-type="modal">
+        <div class="modal-dialog">
+            <div class="modal-content index-error">
+                <div class="message">
+                    <div class="title">登录失败</div>
+                    <div class="desc">
+                        <p>文学网安全系统升级，请使用咪咕阅读账号登录</p>
+                        <p class="small">（咪咕阅读手机客户端账号）</p>
+                    </div>
+                </div>
+                <div class="opeartion">
+                    <div class="btn btn-login with-border">使用咪咕阅读账号登录</div>
+                    <div class="btn btn-register">注册咪咕阅读账号</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 摸态框-默认 -->
+    <!-- <div class="modal default" data-type="modal">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -47,8 +65,7 @@
                 </div>
             </div>
         </div>
-    </div>
-
+    </div> -->
     <!-- 摸态框-超大 -->
     <div class="modal xlarge" data-type="modal">
         <div class="modal-dialog xlarge">
@@ -70,7 +87,6 @@
             </div>
         </div>
     </div>
-
     <!-- 摸态框-大 -->
     <div class="modal large" data-type="modal">
         <div class="modal-dialog large">
@@ -117,14 +133,22 @@
                     <div class="row">
                         <label class="control-label"><span>*</span>选择标签</label>
                         <div class="tags-list">
-                            <label><input type="checkbox" name="biaoqian" value="1" />你好吗哈</label>
-                            <label><input type="checkbox" name="biaoqian" value="1" />你好吗哈</label>
-                            <label><input type="checkbox" name="biaoqian" value="1" />你好吗</label>
-                            <label><input type="checkbox" name="biaoqian" value="1" />你好吗哈</label>
-                            <label><input type="checkbox" name="biaoqian" value="1" />你好吗哈</label>
-                            <label><input type="checkbox" name="biaoqian" value="1" />你好吗哈</label>
-                            <label><input type="checkbox" name="biaoqian" value="1" />你好吗哈</label>
-                            <label><input type="checkbox" name="biaoqian" value="1" />好的</label>
+                            <label>
+                                <input type="checkbox" name="biaoqian" value="1" />你好吗哈</label>
+                            <label>
+                                <input type="checkbox" name="biaoqian" value="1" />你好吗哈</label>
+                            <label>
+                                <input type="checkbox" name="biaoqian" value="1" />你好吗</label>
+                            <label>
+                                <input type="checkbox" name="biaoqian" value="1" />你好吗哈</label>
+                            <label>
+                                <input type="checkbox" name="biaoqian" value="1" />你好吗哈</label>
+                            <label>
+                                <input type="checkbox" name="biaoqian" value="1" />你好吗哈</label>
+                            <label>
+                                <input type="checkbox" name="biaoqian" value="1" />你好吗哈</label>
+                            <label>
+                                <input type="checkbox" name="biaoqian" value="1" />好的</label>
                         </div>
                     </div>
                     <div class="margin-auto">
@@ -141,28 +165,46 @@
                         </div>
                         <div class="row">
                             <div class="radio-list">
-                                <label><input type="radio" name="">1张</label>
-                                <label><input type="radio" name="">2张</label>
-                                <label><input type="radio" name="">3张</label>
-                                <label><input type="radio" name="">4张</label>
-                                <label><input type="radio" name="">5张</label>
-                                <label><input type="radio" name="">6张</label>
-                                <label><input type="radio" name="">6张</label>
-                                <label><input type="radio" name="">7张</label>
-                                <label><input type="radio" name="">8张</label>
-                                <label><input type="radio" name="">9张</label>
-                                <label><input type="radio" name="">全部</label>
+                                <label>
+                                    <input type="radio" name="">1张</label>
+                                <label>
+                                    <input type="radio" name="">2张</label>
+                                <label>
+                                    <input type="radio" name="">3张</label>
+                                <label>
+                                    <input type="radio" name="">4张</label>
+                                <label>
+                                    <input type="radio" name="">5张</label>
+                                <label>
+                                    <input type="radio" name="">6张</label>
+                                <label>
+                                    <input type="radio" name="">6张</label>
+                                <label>
+                                    <input type="radio" name="">7张</label>
+                                <label>
+                                    <input type="radio" name="">8张</label>
+                                <label>
+                                    <input type="radio" name="">9张</label>
+                                <label>
+                                    <input type="radio" name="">全部</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="radio-list">
-                                <label><input type="radio" name="">100金币</label>
-                                <label><input type="radio" name="">588金币</label>
-                                <label><input type="radio" name="">1888金币</label>
-                                <label><input type="radio" name="">8888金币</label>
-                                <label><input type="radio" name="">10000金币</label>
-                                <label><input type="radio" name="">50000金币</label>
-                                <label><input type="radio" name="">100000金币</label>
+                                <label>
+                                    <input type="radio" name="">100金币</label>
+                                <label>
+                                    <input type="radio" name="">588金币</label>
+                                <label>
+                                    <input type="radio" name="">1888金币</label>
+                                <label>
+                                    <input type="radio" name="">8888金币</label>
+                                <label>
+                                    <input type="radio" name="">10000金币</label>
+                                <label>
+                                    <input type="radio" name="">50000金币</label>
+                                <label>
+                                    <input type="radio" name="">100000金币</label>
                             </div>
                         </div>
                         <div class="row">
@@ -178,7 +220,6 @@
             </div>
         </div>
     </div>
-
     <!-- 摸态框-小 -->
     <div class="modal small" data-type="modal">
         <div class="modal-dialog small">
@@ -187,15 +228,15 @@
                     <span class="modal-title">提示</span>
                     <span class="modal-close"></span>
                 </div>
-                <div class="modal-body">确定删除么？</div>
+                <div class="modal-body">登记信息提交后将无法修改,
+                    <br />确定提交？</div>
                 <div class="modal-footer">
-                    <div class="btn btn-sure">确定</div>
                     <div class="btn btn-cancel">取消</div>
+                    <div class="btn btn-sure">确定</div>
                 </div>
             </div>
         </div>
     </div>
-
     <!-- 确认框-小 -->
     <div class="modal" data-type="confirm">
         <div class="modal-dialog small">
@@ -204,7 +245,8 @@
                     <span class="modal-title">提示</span>
                     <span class="modal-close"></span>
                 </div>
-                <div class="modal-body">确定删除么？</div>
+                <div class="modal-body">登记信息提交后将无法修改,
+                    <br />确定提交？</div>
                 <div class="modal-footer">
                     <div class="btn btn-sure">确定</div>
                     <div class="btn btn-cancel">取消</div>
@@ -212,7 +254,6 @@
             </div>
         </div>
     </div>
-
     <!-- 提示框-小 -->
     <div class="modal" data-type="alert">
         <div class="modal-dialog small">
@@ -225,7 +266,18 @@
             </div>
         </div>
     </div>
-    
+    <!-- 全屏弹框 -->
+    <div class="modal fullscreen" data-type="fullscreen">
+        <div class="modal-dialog fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="modal-title">标题</span>
+                    <span class="modal-close"></span>
+                </div>
+                <div class="modal-body">内容</div>
+            </div>
+        </div>
+    </div>
     <div class="modal-backdrop"></div>
 </body>
 

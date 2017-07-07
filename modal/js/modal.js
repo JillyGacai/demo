@@ -39,6 +39,24 @@ $(function() {
             case 'alert':
                 Alert('哈哈哈哈哈');
                 break;
+            case 'fullscreen':
+                FullScreen({
+                    name: 'fullscreen',
+                    // size: '',
+                    // title: '',
+                    // content: '',
+                    sureName: '确定',
+                    sureCb: function() {
+                        Alert('this is Alert ...');
+                        return false;
+                    },
+                    cancelName: '取消',
+                    cancelCb: function() {
+                        return true;
+                    }
+                });
+                break;
+
         }
     });
 
@@ -244,3 +262,48 @@ var Alert = function(option) {
         $alert.trigger('modal.hide');
     }, 2000);
 };
+
+/**
+ * FullScreen(全屏框)
+ * 说明: 支持多个摸态框，支持确定按钮和取消按钮自定义回调函数
+ * 数量: 可自定义多个, 多个请分配不同className
+ * 尺寸: 全屏
+ * 参数:
+ *   option:
+ *     1-文本: name 必须，类名
+ *     实例:
+ *     FullScreen(name);
+ *     2-对象: 如下
+ *     name: 必须 类名, 避免冲突
+ *     title: 非必须 标题: 提示(默认)
+ *     content: 非必须 内容: 内容(默认)
+ *     备注: 其中 name title 可以直接写在html中
+ *     实例:
+ *     FullScreen({
+ *        name: 'name',
+ *        title: '提示',
+ *        content: '点击确定按钮弹出Alert',
+ *     });
+ *  其他: 单独关闭可执行
+ *      $('.modal.' + name).trigger('modal.hide');
+ */
+var FullScreen = function(option) {
+    var modal = '.modal';
+    if (typeof option == 'string') {
+        modal += '.' + option;
+    }
+    // 类名
+    if (typeof option.name != 'undefined') {
+        modal += '.' + option.name;
+    }
+    var $modal = $(modal + '[data-type="fullscreen"]');
+    // 标题
+    if (typeof option.title != 'undefined') {
+        $modal.find('.modal-title').html(option.title || '提示');
+    }
+    // 内容
+    if (typeof option.content != 'undefined') {
+        $modal.find('.modal-body').html(option.content || '内容');
+    }
+    $modal.trigger('modal.show');
+}
