@@ -1,0 +1,234 @@
+/* --- common --- */
+
+html {
+    font-family: 'Microsoft YaHei', 'PingFang SC', 'Arial';
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    width: 100%;
+    min-width: 1320px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #572106;
+}
+
+p {
+    margin: 0;
+}
+
+
+/* --- for placeholder --- */
+
+::-webkit-input-placeholder {
+    color: #f3b864;
+}
+
+:-moz-placeholder {
+    color: #f3b864;
+}
+
+::-moz-placeholder {
+    color: #f3b864;
+}
+
+:-ms-input-placeholder {
+    color: #f3b864;
+}
+
+.main {
+    margin: 40px;
+    background-color: #5e2e07;
+}
+
+.main-page {
+    position: relative;
+    padding: 40px;
+}
+
+.main-page::before {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    content: '';
+    border-width: 390px 363px;
+    border-style: solid;
+    border-color: #572106 #572106 #5e2e07 #5e2e07;
+}
+
+.logo {
+    height: 20px;
+    background: url('../img/send_free_traffic/logo.png') 0 0 no-repeat;
+    display: block;
+    width: 150px;
+}
+
+.logo_sidehead {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    width: 16px;
+    height: 100px;
+    background: url('../img/send_free_traffic/logo_sidehead.png') 0 bottom no-repeat;
+}
+
+.info {
+    position: relative;
+    z-index: 1;
+    width: 1160px;
+    height: 480px;
+    margin: 0 auto;
+    padding: 90px 0;
+}
+
+.info-left {
+    float: left;
+    width: 330px;
+    height: 480px;
+    padding: 0 160px 0 90px;
+}
+
+.info-left h3 {
+    font-size: 32px;
+    font-weight: normal;
+    line-height: 60px;
+    margin-top: 50px;
+    margin-bottom: 0;
+    color: #dc932a;
+}
+
+.info-left h1 {
+    font-size: 36px;
+    line-height: 60px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #fff;
+}
+
+.info-left .desc {
+    font-size: 16px;
+    line-height: 32px;
+    margin-top: 45px;
+    color: #b2a289;
+}
+
+.info-left .featrue {
+    font-size: 16px;
+    line-height: 32px;
+    margin-top: 15px;
+    color: #dc932a;
+}
+
+.info-right {
+    float: right;
+    width: 580px;
+    height: 480px;
+    background-color: #da9237;
+}
+
+.info-right .ticket {
+    height: 196px;
+    padding: 60px 66px 50px 66px;
+    background: url('../img/send_free_traffic/ticket.png') center 60px no-repeat;
+}
+
+.info-right .ticket .gift {
+    float: left;
+    width: 120px;
+    padding: 60px 0 0 34px;
+}
+
+.info-right .ticket .gift p {
+    font-size: 24px;
+    line-height: 42px;
+    color: #dc932a;
+}
+
+.info-right .ticket .gift span {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.info-right .ticket .traffic {
+    float: left;
+    width: 250px;
+    padding: 60px 0 0 44px;
+}
+
+.info-right .ticket .traffic .traffic-number {
+    font-size: 72px;
+    font-weight: bold;
+    line-height: 72px;
+    float: left;
+    color: #dc932a;
+}
+
+.info-right .ticket .traffic .traffic-desc {
+    font-size: 20px;
+    line-height: 30px;
+    float: left;
+    height: 28px;
+    padding-top: 42px;
+    padding-left: 10px;
+    color: #999;
+    background: url('../img/send_free_traffic/free.png') 10px 10px no-repeat;
+}
+
+.info-right .control-input {
+    margin: 0 76px;
+}
+
+.info-right .control-input input[type='text'] {
+    font-size: 16px;
+    line-height: 32px;
+    width: 363px;
+    padding: 0 30px 0 35px;
+    transition: border-bottom-color .3s;
+    color: #fff;
+    border-width: 0 0 1px 0;
+    border-color: #f3b864;
+    outline: none;
+    background: url('../img/send_free_traffic/email.png') 5px 10px no-repeat;
+    background-color: transparent;
+}
+
+.info-right .control-input input[type='text']:focus {
+    border-color: #fff;
+}
+
+.info-right .control-button {
+    margin: 30px 66px 0 66px;
+}
+
+.info-right .control-button .btn-confirm {
+    font-size: 20px;
+    line-height: 48px;
+    float: right;
+    width: 188px;
+    height: 48px;
+    transition: background-color .3s;
+    text-align: center;
+    color: #fff;
+    border-radius: 48px;
+    background-color: #55210b;
+    box-shadow: 0 8px 48px 0 rgba(92, 43, 1, .7);
+    cursor: pointer;
+}
+
+.info-right .control-button .btn-confirm:hover {
+    background-color: #833311;
+}
+
+.footer {
+    font-size: 12px;
+    line-height: 20px;
+    position: relative;
+    text-align: center;
+    color: #775e47;
+}
