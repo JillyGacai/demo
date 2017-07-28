@@ -320,7 +320,6 @@ p {
     body {
         min-width: 100%;
         background: url('../img/index_wap/world_map.gif') center 0 no-repeat;
-        background-size: 100%;
     }
     .navigator-page,
     .banner-page,
