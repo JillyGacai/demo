@@ -1,0 +1,321 @@
+/*----common----*/
+
+body {
+    font-family: 'Microsoft YaHei', 'PingFang SC', 'Arial', 'serif';
+    font-weight: 100;
+    /*-webkit-font-smoothing: antialiased;*/
+    /*-moz-osx-font-smoothing: grayscale;*/
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+.template-view * {
+    font-size: 14px;
+    color: #333;
+}
+
+.template-view ul {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.template-view li {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.template-view img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.star {
+    float: left;
+    overflow: hidden;
+}
+
+.star i {
+    float: left;
+    width: 14px;
+    height: 14px;
+    margin-right: 3px;
+    background: url('../img/view/star_0.png') no-repeat;
+    background-size: 100% auto;
+}
+
+.val-0-5 i:nth-child(1),
+.val-1-5 i:nth-child(2),
+.val-2-5 i:nth-child(3),
+.val-3-5 i:nth-child(4),
+.val-4-5 i:nth-child(5) {
+    background-image: url('../img/view/star_1.png');
+}
+
+.val-1 i:nth-child(1),
+.val-1-5 i:nth-child(1),
+.val-2 i:nth-child(-n+2),
+.val-2-5 i:nth-child(-n+2),
+.val-3 i:nth-child(-n+3),
+.val-3-5 i:nth-child(-n+3),
+.val-4 i:nth-child(-n+4),
+.val-4-5 i:nth-child(-n+4),
+.val-5 i {
+    background-image: url('../img/view/star_2.png');
+}
+
+.mcp,
+.anchor,
+.normal {
+    padding-right: 5px;
+}
+
+.num {
+    padding-left: 16px;
+    background: url('../img/view/user_2.png') no-repeat 2px 0;
+    background-size: 12px 15px;
+}
+
+.date.status1 {
+    color: #53cda6 !important;
+}
+
+.mcp,
+.num,
+.anchor,
+.date,
+.want,
+.normal {
+    line-height: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+/*----view----*/
+
+.template-view {
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #f0eeef;
+}
+
+.template-view section {
+    height: 100%;
+}
+
+.template-view fieldset {
+    overflow: hidden;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.posi.hv {
+    transition: box-shadow .2s;
+}
+
+.posi.hv:hover,
+.posi.hv:active {
+    box-shadow: 0 0 1px 1px #8b9dc3 !important;
+}
+
+
+/*====banner====*/
+
+.template-view fieldset.banner {
+    height: 22.887324%;
+}
+
+.template-view fieldset.banner img {
+    height: 100%;
+}
+
+
+/*====box====*/
+
+.template-view fieldset.box .label {
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 16px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    padding: 0;
+    text-align: inherit;
+}
+
+.template-view fieldset.box a.more {
+    font-size: 12px;
+    float: right;
+    padding-right: 12px;
+    text-decoration: none;
+    color: #a6a6a4;
+    background: url('../img/view/right.png') no-repeat right 2px;
+    background-size: auto 12px;
+}
+
+.template-view fieldset.box li {
+    float: left;
+}
+
+.template-view fieldset.box .info {
+    overflow: hidden;
+    margin: 8px 5px;
+}
+
+.template-view fieldset.box .info .line {
+    overflow: hidden;
+}
+
+.template-view fieldset.box .info p {
+    line-height: 18px;
+    overflow: hidden;
+    height: 18px;
+    margin: 0 0 5px 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.template-view fieldset.box .info span {
+    font-size: 12px;
+    float: right;
+    margin-top: 2px;
+    color: #c0cac5;
+}
+
+.template-view fieldset.box .fixed-line {
+    float: left;
+    width: 100%;
+    padding-bottom: 2px;
+}
+
+.template-view fieldset.box .fixed-line:last-child {
+    margin-bottom: 0 !important;
+}
+
+.template-view fieldset.box .fixed-line li .item {
+    overflow: hidden;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0 2px 0 0 #d6d4d5;
+}
+
+
+/*=====box.col-1=====*/
+
+.template-view fieldset.box .col-1 li {
+    width: 100%;
+}
+
+.template-view fieldset.box .col-1 a {
+    display: block;
+    overflow: hidden;
+}
+
+.template-view fieldset.box .col-1 .single img {
+    margin: 0 !important;
+}
+
+.template-view fieldset.box .col-1 img {
+    margin-top: -36px;
+    margin-bottom: -36px;
+}
+
+.template-view fieldset.box .col-1 .info p {
+    display: inline-block;
+    width: 60%;
+    margin-bottom: 0;
+}
+
+.template-view fieldset.box .col-1 .info .mcp {
+    width: 22%;
+    text-align: right;
+}
+
+.template-view fieldset.box .col-1 .info .normal {
+    float: left;
+}
+
+
+/*=====box.col-2=====*/
+
+.template-view fieldset.box .col-2 li {
+    width: 50%;
+}
+
+.template-view fieldset.box .col-2 img {
+    width: 100%;
+}
+
+.template-view fieldset.box .col-2 .info .mcp {
+    float: left;
+    width: 50%;
+}
+
+.template-view fieldset.box .col-2 .info .anchor {
+    float: left;
+}
+
+
+/*=====box.col-3=====*/
+
+.template-view fieldset.box .col-3 li {
+    width: 33%;
+    padding: 6px;
+}
+
+.template-view fieldset.box .col-3 .info p {
+    text-align: center;
+}
+
+
+/*=====box.col-4=====*/
+
+.template-view fieldset.box .col-4 {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.template-view fieldset.box .col-4 li {
+    width: 25%;
+    margin: 5px 0;
+}
+
+.template-view fieldset.box .col-4 img {
+    width: 50%;
+    border: 1px solid #e7e7e7;
+    border-radius: 50%;
+}
+
+.template-view fieldset.box .col-4 .info p {
+    text-align: center;
+}
+
+
+/*=====box.special=====*/
+
+.template-view fieldset.box .special .col-l {
+    float: left;
+    width: 45%;
+    margin-left: -1px;
+    border-right: 1px solid #e7e7e7;
+}
+
+.template-view fieldset.box .special .col-r {
+    float: left;
+    width: 55%;
+}
+
+.template-view fieldset.box .special .col-r a:first-child img {
+    border-bottom: 1px solid #e7e7e7;
+}

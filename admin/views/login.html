@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>登录 | 四月天数据报表平台</title>
+    <!-- FAVICONS -->
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../public/img/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="../public/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="57x57" href="../public/img/favicons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="../public/img/favicons/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../public/img/favicons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../public/img/favicons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../public/img/favicons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="../public/img/favicons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="../public/img/favicons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="../public/img/favicons/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../public/img/favicons/apple-touch-icon-180x180.png" />
+    <link rel="icon" type="image/png" href="../public/img/favicons/android-chrome-192x192.png" sizes="192x192" />
+    <link rel="icon" type="image/png" href="../public/img/favicons/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="../public/img/favicons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../public/img/favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="manifest" href="../public/img/favicons/manifest.json" />
+    <link rel="shortcut icon" href="../public/img/favicons/favicon.ico" />
+    <!-- STYLE FILES -->
+    <link rel="stylesheet" type="text/css" href="../public/fonts/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="../public/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../public/css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../public/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../public/css/skins.css" />
+    <link rel="stylesheet" type="text/css" href="../public/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../public/css/view.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="../public/css/animation.css"> -->
+    <!-- JAVASCRIPT FILES LIBS -->
+    <script src="../public/lib/jquery.min.js"></script>
+    <script src="../public/lib/bootstrap.min.js"></script>
+    <script src="../public/lib/laytpl.min.js"></script>
+    <script type="text/javascript">
+    var Global = {
+        base: '../public',
+        path: '',
+        ver: '20171025001'
+    };
+    </script>
+</head>
+<body class="page-body skin-facebook">
+<div class="login-container">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="login-info">
+                <div class="logopanel">
+                    <img src="../public/img/default/192.png" alt="logo" width="96" height="96" title="<%= global.app %>" class="am-breathe" />
+                    <h1><span>四月天<br /><small>数据报表平台</small></span></h1>
+                </div>
+                <h4><strong>欢迎访问四月天数据报表平台</strong></h4>
+                <ul>
+                    <li><i class="fa fa-arrow-circle-o-right mr5"></i> 图书报表</li>
+                    <li><i class="fa fa-arrow-circle-o-right mr5"></i> 稿费结算报表</li>
+                    <li><i class="fa fa-arrow-circle-o-right mr5"></i> 运营报表</li>
+                    <li><i class="fa fa-arrow-circle-o-right mr5"></i> 包月数据</li>
+                </ul>
+                <strong>没有帐号？请联系管理员创建</strong>
+            </div>
+        </div>
+        <div class="col-sm-6">
+           <div class="form">
+                <div class="login-header">
+                    <a href="#" class="logo"><span>登录</span></a>
+                    <p>登录来访问后台管理。</p>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="username">用户名</label>
+                    <input type="text" class="form-control uname" />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="passwd">密码</label>
+                    <input type="password" class="form-control pword" />
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-sm btn-primary btn-block login"><i class="fa fa-lock"></i> 登录</button>
+                </div>
+                <div class="login-footer">
+                    <a href="#">忘记密码？联系管理员修改</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="login-footer">
+                <div class="pull-left">&copy; 2017. All Rights Reserved.</div>
+                <div class="pull-right">Created By: <a href="http://www.4yt.net" target="_blank">四月天</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- footer public [start] -->
+<!-- loading -->
+<div class="page-loading-overlay">
+    <div class="loader-2"></div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="_modal" tabindex="-1" role="dialog" aria-labelledby="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">提示</h4>
+            </div>
+            <div class="modal-body">内容</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal" data-value="sure">确定</button>
+                <button type="button" class="btn btn-sm btn-white" data-dismiss="modal" data-value="cancel">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Alert -->
+<div class="modal fade" id="_alert" tabindex="-1" role="dialog" aria-labelledby="myAlert">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">提示</h4>
+            </div>
+            <div class="modal-body">内容</div>
+        </div>
+    </div>
+</div>
+<!-- JAVASCRIPT FILES LIB -->
+<script src="../public/lib/TweenMax.min.js"></script>
+<script src="../public/lib/bootstrap.datepicker.min.js"></script>
+<script src="../public/lib/swiper.jquery.min.js"></script>
+<script src="../public/lib/jquery.form.min.js"></script>
+<script src="../public/lib/jquery.dragsort.min.js"></script>
+<!-- JAVASCRIPT FILES CUSTOM -->
+<script src="../public/js/resizeable.js"></script>
+<script src="../public/js/toggles.js"></script>
+<script src="../public/js/custom.js"></script>
+<script src="../public/js/page.js"></script>
+<!-- footer public [end] -->
+
+</body>
+</html>

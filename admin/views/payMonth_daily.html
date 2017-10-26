@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>包月数据日报表 | 四月天数据报表平台</title>
+    <!-- FAVICONS -->
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../public/img/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="../public/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="57x57" href="../public/img/favicons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="../public/img/favicons/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../public/img/favicons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../public/img/favicons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../public/img/favicons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="../public/img/favicons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="../public/img/favicons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="../public/img/favicons/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../public/img/favicons/apple-touch-icon-180x180.png" />
+    <link rel="icon" type="image/png" href="../public/img/favicons/android-chrome-192x192.png" sizes="192x192" />
+    <link rel="icon" type="image/png" href="../public/img/favicons/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="../public/img/favicons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../public/img/favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="manifest" href="../public/img/favicons/manifest.json" />
+    <link rel="shortcut icon" href="../public/img/favicons/favicon.ico" />
+    <!-- STYLE FILES -->
+    <link rel="stylesheet" type="text/css" href="../public/fonts/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="../public/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../public/css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../public/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../public/css/skins.css" />
+    <link rel="stylesheet" type="text/css" href="../public/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../public/css/view.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="../public/css/animation.css"> -->
+    <!-- JAVASCRIPT FILES LIBS -->
+    <script src="../public/lib/jquery.min.js"></script>
+    <script src="../public/lib/bootstrap.min.js"></script>
+    <script src="../public/lib/laytpl.min.js"></script>
+    <script type="text/javascript">
+    var Global = {
+        base: '../public',
+        path: '',
+        ver: '20171025001'
+    };
+    </script>
+</head>
+<body class="page-body skin-facebook">
+<div class="page-container">
+    <!-- sidebar [start] -->
+    <div class="sidebar-menu toggle-others collapsed">
+        <div class="sidebar-menu-inner">
+            <header class="logo-env">
+                <div class="logo">
+                    <a href="index.html" class="logo-expanded">
+                        <img src="../public/img/default/60.png" alt="logo" width="50" height="50" />
+                        <span>四月天数据报表平台</span>
+                    </a>
+                    <a href="index.html" class="logo-collapsed">
+                        <img src="../public/img/default/60.png" alt="logo" width="50" height="50" />
+                    </a>
+                </div>
+                <div class="mobile-menu-toggle visible-xs">
+                    <a href="#" data-toggle="mobile-menu">
+                        <i class="fa-bars"></i>
+                    </a>
+                </div>
+            </header>
+            <ul id="main-menu" class="main-menu">
+                <li>
+                    <a href="javascript:;"><i class="fa fa-book"></i> <span class="title">图书报表</span></a>
+                    <ul>
+                        <li><a href="bookReport_daily.html"><span class="title">图书数据日报表</span></a></li>
+                        <li><a href="bookReport_monthly.html"><span class="title">图书数据月报表</span></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;"><i class="fa fa-tags"></i> <span class="title">稿费结算报表</span></a>
+                    <ul>
+                        <li><a href="bookFinal_buy.html"><span class="title">买断图书结算报表</span></a></li>
+                        <li><a href="bookFinal_divide.html"><span class="title">分成图书结算报表</span></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;"><i class="fa fa-tasks"></i> <span class="title">运营报表</span></a>
+                    <ul>
+                        <li><a href="recharge_daily.html"><span class="title">充值日报表</span></a></li>
+                        <li><a href="recharge_monthly.html"><span class="title">充值月报表</span></a></li>
+                        <li><a href="reward_daily.html"><span class="title">打赏日报表</span></a></li>
+                        <li><a href="reward_monthly.html"><span class="title">打赏月报表</span></a></li>
+                        <li><a href="subscription_daily.html"><span class="title">全站订阅日报表</span></a></li>
+                        <li><a href="subscription_monthly.html"><span class="title">全站订阅月报表</span></a></li>
+                    </ul>
+                </li>
+                <li class="active opened">
+                    <a href="javascript:;"><i class="fa fa-exchange"></i> <span class="title">包月数据</span></a>
+                    <ul>
+                        <li class="active"><a href="payMonth_daily.html"><span class="title">包月数据日报表</span></a></li>
+                        <li><a href="payMonth_monthly.html"><span class="title">包月数据月报表</span></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;"><i class="fa fa-wrench"></i> <span class="title">后台管理</span></a>
+                    <ul>
+                        <li><a href="member.html"><span class="title">用户列表</span></a></li>
+                        <li><a href="demo.html"><span class="title">demo页</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- sidebar [end] -->
+
+    <div class="main-content">
+
+        <!-- searchbar [start] -->
+        <nav class="navbar user-info-navbar user-info-navbar-skin-facebook" role="navigation">
+            <ul class="user-info-menu left-links list-inline list-unstyled">
+                <li class="hidden-xs">
+                    <a href="javascript:;" data-toggle="sidebar"><i class="fa-bars"></i></a>
+                </li>
+            </ul>
+            <ul class="user-info-menu right-links list-inline list-unstyled">
+                <li class="dropdown user-profile">
+                    <a href="#" data-toggle="dropdown">
+                        <img src="../public/img/default/uface.png" alt="user-image" class="img-circle img-inline userpic-32" width="28" />
+                        <span>管理员 <i class="fa-angle-down"></i></span>
+                    </a>
+                    <ul class="dropdown-menu user-profile-menu list-unstyled">
+                        <li><a href="javascript:;" class="modify_info"><i class="fa fa-user"></i> 个人信息</a></li>
+                        <li><a href="javascript:;" class="modify_pass"><i class="fa fa-wrench"></i> 密码修改</a></li>
+                        <li><a href="../logout"><i class="fa fa-sign-out"></i> 退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- searchbar [end] -->
+
+        <div class="page-title">
+            <div class="title-env">
+                <h1 class="title">包月数据日报表</h1>
+                <p class="description">这里可以添加功能描述</p>
+            </div>
+            <div class="breadcrumb-env">
+                <ol class="breadcrumb bc-1">
+                    <li><a href="index.html"><i class="fa-home"></i>主页</a></li>
+                    <li><a href="payMonth_daily.html">包月数据</a></li>
+                    <li class="active"><strong>包月数据日报表</strong></li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- search [start] -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">搜索</h3>
+                <div class="panel-options">
+                    <a href="#" data-toggle="panel">
+                        <span class="collapse-icon">&ndash;</span>
+                        <span class="expand-icon">+</span>
+                    </a>
+                    <a href="#" data-toggle="remove">&times;</a>
+                </div>
+            </div>
+            <div class="panel-body">
+                <form id="form2" class="form-horizontal" action="#" method="GET">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">查询日期</label>
+                        <div class="col-sm-2">
+                            <div class="input-group">
+                                <input type="text" class="form-control datepick" data-format="yyyy/mm/dd" name="date_s" placeholder="年/月/日" value="" />
+                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="input-group">
+                                <input type="text" class="form-control datepick" data-format="yyyy/mm/dd" name="date_e" placeholder="年/月/日" value="" />
+                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">包月名称</label>
+                        <div class="col-sm-2">
+                            <select class="form-control">
+                                <option value="">请选择</option>
+                                <option value="">单月包</option>
+                                <option value="">三个月包</option>
+                                <option value="">半年包</option>
+                                <option value="">全年包</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-2 col-sm-offset-2">
+                            <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-search"></i> 查询</button>
+                            <button type="button" class="btn btn-sm btn-success"><i class="fa fa-download"></i> 导出</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- search [end] -->
+
+        <!-- data list [start] -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">查询列表</h3>
+                <div class="panel-options">
+                    <a href="#" data-toggle="panel">
+                        <span class="collapse-icon">&ndash;</span>
+                        <span class="expand-icon">+</span>
+                    </a>
+                    <a href="#" data-toggle="remove">&times;</a>
+                </div>
+            </div>
+            <div class="panel-body panel-operation">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>时间</th>
+                                        <th>包月用户数</th>
+                                        <th>新增包月用户数</th>
+                                        <th>包月续费用户数</th>
+                                        <th>包月收入</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="data-list">
+                                    <tr class="data-item" data-id="" data-type="">
+                                        <td>1</td>
+                                        <td>2017-09-09</td>
+                                        <td>1000</td>
+                                        <td>200</td>
+                                        <td>800</td>
+                                        <td>1000000</td>
+                                    </tr>
+                                    <tr class="data-item" data-id="" data-type="">
+                                        <td>2</td>
+                                        <td>2017-09-10</td>
+                                        <td>1000</td>
+                                        <td>200</td>
+                                        <td>800</td>
+                                        <td>1000000</td>
+                                    </tr>
+                                    <tr class="data-item" data-id="" data-type="">
+                                        <td>3</td>
+                                        <td>2017-09-10</td>
+                                        <td>1000</td>
+                                        <td>200</td>
+                                        <td>800</td>
+                                        <td>1000000</td>
+                                    </tr>
+                                    <tr class="data-item" data-id="" data-type="">
+                                        <td>4</td>
+                                        <td>2017-09-10</td>
+                                        <td>1000</td>
+                                        <td>200</td>
+                                        <td>800</td>
+                                        <td>1000000</td>
+                                    </tr>
+                                    <tr class="data-item" data-id="" data-type="">
+                                        <td>5</td>
+                                        <td>2017-09-10</td>
+                                        <td>1000</td>
+                                        <td>200</td>
+                                        <td>800</td>
+                                        <td>1000000</td>
+                                    </tr>
+                                    <tr class="data-item" data-id="" data-type="">
+                                        <td>6</td>
+                                        <td>2017-09-10</td>
+                                        <td>1000</td>
+                                        <td>200</td>
+                                        <td>800</td>
+                                        <td>1000000</td>
+                                    </tr>
+                                    <tr class="data-item" data-id="" data-type="">
+                                        <td>7</td>
+                                        <td>2017-09-10</td>
+                                        <td>1000</td>
+                                        <td>200</td>
+                                        <td>800</td>
+                                        <td>1000000</td>
+                                    </tr>
+                                    <tr class="data-item" data-id="" data-type="">
+                                        <td>8</td>
+                                        <td>2017-09-10</td>
+                                        <td>1000</td>
+                                        <td>200</td>
+                                        <td>800</td>
+                                        <td>1000000</td>
+                                    </tr>
+                                    <tr class="data-item" data-id="" data-type="">
+                                        <td>9</td>
+                                        <td>2017-09-10</td>
+                                        <td>1000</td>
+                                        <td>200</td>
+                                        <td>800</td>
+                                        <td>1000000</td>
+                                    </tr>
+                                    <tr class="data-item" data-id="" data-type="">
+                                        <td>10</td>
+                                        <td>2017-09-10</td>
+                                        <td>1000</td>
+                                        <td>200</td>
+                                        <td>800</td>
+                                        <td>1000000</td>
+                                    </tr>
+
+                                    <!-- for no data [start] -->
+                                    <tr class="no-data">
+                                        <td colspan="6">没有数据 >_< ...</td>
+                                    </tr>
+                                    <!-- for no data [end] -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+
+                        <!-- pagination [start] -->
+                        <span>1-10 共计500000条</span>
+                        <ul class="pagination">
+                            <li class="disabled"><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                            <li><a href="#">1</a></li>
+                            <li class="active"><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                            <li class="page-input">
+                                <input type="text" class="form-control" value="1" />
+                            </li>
+                        </ul>
+                        <!-- pagination [end] -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- data list [end] -->
+    </div>
+</div>
+
+<!-- footer public [start] -->
+<!-- loading -->
+<div class="page-loading-overlay">
+    <div class="loader-2"></div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="_modal" tabindex="-1" role="dialog" aria-labelledby="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">提示</h4>
+            </div>
+            <div class="modal-body">内容</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal" data-value="sure">确定</button>
+                <button type="button" class="btn btn-sm btn-white" data-dismiss="modal" data-value="cancel">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Alert -->
+<div class="modal fade" id="_alert" tabindex="-1" role="dialog" aria-labelledby="myAlert">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">提示</h4>
+            </div>
+            <div class="modal-body">内容</div>
+        </div>
+    </div>
+</div>
+<!-- JAVASCRIPT FILES LIB -->
+<script src="../public/lib/TweenMax.min.js"></script>
+<script src="../public/lib/bootstrap.datepicker.min.js"></script>
+<script src="../public/lib/swiper.jquery.min.js"></script>
+<script src="../public/lib/jquery.form.min.js"></script>
+<script src="../public/lib/jquery.dragsort.min.js"></script>
+<!-- JAVASCRIPT FILES CUSTOM -->
+<script src="../public/js/resizeable.js"></script>
+<script src="../public/js/toggles.js"></script>
+<script src="../public/js/custom.js"></script>
+<script src="../public/js/page.js"></script>
+<!-- footer public [end] -->
+
+</body>
+</html>
