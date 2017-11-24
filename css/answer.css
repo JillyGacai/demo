@@ -1,4 +1,4 @@
-html {
+        html {
     font-family: 'Microsoft YaHei', 'PingFang SC', 'Arial';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -11,16 +11,16 @@ body {
 }
 
 body::after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    background-color: #222;
+    position: absolute;
     top: 0;
     left: 0;
-    position: absolute;
-    opacity: .6;
     display: none;
+    width: 100%;
+    height: 100%;
+    content: '';
     animation: fadeIn-2 .3s;
+    opacity: .6;
+    background-color: #222;
 }
 
 body.modal-open {
@@ -81,7 +81,7 @@ ul {
 
 .page-content img {
     display: block;
-    max-width: 100% !important;
+    max-width: 100%!important;
     margin-top: 6px;
 }
 
@@ -103,7 +103,6 @@ ul {
 }
 
 
-
 /* ------ choice ------ */
 
 .choice-list {
@@ -123,7 +122,6 @@ ul {
     transition: color .3s, background-color .3s;
     border: 1px solid #e7e7e7;
     border-radius: 30px;
-
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -140,7 +138,7 @@ ul {
     width: 32px;
     height: 32px;
     content: '';
-    background-size: 30px 30px !important;
+    background-size: 30px 30px!important;
 }
 
 .choice.correct::before {
@@ -188,7 +186,7 @@ ul {
 
 .choice .choice-txt .text img {
     display: block;
-    max-width: 100% !important;
+    max-width: 100%!important;
     margin-top: 6px;
 }
 
@@ -221,7 +219,7 @@ ul {
     width: 32px;
     height: 32px;
     content: '';
-    background-size: 30px 30px !important;
+    background-size: 30px 30px!important;
 }
 
 .fill.correct::before {
@@ -318,11 +316,11 @@ ul {
 
 .modal {
     position: absolute;
+    z-index: 100;
     top: 0;
     left: 0;
-    z-index: 100;
-    margin: 50px 100px;
     display: none;
+    margin: 50px 100px;
     animation: fadeIn .3s;
 }
 
@@ -331,13 +329,13 @@ ul {
 }
 
 .modal-page {
-    padding-top: 47px;
-    border-radius: 5px;
     position: relative;
-    background-color: #fff;
     overflow: hidden;
     height: 230px;
-    box-shadow: 0 0 5px 0 #4D4D4D;
+    padding-top: 47px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 5px 0 #4d4d4d;
 }
 
 .modal-header {
@@ -357,7 +355,7 @@ ul {
     width: 22px;
     height: 22px;
     background: url('../img/default/btn_close.png') center center no-repeat;
-    background-size: 15px 16px !important;
+    background-size: 15px 16px!important;
 }
 
 .modal-body {
@@ -382,7 +380,7 @@ ul {
 
 .modal .content .detail img {
     display: block;
-    max-width: 100% !important;
+    max-width: 100%!important;
     margin-top: 6px;
 }
 
@@ -426,7 +424,7 @@ ul {
 
 /* ------ 多dpi配置 ------ */
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (-webkit-min-device-pixel-ratio:2) {
     .choice.correct::before,
     .fill.correct::before {
         background: url('../img/default/icon_right@2x.png') center center no-repeat;
@@ -440,7 +438,7 @@ ul {
     }
 }
 
-@media only screen and (min-device-pixel-ratio: 2) {
+@media only screen and (min-device-pixel-ratio:2) {
     .choice.correct::before,
     .fill.correct::before {
         background: url('../img/default/icon_right@2x.png') center center no-repeat;
@@ -454,7 +452,7 @@ ul {
     }
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 3) {
+@media only screen and (-webkit-min-device-pixel-ratio:3) {
     .choice.correct::before,
     .fill.correct::before {
         background: url('../img/default/icon_right@3x.png') center center no-repeat;
@@ -468,7 +466,7 @@ ul {
     }
 }
 
-@media only screen and (min-device-pixel-ratio: 3) {
+@media only screen and (min-device-pixel-ratio:3) {
     .choice.correct::before,
     .fill.correct::before {
         background: url('../img/default/icon_right@3x.png') center center no-repeat;

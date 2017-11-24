@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>客户管理 | Grouk企业管理平台</title>
+    <!-- FAVICONS -->
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../public/img/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="../public/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="57x57" href="../public/img/favicons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="../public/img/favicons/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../public/img/favicons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../public/img/favicons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../public/img/favicons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="../public/img/favicons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="../public/img/favicons/apple-touch-icon-144x144.png" />
+    <link rel="icon" type="image/png" href="../public/img/favicons/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="../public/img/favicons/favicon-32x32.png" sizes="32x32" />
+    <link rel="manifest" href="../public/img/favicons/manifest.json" />
+    <link rel="shortcut icon" href="../public/img/favicons/favicon.ico" />
+    <!-- STYLE FILES -->
+    <link rel="stylesheet" type="text/css" href="../public/fonts/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="../public/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../public/css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../public/css/base.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="../public/css/skins.css" /> -->
+    <link rel="stylesheet" type="text/css" href="../public/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../public/css/view.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="../public/css/animation.css"> -->
+    <!-- JAVASCRIPT FILES LIBS -->
+    <script src="../public/lib/jquery.min.js"></script>
+    <script src="../public/lib/bootstrap.min.js"></script>
+    <script src="../public/lib/laytpl.min.js"></script>
+    <script type="text/javascript">
+    var Global = {
+        base: '../public',
+        path: '',
+        ver: '20171025001'
+    };
+    </script>
+</head>
+<body class="page-body skin-facebook">
+<div class="page-container">
+    <!-- sidebar [start] -->
+    <div class="sidebar-menu toggle-others collapsed">
+        <div class="sidebar-menu-inner">
+            <header class="logo-env">
+                <div class="logo">
+                    <a href="index.html" class="logo-expanded">
+                        <img src="../public/img/default/120.png" alt="logo" width="50" height="50" />
+                        <span>Grouk企业管理平台</span>
+                    </a>
+                    <a href="index.html" class="logo-collapsed">
+                        <img src="../public/img/default/120.png" alt="logo" width="50" height="50" />
+                    </a>
+                </div>
+                <div class="mobile-menu-toggle visible-xs">
+                    <a href="#" data-toggle="mobile-menu">
+                        <i class="fa-bars"></i>
+                    </a>
+                </div>
+            </header>
+            <ul id="main-menu" class="main-menu">
+                <li>
+                    <a href="member.html"><i class="fa fa-user"></i> <span class="title">员工管理</span></a>
+                </li>
+                <li>
+                    <a href="product.html"><i class="fa fa-tasks"></i> <span class="title">产品管理</span></a>
+                </li>
+                <li class="active opened">
+                    <a href="custom.html"><i class="fa fa-globe"></i> <span class="title">客户管理</span></a>
+                </li>
+                <li>
+                    <a href="selling.html"><i class="fa fa-bar-chart"></i> <span class="title">销售信息管理</span></a>
+                </li>
+                <li>
+                    <a href="dispatch.html"><i class="fa fa-exchange"></i> <span class="title">报销管理</span></a>
+                </li>
+                <li>
+                    <a href="daily.html"><i class="fa fa-calendar"></i> <span class="title">日报管理</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- sidebar [end] -->
+
+    <div class="main-content">
+
+        <!-- searchbar [start] -->
+        <nav class="navbar user-info-navbar user-info-navbar-skin-facebook" role="navigation">
+            <ul class="user-info-menu left-links list-inline list-unstyled">
+                <li class="hidden-xs">
+                    <a href="javascript:;" data-toggle="sidebar"><i class="fa-bars"></i></a>
+                </li>
+            </ul>
+            <ul class="user-info-menu right-links list-inline list-unstyled">
+                <li class="dropdown user-profile">
+                    <a href="#" data-toggle="dropdown">
+                        <img src="../public/img/default/uface.png" alt="user-image" class="img-circle img-inline userpic-32" width="28" />
+                        <span>刘鑫 <i class="fa-angle-down"></i></span>
+                    </a>
+                    <ul class="dropdown-menu user-profile-menu list-unstyled">
+                        <li><a href="javascript:;" class="modify_info"><i class="fa fa-user"></i> 个人信息</a></li>
+                        <li><a href="javascript:;" class="modify_pass"><i class="fa fa-wrench"></i> 密码修改</a></li>
+                        <li><a href="../logout"><i class="fa fa-sign-out"></i> 退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- searchbar [end] -->
+
+        <div class="page-title">
+            <div class="title-env">
+                <h1 class="title">客户管理</h1>
+                <p class="description">这里显示的本公司客户列表</p>
+            </div>
+            <div class="breadcrumb-env">
+                <ol class="breadcrumb bc-1">
+                    <li><a href="index.html"><i class="fa-home"></i>主页</a></li>
+                    <li class="active"><a href="custom.html"><strong>客户管理</strong></a></li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- data list [start] -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">客户列表</h3>
+                <div class="panel-options">
+                    <a href="#" data-toggle="panel">
+                        <span class="collapse-icon">&ndash;</span>
+                        <span class="expand-icon">+</span>
+                    </a>
+                    <a href="#" data-toggle="remove">&times;</a>
+                </div>
+            </div>
+            <div class="panel-body panel-operation">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>客户</th>
+                                        <th>所在地</th>
+                                        <th>详细地址</th>
+                                        <th>行业类型</th>
+                                        <th>跟进人</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="data-list">
+                                    <tr class="data-item" data-id="" data-type="">
+                                        <td>1</td>
+                                        <td>财经头条</td>
+                                        <td>北京</td>
+                                        <td>北京市朝阳区望京</td>
+                                        <td>传媒</td>
+                                        <td>刘鑫</td>
+                                        <td>
+                                            <a href="javascript:;" class="btn-link btn-pass">查看详情</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-item" data-id="" data-type="">
+                                        <td>2</td>
+                                        <td>搜狐</td>
+                                        <td>北京</td>
+                                        <td>北京市海淀区科学院南路2号院3号楼 搜狐媒体大厦</td>
+                                        <td>门户</td>
+                                        <td>刘鑫</td>
+                                        <td>
+                                            <a href="javascript:;" class="btn-link btn-pass">查看详情</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-item" data-id="" data-type="">
+                                        <td>3</td>
+                                        <td>云校</td>
+                                        <td>北京</td>
+                                        <td>北京市朝阳区望京西园425号楼三层3311室</td>
+                                        <td>教育</td>
+                                        <td>刘鑫</td>
+                                        <td>
+                                            <a href="javascript:;" class="btn-link btn-pass">查看详情</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-item" data-id="" data-type="">
+                                        <td>4</td>
+                                        <td>浩方引线传媒</td>
+                                        <td>北京</td>
+                                        <td>北京市朝阳区望京</td>
+                                        <td>社交网络, 硬件</td>
+                                        <td>刘鑫</td>
+                                        <td>
+                                            <a href="javascript:;" class="btn-link btn-pass">查看详情</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-item" data-id="" data-type="">
+                                        <td>5</td>
+                                        <td>甄保科技</td>
+                                        <td>北京</td>
+                                        <td>北京市朝阳区高碑店</td>
+                                        <td>高新技术</td>
+                                        <td>刘鑫</td>
+                                        <td>
+                                            <a href="javascript:;" class="btn-link btn-pass">查看详情</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-item" data-id="" data-type="">
+                                        <td>6</td>
+                                        <td>CloudMinds(达闼科技)</td>
+                                        <td>北京</td>
+                                        <td>北京市朝阳区望京SOHO塔三B座33层</td>
+                                        <td>AI</td>
+                                        <td>刘鑫</td>
+                                        <td>
+                                            <a href="javascript:;" class="btn-link btn-pass">查看详情</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-item" data-id="" data-type="">
+                                        <td>7</td>
+                                        <td>新浪微博</td>
+                                        <td>北京</td>
+                                        <td>北京市海淀区东北旺西路中关村软件园二期</td>
+                                        <td>社交</td>
+                                        <td>刘鑫</td>
+                                        <td>
+                                            <a href="javascript:;" class="btn-link btn-pass">查看详情</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-item" data-id="" data-type="">
+                                        <td>8</td>
+                                        <td>上海汉德信息</td>
+                                        <td>上海</td>
+                                        <td>上海市青浦工业园区外青松公路5500号303室</td>
+                                        <td>计算机, 网络</td>
+                                        <td>刘鑫</td>
+                                        <td>
+                                            <a href="javascript:;" class="btn-link btn-pass">查看详情</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <!-- pagination [start] -->
+                        <span>1-8 共计8条</span>
+                        <ul class="pagination">
+                            <li class="disabled"><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                            <li class="page-input">
+                                <input type="text" class="form-control" value="1" />
+                            </li>
+                        </ul>
+                        <!-- pagination [end] -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- data list [end] -->
+    </div>
+</div>
+
+<!-- footer public [start] -->
+<!-- loading -->
+<div class="page-loading-overlay">
+    <div class="loader-2"></div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="_modal" tabindex="-1" role="dialog" aria-labelledby="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">提示</h4>
+            </div>
+            <div class="modal-body">内容</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal" data-value="sure">确定</button>
+                <button type="button" class="btn btn-sm btn-white" data-dismiss="modal" data-value="cancel">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Alert -->
+<div class="modal fade" id="_alert" tabindex="-1" role="dialog" aria-labelledby="myAlert">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">提示</h4>
+            </div>
+            <div class="modal-body">内容</div>
+        </div>
+    </div>
+</div>
+<!-- JAVASCRIPT FILES LIB -->
+<script src="../public/lib/TweenMax.min.js"></script>
+<script src="../public/lib/bootstrap.datepicker.min.js"></script>
+<script src="../public/lib/swiper.jquery.min.js"></script>
+<script src="../public/lib/jquery.form.min.js"></script>
+<script src="../public/lib/jquery.dragsort.min.js"></script>
+<!-- JAVASCRIPT FILES CUSTOM -->
+<script src="../public/js/resizeable.js"></script>
+<script src="../public/js/toggles.js"></script>
+<script src="../public/js/custom.js"></script>
+<script src="../public/js/page.js"></script>
+<!-- footer public [end] -->
+
+</body>
+</html>
