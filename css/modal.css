@@ -21,7 +21,6 @@
     filter: alpha(opacity=50);
 }
 
-
 /* ----------- */
 
 .modal {
@@ -269,7 +268,6 @@
     background-color: #e82639;
 }
 
-
 /* ------ 其他内嵌模板样式 ------ */
 
 .modal-dialog .modal-body .row .tags-list {
@@ -308,7 +306,6 @@
     margin-top: 5px;
     margin-right: 5px;
 }
-
 
 /* ------ animation ------ */
 
