@@ -28,7 +28,33 @@ ul {
     list-style: none;
 }
 
+.breathe {
+    animation: breathe 5s infinite;
+    width: 160px;
+    height: 160px;
+    display: inline-block;
+    margin: 30px;
+    border-radius: 35px;
+}
+
+.shining img {
+    float: left;
+}
+
 /* ------ animation ------ */
+
+@keyframes breathe {
+    0% {
+        box-shadow: 0 0 1px 1px rgba(0, 0, 0, .01);
+    }
+    50% {
+        box-shadow: 0 0 3px 3px rgba(0, 0, 0, .2);
+    }
+    100% {
+        box-shadow: 0 0 1px 1px rgba(0, 0, 0, .01);
+    }
+}
+
 @keyframes fadeIn {
     0% {
         display: none;
@@ -176,7 +202,7 @@ ul {
 }
 
 .main-page {
-    width: 100%;
+    max-width: 100%;
     min-height: 100%;
     padding-bottom: 50px;
     box-sizing: border-box;
@@ -191,10 +217,9 @@ ul {
 
 .container .title {
     font-size: 70px;
-    line-height: 250px;
-    width: 1020px;
     margin: 0 auto;
     text-align: center;
+    padding: 200px 50px 100px;
 }
 
 .container .tips {
@@ -209,7 +234,7 @@ ul {
 }
 
 .container .content {
-    width: 1020px;
+    /* width: 1020px; */
     margin: 0 auto;
     overflow: hidden;
 }
@@ -238,4 +263,3 @@ ul {
     float: right;
     width: 50%;
 }
-
