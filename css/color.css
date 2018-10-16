@@ -1,0 +1,265 @@
+/* ------ basic ------ */
+html {
+    font-family: 'Microsoft YaHei', 'PingFang SC', 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    color: #2c3e50;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.breathe {
+    animation: breathe 5s infinite;
+    width: 160px;
+    height: 160px;
+    display: inline-block;
+    margin: 30px;
+    border-radius: 35px;
+}
+
+.shining img {
+    float: left;
+}
+
+/* ------ animation ------ */
+
+@keyframes breathe {
+    0% {
+        box-shadow: 0 0 1px 1px rgba(0, 0, 0, .01);
+    }
+    50% {
+        box-shadow: 0 0 3px 3px rgba(0, 0, 0, .2);
+    }
+    100% {
+        box-shadow: 0 0 1px 1px rgba(0, 0, 0, .01);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    1% {
+        display: block;
+        opacity: 0;
+    }
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn-2 {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    1% {
+        display: block;
+        opacity: 0;
+    }
+    100% {
+        display: block;
+        opacity: .6;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        display: block;
+        opacity: 1;
+    }
+    99% {
+        display: block;
+        opacity: 0;
+    }
+    100% {
+        display: none;
+        opacity: 0;
+    }
+}
+
+/* ------ common ------ */
+.hide {
+    display: none;
+}
+
+.fx-lt {
+    float: left;
+}
+
+.fx-rt {
+    float: right;
+}
+
+.fx-clear {
+    clear: both;
+}
+
+.tx-center {
+    text-align: center;
+}
+
+.tx-large {
+    font-size: 36px;
+}
+
+.color-item {
+    width: 150px;
+    height: 60px;
+    display: inline-block;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+}
+
+.color-default {
+    background: #fddb00;
+}
+
+/* ------ loading ------ */
+.loading {
+    background: #FCDC58 url("../img/color/loading.gif") center 0 no-repeat;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: block;
+}
+
+.loading.hide {
+    animation: fadeOut 3s;
+}
+
+/* ------ navigator ------ */
+.navigator {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .2);
+}
+
+.navigator .navigator-page {
+    overflow: hidden;
+    width: 1020px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.navigator .logo {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    border: 1px solid #eee;
+    border-radius: 40px;
+    background: url('../img/color/jilly_180.png') center center no-repeat;
+    background-size: 40px 40px;
+    float: left;
+}
+
+.navigator .name {
+    float: left;
+    margin-top: 10px;
+    line-height: 40px;
+    margin-left: 10px;
+}
+
+/* ------ footer ------ */
+.footer {
+    background-color: #ecf0f1;
+}
+
+.footer .footer-page {
+    width: 1020px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+/* ------ main ------ */
+.main {
+    width: 100%;
+    height: 100%;
+}
+
+.main-page {
+    max-width: 100%;
+    min-height: 100%;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #eee;
+}
+
+/* ------ container ------ */
+.container p {
+    line-height: 30px;
+    font-size: 24px;
+}
+
+.container .title {
+    font-size: 70px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 200px 50px 100px;
+}
+
+.container .tips {
+    line-height: 40px;
+    font-size: 36px;
+}
+
+.container .desc {
+    font-size: 24px;
+    line-height: 48px;
+    text-align: center;
+}
+
+.container .content {
+    /* width: 1020px; */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.container .content .list {
+    line-height: 1.5em;
+}
+
+.container .img-list {
+    overflow: hidden;
+}
+
+.container .img-list .img-item {
+    margin: 0 40px 40px 40px;
+    width: 250px;
+    text-align: center;
+    float: left;
+}
+
+.container .content-left {
+    float: left;
+    width: 50%;
+}
+
+.container .content-right {
+    float: right;
+    width: 50%;
+}
