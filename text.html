@@ -2,61 +2,115 @@
 <html>
 
 <head>
-    <title>文本两端对齐 by hongchenok</title>
+    <title>test for 面试题</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <style>
-    .box {
-        width: 50%;
-        padding: 20px;
-        margin: 20px auto;
-        background-color: #f0f3f9;
-        text-align: justify;
-        text-justify: distribute-all-lines;
-    }
-    
-    .list {
-        width: 120px;
-        display: inline-block;
-        *display: inline;
-        *zoom: 1;
-        padding-bottom: 20px;
-        text-align: center;
-        vertical-align: top;
-    }
-    
-    .justify_fix {
-        display: inline-block;
-        *display: inline;
-        *zoom: 1;
-        width: 100%;
-        height: 0;
-        overflow: hidden;
-    }
-    
-    .list_head {
-        height: 50px;
-        width: 50px;
-        background-color: red;
-        float: left;
-    }
-    
-    .list_content {
-        width: 70px;
-        height: 50px;
-        float: left;
-    }
-    
-    .clearfix:after {
-        content: ".";
-        display: block;
-        height: 0;
-        clear: both;
-        visibility: hidden;
-    }
-    
-    * html .clearfix {
-        height: 1%;
-    }
+        .box {
+            width: 50%;
+            padding: 20px;
+            margin: 20px auto;
+            background-color: #f0f3f9;
+            text-align: justify;
+            text-justify: distribute-all-lines;
+        }
+
+        .list {
+            width: 120px;
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+            padding-bottom: 20px;
+            text-align: center;
+            vertical-align: top;
+        }
+
+        .justify_fix {
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .list_head {
+            height: 50px;
+            width: 50px;
+            background-color: red;
+            float: left;
+        }
+
+        .list_content {
+            width: 70px;
+            height: 50px;
+            float: left;
+        }
+
+        .clearfix:after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .box-1 {
+            width: 10%;
+            padding-top: 10%;
+            background-color: #0b4fa1;
+        }
+
+        .box-1-1 {
+            width: 10%;
+            padding-bottom: 10%;
+            background-color: #0e62c7;
+        }
+
+        .box-2 {
+            width: 10vw;
+            height: 10vw;
+            background-color: #1aad19;
+        }
+
+        .box-2-1 {
+            width: 10vh;
+            height: 10vh;
+            background-color: #00b19d;
+        }
+
+        .box-3 {
+            width: 10%;
+            position: relative;
+            background-color: #1b6d85;
+            overflow: hidden;
+        }
+
+        .box-3:after {
+            content: '';
+            margin-top: 100%;
+            display: block;
+        }
+
+        .box-3-1 {
+            width: 10%;
+            position: relative;
+            background-color: #3c6ffa;
+            overflow: hidden;
+        }
+
+        .box-3-1:after {
+            content: '';
+            padding-top: 100%;
+            display: block;
+        }
+
+        #eventSpreadDiv {
+            background-color: #eee;
+        }
+
+        * html .clearfix {
+            height: 1%;
+        }
     </style>
 </head>
 
@@ -91,6 +145,521 @@
         </div>
         <span class="justify_fix"></span>
     </div>
+    <div class="box-1"></div>
+    <div class="box-1-1"></div>
+    <div class="box-2"></div>
+    <div class="box-2-1"></div>
+    <div class="box-3"></div>
+    <div class="box-3-1"></div>
+    <div id="eventSpreadDiv">
+        <span id="eventSpreadBtn">点击</span>
+    </div>
 </body>
+<script type="text/javascript">
+    // "use strict";
+
+    // 事件驱动
+    // document.querySelector("#eventSpreadBtn").addEventListener("click", function (e) {
+    //     console.log(e.currentTarget.id)
+    // }, false);
+
+    // document.querySelector("#eventSpreadDiv").addEventListener("click", function (e) {
+    //     console.log("捕获" + e.currentTarget.id);
+    // }, true);
+
+    // document.querySelector("#eventSpreadDiv").addEventListener("click", function (e) {
+    //     console.log("冒泡" + e.currentTarget.id);
+    // }, false);
+
+    // let a = [1,2,3];
+    // let b = a;
+
+    // console.log('a =1= ', a);
+    // console.log('b =1= ', b);
+
+    // b[0] = 4;
+
+    // console.log('a =2= ', a);
+    // console.log('b =2= ', b);
+
+    // b = 4;
+
+    // console.log('a =3= ', a);
+    // console.log('b =3= ', b);
+
+    // var a = new Number(1);
+    // var b = new Number(1);
+
+    // console.log('a == b', a == b);
+    // console.log('a === b', a === b);
+
+    // var c = [1,2,3];
+    // var d = [1,2,3];
+    // var e = c;
+
+    // console.log('c == d', c == d);
+    // console.log('c === d', c === d);
+    // console.log('c == e', c == e);
+    // console.log('c === e', c === e);
+
+    // var a = 0;
+    // var b = 1;
+    // var c = 2;
+
+    // var i = (a ? a : (b ? b : (c ? c : 3)));
+
+    // console.log('a == ', a);
+    // console.log('b == ', b);
+    // console.log('c == ', c);
+    // console.log('i == ', i);
+
+    // var num16_1 = 0x1F4;
+    // var num16_2 = 4 + 15*16 + 1*16*16;
+
+    // console.log('num16_1 == ', num16_1);
+    // console.log('num16_2 == ', num16_2);
+
+    // 0-9(9), a-z(26)
+    // var num = 95;
+    // var num32 = num.toString(35);
+
+    // console.log('num32 == ', num32);
+
+    // var a = new Number(1); // 传址
+    // var b = Number(1); // 传值
+    // var c = 1; // 传值
+
+    // console.log('a == b', a == b);
+    // console.log('a === b', a === b);
+
+    // console.log('a == c', a == c);
+    // console.log('a === c', a === c);
+
+    // console.log('b == c', b == c);
+    // console.log('b === c', b === c);
+
+    // function fn() {
+    //     this.a = 1;
+    //     this.b = function() {
+    //         return 'this is fn';
+    //     }
+    // }
+
+    // var num1 = new Number(1);
+    // var num2 = Number(1);
+    // var num3 = 1;
+    //
+    // console.log('num1 == typeof == ', typeof num1);
+    // console.log('num1 == constructor == ', num1.constructor);
+    //
+    // console.log('num2 == typeof == ', typeof num2);
+    // console.log('num2 == constructor == ', num2.constructor);
+    //
+    // console.log('num3 == typeof == ', typeof num3);
+    // console.log('num3 == constructor == ', num3.constructor);
+
+    // var arr = new String("123456");
+    // console.log('arr == ', arr);
+    // console.log('substr in arr == ', "substr" in arr);
+    // console.log('splice in arr == ', "splice" in arr);
+
+    // var str1 = new String("");
+    // var str2 = "456";
+    // str1 && alert(str1);
+    // str1 && console.log('str1 == ', str1);
+    // str2 && console.log('str2 == ', str2);
+
+    // var val = new Number(1);
+    // console.log('val == ', val.valueOf());
+
+    // console.log(parseFloat("123")); // 123
+
+    // var pro = function () {
+    // };
+    // console.log('pro.__proto__ == ', pro.__proto__);
+    // console.log('pro.prototype == ', pro.prototype);
+    // console.log('pro.constructor == ', pro.constructor);
+    // console.log('pro.constructor.prototype == ', pro.constructor.prototype);
+    // console.log('pro.__proto__ === pro.prototype ', pro.__proto__ === pro.prototype);
+
+    // var a = {};
+    // console.log(a.prototype);  //undefined
+    // console.log(a.__proto__);  //Object {}
+
+    // 数组示例
+    // 给arr数组排序
+    // 排序优先级：总分 > 数学成绩 > 年龄
+    // 按总分排序，如总分相同，比较数学成绩；如数学成绩相同，比较年龄。
+    // var lc = {
+    //         name: 'lc',
+    //         age: '10',
+    //         math: '85',
+    //         english: '85'
+    //     },
+    //     twz = {
+    //         name: 'twz',
+    //         age: '11',
+    //         math: '85',
+    //         english: '85'
+    //     },
+    //     jyf = {
+    //         name: 'jyf',
+    //         age: '13',
+    //         math: '90',
+    //         english: '90'
+    //     },
+    //     sc = {
+    //         name: 'sc',
+    //         age: '12',
+    //         math: '90',
+    //         english: '80'
+    //     };
+    // var arr = [lc, jyf, twz, sc];
+
+    // 冒泡之后，小的在前(a,b) 大的在前(b,a)
+    // arr.sort(function(b, a) {
+    //     var aTotal = a.math + a.english;
+    //     var bTotal = b.math + b.english;
+
+    //     // 比较总成绩
+    //     if (aTotal == bTotal) {
+    //         if (a.math == b.math) {
+    //             return (a.age - b.age);
+    //         } else {
+    //             return (a.math - b.math);
+    //         }
+    //     } else {
+    //         return (aTotal - bTotal);
+    //     }
+    // });
+
+    // 倒叙
+    // arr.reverse();
+    // console.log('arr == ', arr);
+
+    // var arr = [2, 5, 1, 3];
+    // arr.sort((a, b) => {
+    //     console.log('arr == ', arr);
+    //     console.log('a == ', a);
+    //     console.log('b == ', b);
+    //     console.log(' ========== ');
+    //     return a - b;
+    // });
+    // console.log('arr == ', arr);
+
+    // setTimeout(function() {
+    //     console.log(1);
+    // }, 0);
+    // new Promise(function executor(resolve) {
+    //     console.log(2);
+    //     for (var i = 0; i < 100000000; i++) {
+    //         i == 99999999 && resolve();
+    //     }
+    //     console.log(3);
+    // }).then(function() {
+    //     console.log(4);
+    // });
+    // console.log(5);
+
+    // let a = {
+    //     name: 'jyf'
+    // };
+
+    // let b = a;
+
+    // console.log('a =1= ', a);
+    // console.log('b =1= ', b);
+
+    // a.name = 'lc';
+
+    // console.log('a =2= ', a);
+    // console.log('b =2= ', b);
+
+    // var a = 0;
+    // function make() {
+    //     // console.log('a =1= ', a); // undefined
+    //     a = 2;
+    //     console.log('a =2= ', a); // 2
+    // }
+    // make();
+    // console.log('a =3= ', a); // 0
+    // a = 3;
+
+    // var x = 1, // x=1
+    //     y = z = 0; //y=0,z=0
+
+    // function add(n) {
+    //     return n = n + 1;
+    // }
+
+    // y = add(x); // y=4
+
+    // console.log('y == ', y);
+
+    // function add(n) {
+    //     return n = n + 3;
+    // }
+
+    // z = add(x); // z=4
+
+    // function f1() {
+    //     var n = 100;
+    //     nAdd = function() {
+    //         n += 1;
+    //         console.log('n =nAdd= ', n);
+    //     }
+
+    //     function f2() {
+    //         // alert(n);
+    //         console.log('n == ', n);
+    //     }
+    //     return f2;
+    // }
+
+    // var result1 = f1;
+    // console.log('typeof result =1= ', typeof result1);
+    // console.log('result =1= ', result1);
+    // console.log('result.toString =1= ', result1.toString());
+
+    // var result2 = f1();
+    // console.log('typeof result =2= ', typeof result2);
+    // console.log('result =2= ', result2);
+    // console.log('result.toString =2= ', result2.toString());
+
+    // console.log('===1===');
+    // result(); // 100
+    // console.log('===2===');
+    // nAdd(); // 101
+    // console.log('===3===');
+    // result(); // 100
+    // console.log('===4===');
+
+    // var a;
+    // alert(typeof a); // undefined
+    // alert(b); // 报错
+
+    // var undefined;
+    // console.log('undefined == null', undefined == null); // true
+    // console.log('1 == true', 1 == true); // true
+    // console.log('"1" == "true"', '1' == 'true'); // false
+    // console.log('1 == "true"', 1 == 'true'); // false
+    // console.log('2 == true', 2 == true); // true -> false
+    // console.log('2 != true', 2 != true); // true
+    // console.log('!2', !2); // false
+    // console.log('"2" == true', "2" == true); // true -> false
+    // console.log('0 == false', 0 == false); // true
+    // console.log('0 == ""', 0 == ""); // false
+    // console.log('NaN == NaN', NaN == NaN); // true
+    // console.log('[] == false', [] == false); // false
+    // console.log('[] == ![]', [] == ![]); // false
+    // console.log('[] == 0', [] == 0); // true
+    // console.log('![] == 0', ![] == 0); // true
+    // console.log('!0 == 0', !0 == 0); // false
+
+    // var foo = "11"+2-"1";
+    // console.log(foo); // "112"-"1"
+    // console.log(typeof foo); // number:111
+
+    // var foo2 = 11+"2"-"1";
+    // console.log(foo2); // 
+    // console.log(typeof foo2); //
+
+    // var a = new Object();
+    // a.value = 1;
+    // b = a;
+    // b.value = 2;
+    // console.log(a.value);
+
+    // function fn(a) {
+    //     console.log(a); //
+    //     var a = 2;
+    //     function a(){};
+    //     console.log(a);
+    // }
+    // fn(1);
+
+    // var f = true;
+    // if (f === true) {
+    //     var a = 10;
+    // }
+    // function fn() {
+    //     var b = 20;
+    //     c = 30;
+    // }
+    // fn();
+    // console.log('a == ', a); // 10
+    // // console.log('b == ', b); // b is not defined
+    // console.log('c == ', c); // 30
+
+    // var a = 10;
+    // a.pro = 10;
+    // console.log('a =1= ', a);
+    // console.log('a.pro == ', a.pro);
+    // console.log('typeof a == ', typeof a);
+    // console.log('a =2= ', a.pro + a);
+    // console.log('a =3= ', undefined + a);
+
+    // var s = 'hello';
+    // s.pro = 'world';
+    // console.log('s =1= ', s);
+    // console.log('s.pro == ', s.pro);
+    // console.log('typeof s == ', typeof s);
+    // console.log('s =2= ', s.pro + s);
+
+    // console.log(typeof fn);
+    // function fn(){}
+    // var fn = 1;
+    // console.log(typeof fn);
+
+    // var a = 'undefined';
+    // var b = 'false';
+    // var c = '';
+    // function assert(val){
+    //     if (val) {
+    //         alert(true);
+    //     } else {
+    //         alert(false);
+    //     }
+    // }
+    // assert(a);
+    // assert(b);
+    // assert(c);
+
+    // var a = 1;
+    // var b = 2;
+    // console.log('a & b == ', a && b);
+
+    // ------------------------------------- //
+
+    // var s = "http://www.mysite.cn/index.html";
+
+    // var a = s.substr(s.length - 4, 4);
+    // console.log('a == ', a);
+
+    // var b = s.substr(s.lastIndexOf('.') + 1, 4);
+    // console.log('b == ', b);
+
+    // var c = s.substr(-4, 4);
+    // console.log('c == ', c);
+
+    // var d = s.substring(s.lastIndexOf('.') + 1, s.length);
+    // console.log('d == ', d);
+
+    // var e = s.slice(s.lastIndexOf('.') + 1, s.length);
+    // console.log('e == ', e);
+
+    // var f = s.slice(-4);
+    // console.log('f == ', f);
+
+    // ------------------------------------- //
+
+    // var s = "javascript";
+    // var b = s.replace(/(script)/, "$1, $&, $`, $'");
+
+    // console.log('b == ', b);
+
+    // ------------------------------------- //
+
+    // var s = '1a2b3c4d5e6f7g8';
+    // var a = s.split(/\d+/);
+    // var b = a.filter(function (currentValue, index, arr) {
+    //     return currentValue !== '';
+    // });
+
+    // console.log('a == ', a);
+    // console.log('a.length == ', a.length);
+    // console.log('b == ', b);
+
+    // ------------------------------------- //
+
+    // left(string, number);
+    // String.left(number);
+    // var left = Object.prototype.left = function () {
+    //     var len = arguments.length;
+    //     switch (len) {
+    //         case 0: // 没有参数
+    //             throw new Error('缺少参数');
+    //             break;
+    //         case 1: // 原型方法
+    //             var l = arguments[0]; // 截取的长度
+    //             if (l > 0) {
+    //                 return this.substring(0, l);
+    //             } else if (l < 1) {
+    //                 return '';
+    //             }
+    //             throw new Error('参数必须是数字');
+    //             break;
+    //         default: // 静态方法
+    //             var s = arguments[0]; // 截取的长度
+    //             if (typeof s === 'string') {
+    //                 var l = arguments[1]; // 截取的长度
+    //                 if (l > 0) {
+    //                     return s.substring(0, l);
+    //                 } else if (l < 1) {
+    //                     return '';
+    //                 }
+    //             }
+    //             throw new Error('参数必须是数字');
+    //             break;
+    //     }
+    // }
+
+    // console.log('String == ', );
+
+    // var s = 'jiangyefeng';
+    // var a = s.left(5);
+    // var b = left(s, 5);
+    // var c = window.left(s, 5);
+
+    // // console.log();
+
+    // console.log('a == ', a);
+    // console.log('b == ', b);
+    // console.log('c == ', c);
+
+    // ------------------------------------- //
+
+    // var a = [1,2,3,4,5];
+    // console.log('a[true] == ', a[true]);
+
+    // var a = {
+    //     "NaN": 1
+    // };
+    // console.log('a[NaN] == ', a[NaN]);
+    // console.log('a["NaN"] == ', a["NaN"]);
+
+    Function.prototype.yeye = function () {
+        console.log('this is Function baba()');
+    }
+
+    Object.prototype.baba = function () {
+        console.log('this is Object mine()');
+    }
+
+    String.prototype.son = function () {
+        console.log('this is String own()');
+    }
+
+    var obj = new Object();
+    obj.mine();
+
+    console.log('Object.prototype == ', Object.prototype);
+    console.log('obj.__proto__ == ', obj.__proto__);
+    console.log('obj.constructor == ', obj.constructor);
+    console.log('Object.prototype === obj.__proto__ == ', Object.prototype === obj.__proto__);
+    console.log('Object.prototype === obj.constructor == ', Object.prototype === obj.constructor);
+
+    var str = new String();
+
+    str.own();
+    str.mine(); // 被继承下来的方法
+    str.__proto__.mine(); // Object 对象中的方法
+
+    console.log('str == ', str);
+    // console.log('str.prototype == ', str.prototype);
+    console.log('str.__proto__ == ', str.__proto__);
+
+    // str.__proto__
+</script>
 
 </html>

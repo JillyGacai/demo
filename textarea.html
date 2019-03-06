@@ -19,33 +19,31 @@
 </body>
 <script type="text/javascript" src="lib/jquery.min.js"></script>
 <script type="text/javascript">
-$(function() {
-    $('input[type="button"]').on('click', function() {
-        var $this = $(this),
-            name = $this.attr('name'),
-            $textarea = $('textarea[name="text"]'),
-            string = $textarea.val();
+    $(function () {
+        $('input[type="button"]').on('click', function () {
+            var $this = $(this),
+                name = $this.attr('name'),
+                $textarea = $('textarea[name="text"]'),
+                string = $textarea.val();
 
-        switch (name) {
-            case 'input':
-                console.log('val == ', $textarea.val());
-                console.log('text == ', $textarea.text());
-                console.log('html == ', $textarea.html());
-                break;
-            case 'val':
-                $textarea.val(string);
-                break;
-            case 'text':
-                $textarea.text(string);
-                break;
-            case 'html':
-                $textarea.html(string);
-
-
-                break;
-        }
+            switch (name) {
+                case 'input':
+                    console.log('val == ', $textarea.val());
+                    console.log('text == ', $textarea.text());
+                    console.log('html == ', $textarea.html());
+                    break;
+                case 'val':
+                    $textarea.val(string);
+                    break;
+                case 'text':
+                    $textarea.text(string);
+                    break;
+                case 'html':
+                    $textarea.html(string);
+                    break;
+            }
+        });
     });
-});
 </script>
 
 </html>
