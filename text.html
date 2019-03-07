@@ -628,38 +628,51 @@
     // console.log('a[NaN] == ', a[NaN]);
     // console.log('a["NaN"] == ', a["NaN"]);
 
-    Function.prototype.yeye = function () {
-        console.log('this is Function baba()');
-    }
+    // Function.prototype.yeye = function () {
+    //     console.log('this is Function baba()');
+    // }
 
-    Object.prototype.baba = function () {
-        console.log('this is Object mine()');
-    }
+    // Object.prototype.baba = function () {
+    //     console.log('this is Object mine()');
+    // }
 
-    String.prototype.son = function () {
-        console.log('this is String own()');
-    }
+    // String.prototype.son = function () {
+    //     console.log('this is String own()');
+    // }
 
-    var obj = new Object();
-    obj.mine();
+    // var obj = new Object();
+    // obj.mine();
 
-    console.log('Object.prototype == ', Object.prototype);
-    console.log('obj.__proto__ == ', obj.__proto__);
-    console.log('obj.constructor == ', obj.constructor);
-    console.log('Object.prototype === obj.__proto__ == ', Object.prototype === obj.__proto__);
-    console.log('Object.prototype === obj.constructor == ', Object.prototype === obj.constructor);
+    // console.log('Object.prototype == ', Object.prototype);
+    // console.log('obj.__proto__ == ', obj.__proto__);
+    // console.log('obj.constructor == ', obj.constructor);
+    // console.log('Object.prototype === obj.__proto__ == ', Object.prototype === obj.__proto__);
+    // console.log('Object.prototype === obj.constructor == ', Object.prototype === obj.constructor);
 
-    var str = new String();
+    // var str = new String();
 
-    str.own();
-    str.mine(); // 被继承下来的方法
-    str.__proto__.mine(); // Object 对象中的方法
+    // str.own();
+    // str.mine(); // 被继承下来的方法
+    // str.__proto__.mine(); // Object 对象中的方法
 
-    console.log('str == ', str);
-    // console.log('str.prototype == ', str.prototype);
-    console.log('str.__proto__ == ', str.__proto__);
+    // console.log('str == ', str);
+    // // console.log('str.prototype == ', str.prototype);
+    // console.log('str.__proto__ == ', str.__proto__);
 
-    // str.__proto__
+    // // str.__proto__
+
+    // ------------------------------------- //
+
+    // var a = [];
+    // a[2] = 2;
+    // a[100] = 100;
+    // for (var i in a) {
+    //     console.log('a[' + i + '] == ', a[i]);
+    // }
+    // console.log('a == ', a);
+    // console.log('this is click ...');
+    // console.log('this is work ...');
+    
 </script>
 
 </html>
