@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>多级菜单</title>
+    <style>
+        .menu-panel {
+            width: 240px;
+            line-height: 20px;
+            font-size: 14px;
+        }
+
+        .menu-panel .menu-label {
+            padding: 10px;
+            background: #34495e;
+            margin-bottom: 10px;
+            color: #fff;
+
+            border-radius: 2px;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .23);
+        }
+
+        .menu-item .menu-item > .menu-label {
+            margin-left: 20px;
+        }
+
+        .menu-item .menu-item > .menu-item .menu-label {
+            margin-left: 40px;
+        }
+
+        .menu-item .menu-item {
+            display: none;
+        }
+
+        .menu-item:hover > .menu-item,
+        .menu-item.active > .menu-item,
+        .menu-item.active {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="menu-panel">
+    <div class="menu-item active">
+        <div class="menu-label">菜单 A</div>
+
+        <div class="menu-item">
+            <div class="menu-label">菜单 A.1</div>
+            <div class="menu-item active">
+                <div class="menu-label">菜单 A.1.1</div>
+                <div class="menu-label">菜单 A.1.2</div>
+                <div class="menu-label">菜单 A.1.3</div>
+                <div class="menu-label">菜单 A.1.4</div>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-label">菜单 A.2</div>
+            <div class="menu-item">
+                <div class="menu-label">菜单 A.2.1</div>
+                <div class="menu-label">菜单 A.2.2</div>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-label">菜单 A.3</div>
+            <div class="menu-item">
+                <div class="menu-label">菜单 A.3.1</div>
+                <div class="menu-label">菜单 A.3.2</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <div class="menu-label">菜单 B</div>
+
+        <div class="menu-item">
+            <div class="menu-label">菜单 B.1</div>
+            <div class="menu-item">
+                <div class="menu-label">菜单 B.1.1</div>
+                <div class="menu-label">菜单 B.1.2</div>
+                <div class="menu-label">菜单 B.1.3</div>
+                <div class="menu-label">菜单 B.1.4</div>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-label">菜单 B.2</div>
+            <div class="menu-item">
+                <div class="menu-label">菜单 B.2.1</div>
+                <div class="menu-label">菜单 B.2.2</div>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-label">菜单 B.3</div>
+            <div class="menu-item">
+                <div class="menu-label">菜单 B.3.1</div>
+                <div class="menu-label">菜单 B.3.2</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

@@ -286,6 +286,7 @@ p {
     body {
         min-width: 1024px;
     }
+
     .navigator-page,
     .banner-page,
     .footer-page,
@@ -300,6 +301,7 @@ p {
     body {
         min-width: 768px;
     }
+
     .navigator-page,
     .banner-page,
     .footer-page,
@@ -314,13 +316,16 @@ p {
     *[for='wide'] {
         display: none;
     }
+
     *[for='narrow'] {
         display: block;
     }
+
     body {
         min-width: 100%;
         background: url('../img/index_wap/world_map.gif') center 0 no-repeat;
     }
+
     .navigator-page,
     .banner-page,
     .footer-page,
@@ -329,27 +334,32 @@ p {
         padding-right: 20px;
         padding-left: 20px;
     }
+
     .navigator-page {
         position: relative;
         height: 92px;
         padding: 30px 20px;
     }
+
     .navigator .logo {
         float: left;
         width: 180px;
         height: 32px;
         background: url('../img/index_wap/logo.png') top left no-repeat;
     }
+
     .navigator .logo .describe {
         line-height: 14px;
         padding: 18px 0 0 63px;
     }
+
     .navigator .menu {
         float: right;
         width: 24px;
         height: 32px;
         background: url('../img/index_wap/menu.png') center right no-repeat;
     }
+
     .navigator .menu-list {
         position: absolute;
         z-index: 5;
@@ -360,9 +370,11 @@ p {
         padding: 0;
         box-shadow: 0 8px 24px 0 rgba(194, 193, 192, .4);
     }
+
     .navigator .menu-list.active {
         display: block;
     }
+
     .navigator .menu-list li {
         line-height: 36px;
         float: none;
@@ -374,71 +386,87 @@ p {
         border-bottom: none;
         background-color: #fff;
     }
+
     .navigator .menu-list li:hover,
     .navigator .menu-list li.active {
         background-color: #faaa31;
     }
+
     .navigator .menu-list li a {
         display: block;
     }
+
     .navigator .menu-list li:hover a,
     .navigator .menu-list li.active a {
         color: #fff;
     }
+
     .banner {
         background: none;
     }
+
     .banner-page {
         position: relative;
         height: 550px;
     }
+
     .banner h1[for='narrow'] {
         font-size: 32px;
         line-height: 50px;
         padding-top: 110px;
         text-align: center;
     }
+
     .banner .btn-try-now {
         margin: 50px auto;
     }
+
     .feature-page {
         background: url('../img/index_wap/logo_lg_left.png') 40px top no-repeat;
     }
+
     .feature-panel {
         background-color: transparent;
         box-shadow: none;
     }
+
     .feature-list {
         margin-top: -40px;
         padding-top: 0;
         padding-bottom: 0;
     }
+
     .feature-list li {
         position: relative;
         float: none;
         width: 90%;
         padding: 50px 40px;
     }
+
     .feature-list li.item-1,
     .feature-list li.item-3 {
         z-index: 5;
         background-color: #fff;
         box-shadow: 0 8px 24px 0 rgba(194, 193, 192, .4);
     }
+
     .feature-list li.item-2,
     .feature-list li.item-4 {
         z-index: 4;
         margin-top: -100px;
         padding-top: 170px;
     }
+
     .feature-list li.item-2,
     .feature-list li.item-3 {
         margin-right: 0;
         margin-left: auto;
     }
+
     .feature-list li.item-3 {
         margin-top: 150px;
     }
+
     .feature-list li.item-3::before {
         position: absolute;
         top: -60px;
@@ -448,19 +476,23 @@ p {
         content: '';
         background: url('../img/index_wap/logo_lg_right.png') right top no-repeat;
     }
+
     .feature-list h3 {
         font-size: 20px;
         margin-bottom: 20px;
     }
+
     .feature-list .feature-number {
         position: absolute;
         right: 40px;
     }
+
     .feature-list .feature-number span {
         font-size: 20px;
         line-height: 22px;
         padding-bottom: 0;
     }
+
     .footer .footer-left,
     .footer .footer-right {
         float: none;
@@ -468,13 +500,16 @@ p {
         padding-right: 40px;
         padding-left: 40px;
     }
+
     .footer .footer-left ul {
         float: none;
         margin-bottom: 30px;
     }
+
     .footer .footer-user {
         margin-right: 100px;
     }
+
     .footer ul li.title {
         font-size: 20px;
     }

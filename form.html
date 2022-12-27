@@ -41,6 +41,22 @@
         color: #fff;
         font-style: normal;
     }
+
+    table {
+        border: 1px solid #eee;
+    }
+    td {
+        border: 1px solid #eee;
+    }
+
+    .bg {
+        width: 400px;
+        height: 320px;
+        background: url('img/default/banner_2.jpg') no-repeat;
+        background-size: cover;
+        background-position: 50%;
+        float: left;
+    }
     </style>
 </head>
 
@@ -48,6 +64,25 @@
     <div class="range">
         <span class="value"><i>0</i></span>
     </div>
+
+    <div class="bg">
+        &nbsp;
+    </div>
+
+    <table>
+        <tbody>
+            <tr>
+                <td rowspan="2">跨行</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+        </tbody>
+    </table>
+    
 </body>
 <script type="text/javascript" src="lib/jquery.min.js"></script>
 <script type="text/javascript">

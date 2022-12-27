@@ -1,4 +1,4 @@
-        html {
+html {
     font-family: 'Microsoft YaHei', 'PingFang SC', 'Arial';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -81,7 +81,7 @@ ul {
 
 .page-content img {
     display: block;
-    max-width: 100%!important;
+    max-width: 100% !important;
     margin-top: 6px;
 }
 
@@ -138,7 +138,7 @@ ul {
     width: 32px;
     height: 32px;
     content: '';
-    background-size: 30px 30px!important;
+    background-size: 30px 30px !important;
 }
 
 .choice.correct::before {
@@ -186,7 +186,7 @@ ul {
 
 .choice .choice-txt .text img {
     display: block;
-    max-width: 100%!important;
+    max-width: 100% !important;
     margin-top: 6px;
 }
 
@@ -219,7 +219,7 @@ ul {
     width: 32px;
     height: 32px;
     content: '';
-    background-size: 30px 30px!important;
+    background-size: 30px 30px !important;
 }
 
 .fill.correct::before {
@@ -355,7 +355,7 @@ ul {
     width: 22px;
     height: 22px;
     background: url('../img/default/btn_close.png') center center no-repeat;
-    background-size: 15px 16px!important;
+    background-size: 15px 16px !important;
 }
 
 .modal-body {
@@ -380,7 +380,7 @@ ul {
 
 .modal .content .detail img {
     display: block;
-    max-width: 100%!important;
+    max-width: 100% !important;
     margin-top: 6px;
 }
 
@@ -396,10 +396,12 @@ ul {
         display: none;
         opacity: 0;
     }
+
     1% {
         display: block;
         opacity: 0;
     }
+
     100% {
         display: block;
         opacity: 1;
@@ -411,10 +413,12 @@ ul {
         display: none;
         opacity: 0;
     }
+
     1% {
         display: block;
         opacity: 0;
     }
+
     100% {
         display: block;
         opacity: .6;
@@ -425,56 +429,68 @@ ul {
 /* ------ 多dpi配置 ------ */
 
 @media only screen and (-webkit-min-device-pixel-ratio:2) {
+
     .choice.correct::before,
     .fill.correct::before {
         background: url('../img/default/icon_right@2x.png') center center no-repeat;
     }
+
     .choice.wrong::before,
     .fill.wrong::before {
         background: url('../img/default/icon_wrong@2x.png') center center no-repeat;
     }
+
     .modal .header span.close {
         background: url('../img/default/btn_close@2x.png') center center no-repeat;
     }
 }
 
 @media only screen and (min-device-pixel-ratio:2) {
+
     .choice.correct::before,
     .fill.correct::before {
         background: url('../img/default/icon_right@2x.png') center center no-repeat;
     }
+
     .choice.wrong::before,
     .fill.wrong::before {
         background: url('../img/default/icon_wrong@2x.png') center center no-repeat;
     }
+
     .modal .header span.close {
         background: url('../img/default/btn_close@2x.png') center center no-repeat;
     }
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio:3) {
+
     .choice.correct::before,
     .fill.correct::before {
         background: url('../img/default/icon_right@3x.png') center center no-repeat;
     }
+
     .choice.wrong::before,
     .fill.wrong::before {
         background: url('../img/default/icon_wrong@3x.png') center center no-repeat;
     }
+
     .modal .header span.close {
         background: url('../img/default/btn_close@3x.png') center center no-repeat;
     }
 }
 
 @media only screen and (min-device-pixel-ratio:3) {
+
     .choice.correct::before,
     .fill.correct::before {
         background: url('../img/default/icon_right@3x.png') center center no-repeat;
     }
+
     .choice.wrong::before,
     .fill.wrong::before {
         background: url('../img/default/icon_wrong@3x.png') center center no-repeat;
     }
+
     .modal .header span.close {
         background: url('../img/default/btn_close@3x.png') center center no-repeat;
     }

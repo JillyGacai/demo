@@ -1,0 +1,380 @@
+html {
+    font-family: 'microsoft yahei', 'pingfang sc', 'arial', sans-serif;
+    font-size: 14px;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.text-info {
+    color: aqua;
+}
+
+.text-success {
+    color: #2aff00;
+}
+
+.text-danger {
+    color: #e50111;
+}
+
+.text-warning {
+    color: #fff800;
+}
+
+.avatar {
+    width: 28px;
+    height: 28px;
+    background-color: #3498DB;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+/* 侧栏 */
+.aside,
+.content-panel {
+    box-sizing: border-box;
+    width: 280px;
+    background-color: #2C3E50;
+    height: 100%;
+    float: left;
+    border-right: 1px solid #494e69;
+    color: #fff;
+    font-size: 14px;
+}
+
+.row {
+    padding: 10px;
+    line-height: 22px;
+}
+
+.row + .row {
+    padding-top: 0;
+}
+
+.form-header {
+    font-size: 18px;
+}
+
+.form-label {
+    line-height: 24px;
+    margin-bottom: 5px;
+}
+
+.from-text {
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #494e69;
+}
+
+.from-text + .from-text {
+    border-top: none;
+}
+
+.text-label {
+    font-size: 18px;
+}
+
+.text-value {
+    margin-left: 5px;
+    font-size: 22px;
+}
+
+.form-list {
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.form-list li {
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #494e69;
+    transition: background-color .3s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.form-list li:hover,
+.form-list li.active {
+    background-color: #34495E;
+}
+
+.form-list li + li {
+    border-top: none;
+}
+
+.leader-list .avatar {
+    float: left;
+    margin-right: 10px;
+}
+
+.leader-list li {
+    overflow: hidden;
+}
+
+.leader-list li span {
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.form-cover {
+    overflow: hidden;
+}
+
+.form-cover img {
+    width: 100%;
+    border-radius: 3px;
+    background-color: #3498DB;
+    float: left;
+}
+
+.form-card {
+    display: flex;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #494e69;
+    border-radius: 3px;
+}
+
+.form-card-hd {
+    width: 90px;
+    height: 90px;
+    margin-right: 10px;
+}
+
+.form-card-hd img {
+    width: 100%;
+    border-radius: 3px;
+    background-color: #3498DB;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.form-card-bd {
+    width: 335px;
+}
+
+.form-card-bd .text-line {
+    word-break: break-all;
+    line-height: 18px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-content {
+    margin-top: 10px;
+}
+
+.form-content p {
+    margin-bottom: 8px;
+    line-height: 18px;
+    text-indent: 28px;
+    word-break: break-all;
+}
+
+.form-control {
+
+}
+
+.form-control input[type="text"] {
+    padding: 10px;
+    line-height: 20px;
+    border-radius: 3px;
+    background-color: #1d2a36;
+    border: 1px solid #494e69;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-button {
+    text-align: center;
+}
+
+.form-button button {
+    height: 36px;
+    line-height: 36px;
+    background-color: #e50111;
+    color: #fff;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .23);
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+    transition: background-color .3s;
+    letter-spacing: 1px;
+}
+
+.form-button button:hover {
+    background-color: #fc0317;
+}
+
+/* 主页 */
+.main {
+    margin-left: 280px;
+    height: 100%;
+    position: relative;
+}
+
+/* 地图侧栏 */
+.content-panel {
+    position: absolute;
+    top: 0;
+    overflow-y: auto;
+    display: none;
+}
+
+.content-panel[data-index="1"] {
+    left: 0;
+}
+
+.content-panel[data-index="2"] {
+    left: 280px;
+    width: 480px;
+}
+
+.content-panel .close {
+    width: 20px;
+    height: 20px;
+    background: url("../images/icon-close.png") no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+/* 百度地图 */
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+/* 重置部分样式 */
+.BMap_pop .BMap_bubble_title {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    background-color: #2C3E50;
+    width: 100%;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.BMap_pop .BMap_bubble_content {
+    font-size: 13px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    background-color: #2C3E50;
+    color: #fff;
+}
+
+/* 指示角 */
+.BMap_pop div:nth-child(8) {
+    display: none;
+}
+
+.BMap_pop div:nth-child(9) {
+    top: 15px !important;
+    height: auto !important;
+    left: 0 !important;
+    border-radius: 3px;
+    position: relative;
+    overflow: visible !important;
+}
+
+.BMap_pop div:nth-child(9)::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 10px solid;
+    border-color: #2C3E50 transparent transparent transparent;
+    left: 50%;
+    bottom: -20px;
+    margin-left: -10px;
+}
+
+/* 左上角删除按键 */
+.BMap_pop img {
+    top: 28px !important;
+    left: 202px !important;
+}
+
+/* 隐藏无用 */
+.BMap_top,
+.BMap_bottom,
+.BMap_center {
+    display: none;
+}
+
+.BMap_pop div:nth-child(1) div,
+.BMap_pop div:nth-child(3),
+.BMap_pop div:nth-child(5),
+.BMap_pop div:nth-child(7) {
+    display: none;
+}
+
+.BMap_pop .info-window-content {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.BMap_pop .info-window-content .info-window-content-hd {
+    display: block;
+    width: 52px;
+    height: 52px;
+    float: left;
+}
+
+.BMap_pop .info-window-content .info-window-content-hd img {
+    background-color: #3498DB;
+    width: 42px;
+    height: 42px;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.BMap_pop .info-window-content .info-window-content-bd {
+    display: block;
+    float: left;
+    width: 140px;
+    height: 52px;
+    color: #fff;
+    line-height: 16px;
+    margin-left: 10px;
+}
+
+.BMap_pop .info-window-content .info-window-content-bd .area {
+    line-height: 10px;
+}
+

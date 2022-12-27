@@ -7,7 +7,7 @@
     <title>色彩管理</title>
     <link rel="stylesheet" type="text/css" href="css/color.css"/>
     <script language="JavaScript" src="lib/jquery.min.js"></script>
-    <script language="JavaScript" src="js/color.js"></script>
+    <!-- <script language="JavaScript" src="js/color.js"></script> -->
 </head>
 <body>
 <!--<div class="loading"></div>-->
@@ -17,7 +17,7 @@
         <div class="name">嘎菜</div>
     </div>
 </div>
-<div class="main">
+<div class="main" style="color: rgb(123, 123, 123);">
     <div class="main-page" data-index="1">
         <div class="container">
             <div class="title">色彩管理</div>
@@ -120,4 +120,16 @@
     </div>
 </div>
 </body>
+<script>
+    let main = document.querySelector('.main');
+    console.log('main == ', main);
+
+    let style = main.style;
+    console.log('style == ', style);
+
+    let color = main.style.color;
+    console.log('color == ', color);
+
+    // main.style.color = '#eee';
+</script>
 </html>

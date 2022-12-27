@@ -244,3 +244,6 @@ var Alert = function(option) {
         $alert.trigger('modal.hide');
     }, 2000);
 };
+
+
+console.log('this is modal ...');

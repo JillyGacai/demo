@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>LayUI</title>
+    <link href="lib/layui-v2.5.6/layui/css/layui.css"/>
+    <script src="lib/layui-v2.5.6/layui/layui.all.js"></script>
+</head>
+<body>
+<h1>CSS Box</h1>
+<div class="box">
+    <div class="subline x"></div>
+    <div class="subline y"></div>
+    <div class="subline z"></div>
+    <div class="box-head hide"></div>
+    <div class="box-body">
+        <div class="box-outside">
+            <div class="board front"></div>
+            <div class="board back"></div>
+            <div class="board left"></div>
+            <div class="board right"></div>
+            <div class="board bottom"></div>
+        </div>
+        <div class="box-inside">
+            <div class="board front hide"></div>
+            <div class="board back hide"></div>
+            <div class="board left hide"></div>
+            <div class="board right hide"></div>
+            <div class="board bottom hide"></div>
+        </div>
+    </div>
+    <label for="endDate"></label><input id="endDate"/>
+</div>
+</body>
+<script language="JavaScript">
+    layui.laydate.render({
+        elem: '#endDate',
+        type: 'date',
+        trigger: 'click',
+        min: new Date(),
+        done: function (value, date, endDate) {
+        }
+    });
+</script>
+</html>
