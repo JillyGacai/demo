@@ -1,114 +1,114 @@
 <html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>js复制</title>
-    <script type="text/javascript">
-        function copyUrl2() {
-            var Url2 = document.getElementById("biao1");
-            Url2.select(); // 选择对象
-            document.execCommand("Copy"); // 执行浏览器复制命令
-            alert("已复制好，可贴粘。");
-        }
-    </script>
-    <style>
-        body {
-            color: #333;
-        }
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>js复制</title>
+  <script type="text/javascript">
+    function copyUrl2() {
+      var Url2 = document.getElementById("biao1");
+      Url2.select(); // 选择对象
+      document.execCommand("Copy"); // 执行浏览器复制命令
+      alert("已复制好，可贴粘。");
+    }
+  </script>
+  <style>
+    body {
+      color: #333;
+    }
 
-        /* tab li */
-        .tab {
-            padding: 0;
-            margin: 0;
-            display: flex;
-            background-color: #50bfff;
-            height: 100px;
-        }
+    /* tab li */
+    .tab {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      background-color: #50bfff;
+      height: 100px;
+    }
 
-        .tab li {
-            flex: 1;
-            list-style: none;
-            text-align: center;
-            display: flex;
-            align-items: center;
-        }
+    .tab li {
+      flex: 1;
+      list-style: none;
+      text-align: center;
+      display: flex;
+      align-items: center;
+    }
 
-        .tab li a {
-            width: 100%;            
-        }
+    .tab li a {
+      width: 100%;
+    }
 
-        .tab li img {
-            display: block;
-            margin: 0 auto;
-        }
+    .tab li img {
+      display: block;
+      margin: 0 auto;
+    }
 
-        .tab li span {
-            display: block;
-        }
+    .tab li span {
+      display: block;
+    }
 
-        .data-list {
-            border: 1px solid #eee;
-            width: 100%;
-            border-collapse:collapse;
-            font-size: 14px;
-            margin-top: 10px;
-        }
+    .data-list {
+      border: 1px solid #eee;
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      margin-top: 10px;
+    }
 
-        .data-list th,
-        .data-list td {
-            border: 1px solid #eee;
-            line-height: 30px;
-            padding: 0 10px;
-        }
+    .data-list th,
+    .data-list td {
+      border: 1px solid #eee;
+      line-height: 30px;
+      padding: 0 10px;
+    }
 
-        .data-list tr > td {
-            color: #bbb;
-        }
+    .data-list tr > td {
+      color: #bbb;
+    }
 
-        .data-list tr > td:first-child {
-            color: #333;
-        }
-    </style>
+    .data-list tr > td:first-child {
+      color: #333;
+    }
+  </style>
 </head>
 
 <body>
-    <!-- tab -->
-    <ul class="tab">
-        <li><a href="#"><img src="img/default/icon_right.png"/><span>名称</span></a></li>
-        <li><a href="#"><img src="img/default/icon_right.png"/><span>名称</span></a></li>
-        <li><a href="#"><img src="img/default/icon_right.png"/><span>名称</span></a></li>
-    </ul>
+<!-- tab -->
+<ul class="tab">
+  <li><a href="#"><img src="img/default/icon_right.png"/><span>名称</span></a></li>
+  <li><a href="#"><img src="img/default/icon_right.png"/><span>名称</span></a></li>
+  <li><a href="#"><img src="img/default/icon_right.png"/><span>名称</span></a></li>
+</ul>
 
-    <table class="data-list">
-        <thead>
-            <tr>
-                <th>表头1</th>
-                <th>表头2</th>
-                <th>表头3</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>列名1</td>
-                <td>数据1</td>
-                <td>数据2</td>
-            </tr>
-            <tr>
-                <td>列名2</td>
-                <td>数据2</td>
-                <td>数据3</td>
-            </tr>
-        </tbody>
-    </table>
+<table class="data-list">
+  <thead>
+  <tr>
+    <th>表头1</th>
+    <th>表头2</th>
+    <th>表头3</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>列名1</td>
+    <td>数据1</td>
+    <td>数据2</td>
+  </tr>
+  <tr>
+    <td>列名2</td>
+    <td>数据2</td>
+    <td>数据3</td>
+  </tr>
+  </tbody>
+</table>
 
-    <div class="form">
-        <div class="form-control">
-            <div class="form-label">标签</div>
-            <div class="form-input">
-                <button>打开列表</button>
-            </div>
-        </div>
+<div class="form">
+  <div class="form-control">
+    <div class="form-label">标签</div>
+    <div class="form-input">
+      <button>打开列表</button>
     </div>
+  </div>
+</div>
 
 </body>
 

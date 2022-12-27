@@ -1,77 +1,77 @@
 /* 遮罩带有0.3s，所有效果延迟0.5s */
 
 @keyframes breathe {
-    0% {
-        box-shadow: 0 0 1px 1px rgba(255, 255, 255, .1);
-    }
-    50% {
-        box-shadow: 0 0 2px 5px rgba(255, 255, 255, .9);
-    }
-    100% {
-        box-shadow: 0 0 1px 1px rgba(255, 255, 255, .1);
-    }
+  0% {
+    box-shadow: 0 0 1px 1px rgba(255, 255, 255, .1);
+  }
+  50% {
+    box-shadow: 0 0 2px 5px rgba(255, 255, 255, .9);
+  }
+  100% {
+    box-shadow: 0 0 1px 1px rgba(255, 255, 255, .1);
+  }
 }
 
 @keyframes pull-right {
-    0% {
-        transform: translate(-60px, 0);
-        opacity: 0;
-    }
-    100% {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
+  0% {
+    transform: translate(-60px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
 }
 
 @keyframes pull-up {
-    0% {
-        transform: translate(0, 60px);
-        opacity: 0;
-    }
-    100% {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
+  0% {
+    transform: translate(0, 60px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
 }
 
 @keyframes ch-pull-up {
-    0% {
-        transform: translate(0, 30px);
-        opacity: 0;
-    }
-    100% {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
+  0% {
+    transform: translate(0, 30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
 }
 
 
 /*animation: name duration timing-function delay iteration-count direction;*/
 
 .am-breathe {
-    -webkit-animation: breathe 4s linear 0s infinite;
-    -moz-animation: breathe 4s linear 0s infinite;
-    -o-animation: breathe 4s linear 0s infinite;
-    animation: breathe 4s linear 0s infinite;
+  -webkit-animation: breathe 4s linear 0s infinite;
+  -moz-animation: breathe 4s linear 0s infinite;
+  -o-animation: breathe 4s linear 0s infinite;
+  animation: breathe 4s linear 0s infinite;
 }
 
 .am-pull-right {
-    -webkit-animation: pull-right .5s ease .3s;
-    -moz-animation: pull-right .5s ease .3s;
-    -o-animation: pull-right .5s ease .3s;
-    animation: pull-right .5s ease .3s;
+  -webkit-animation: pull-right .5s ease .3s;
+  -moz-animation: pull-right .5s ease .3s;
+  -o-animation: pull-right .5s ease .3s;
+  animation: pull-right .5s ease .3s;
 }
 
 .am-pull-up {
-    -webkit-animation: pull-up .5s ease .3s;
-    -moz-animation: pull-up .5s ease .3s;
-    -o-animation: pull-up .5s ease .3s;
-    animation: pull-up .5s ease .3s;
+  -webkit-animation: pull-up .5s ease .3s;
+  -moz-animation: pull-up .5s ease .3s;
+  -o-animation: pull-up .5s ease .3s;
+  animation: pull-up .5s ease .3s;
 }
 
 .am-ch-pull-up {
-    -webkit-animation: ch-pull-up 1s ease .3s;
-    -moz-animation: ch-pull-up 1s ease .3s;
-    -o-animation: ch-pull-up 1s ease .3s;
-    animation: ch-pull-up 1s ease .3s;
+  -webkit-animation: ch-pull-up 1s ease .3s;
+  -moz-animation: ch-pull-up 1s ease .3s;
+  -o-animation: ch-pull-up 1s ease .3s;
+  animation: ch-pull-up 1s ease .3s;
 }

@@ -1,540 +1,546 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta name="renderer" content="webkit">
-    <title>图书数据日报表 | 四月天数据报表平台</title>
-    <!-- FAVICONS -->
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="../public/img/favicons/mstile-144x144.png">
-    <meta name="msapplication-config" content="../public/img/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="apple-touch-icon" sizes="57x57" href="../public/img/favicons/apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon" sizes="60x60" href="../public/img/favicons/apple-touch-icon-60x60.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="../public/img/favicons/apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="../public/img/favicons/apple-touch-icon-76x76.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="../public/img/favicons/apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon" sizes="120x120" href="../public/img/favicons/apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="../public/img/favicons/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="../public/img/favicons/apple-touch-icon-152x152.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="../public/img/favicons/apple-touch-icon-180x180.png" />
-    <link rel="icon" type="image/png" href="../public/img/favicons/android-chrome-192x192.png" sizes="192x192" />
-    <link rel="icon" type="image/png" href="../public/img/favicons/favicon-16x16.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="../public/img/favicons/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="../public/img/favicons/favicon-96x96.png" sizes="96x96" />
-    <link rel="manifest" href="../public/img/favicons/manifest.json" />
-    <link rel="shortcut icon" href="../public/img/favicons/favicon.ico" />
-    <!-- STYLE FILES -->
-    <link rel="stylesheet" type="text/css" href="../public/fonts/fontawesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="../public/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="../public/css/swiper.min.css" />
-    <link rel="stylesheet" type="text/css" href="../public/css/base.css" />
-    <link rel="stylesheet" type="text/css" href="../public/css/skins.css" />
-    <link rel="stylesheet" type="text/css" href="../public/css/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../public/css/view.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="../public/css/animation.css"> -->
-    <!-- JAVASCRIPT FILES LIBS -->
-    <script src="../public/lib/jquery.min.js"></script>
-    <script src="../public/lib/bootstrap.min.js"></script>
-    <script src="../public/lib/laytpl.min.js"></script>
-    <script type="text/javascript">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport">
+  <meta content="webkit" name="renderer">
+  <title>图书数据日报表 | 四月天数据报表平台</title>
+  <!-- FAVICONS -->
+  <meta content="#ffffff" name="msapplication-TileColor">
+  <meta content="../public/img/favicons/mstile-144x144.png" name="msapplication-TileImage">
+  <meta content="../public/img/favicons/browserconfig.xml" name="msapplication-config">
+  <meta content="#ffffff" name="theme-color">
+  <link href="../public/img/favicons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57"/>
+  <link href="../public/img/favicons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60"/>
+  <link href="../public/img/favicons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72"/>
+  <link href="../public/img/favicons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76"/>
+  <link href="../public/img/favicons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114"/>
+  <link href="../public/img/favicons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120"/>
+  <link href="../public/img/favicons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144"/>
+  <link href="../public/img/favicons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152"/>
+  <link href="../public/img/favicons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180"/>
+  <link href="../public/img/favicons/android-chrome-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+  <link href="../public/img/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+  <link href="../public/img/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+  <link href="../public/img/favicons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+  <link href="../public/img/favicons/manifest.json" rel="manifest"/>
+  <link href="../public/img/favicons/favicon.ico" rel="shortcut icon"/>
+  <!-- STYLE FILES -->
+  <link href="../public/fonts/fontawesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+  <link href="../public/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="../public/css/swiper.min.css" rel="stylesheet" type="text/css"/>
+  <link href="../public/css/base.css" rel="stylesheet" type="text/css"/>
+  <link href="../public/css/skins.css" rel="stylesheet" type="text/css"/>
+  <link href="../public/css/custom.css" rel="stylesheet" type="text/css"/>
+  <link href="../public/css/view.css" rel="stylesheet" type="text/css"/>
+  <!-- <link rel="stylesheet" type="text/css" href="../public/css/animation.css"> -->
+  <!-- JAVASCRIPT FILES LIBS -->
+  <script src="../public/lib/jquery.min.js"></script>
+  <script src="../public/lib/bootstrap.min.js"></script>
+  <script src="../public/lib/laytpl.min.js"></script>
+  <script type="text/javascript">
     var Global = {
-        base: '../public',
-        path: '',
-        ver: '20171025001'
+      base: '../public',
+      path: '',
+      ver: '20171025001'
     };
-    </script>
+  </script>
 </head>
 <body class="page-body skin-facebook">
 <div class="page-container">
-    <!-- sidebar [start] -->
-    <div class="sidebar-menu toggle-others collapsed">
-        <div class="sidebar-menu-inner">
-            <header class="logo-env">
-                <div class="logo">
-                    <a href="index.html" class="logo-expanded">
-                        <img src="../public/img/default/60.png" alt="logo" width="50" height="50" />
-                        <span>四月天数据报表平台</span>
-                    </a>
-                    <a href="index.html" class="logo-collapsed">
-                        <img src="../public/img/default/60.png" alt="logo" width="50" height="50" />
-                    </a>
-                </div>
-                <div class="mobile-menu-toggle visible-xs">
-                    <a href="#" data-toggle="mobile-menu">
-                        <i class="fa-bars"></i>
-                    </a>
-                </div>
-            </header>
-            <ul id="main-menu" class="main-menu">
-                <li>
-                    <a href="javascript:;"><i class="fa fa-book"></i> <span class="title">图书报表</span></a>
-                    <ul>
-                        <li><a href="bookReport_daily.html"><span class="title">图书数据日报表</span></a></li>
-                        <li><a href="bookReport_monthly.html"><span class="title">图书数据月报表</span></a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript:;"><i class="fa fa-tags"></i> <span class="title">稿费结算报表</span></a>
-                    <ul>
-                        <li><a href="bookFinal_buy.html"><span class="title">买断图书结算报表</span></a></li>
-                        <li><a href="bookFinal_divide.html"><span class="title">分成图书结算报表</span></a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript:;"><i class="fa fa-tasks"></i> <span class="title">运营报表</span></a>
-                    <ul>
-                        <li><a href="recharge_daily.html"><span class="title">充值日报表</span></a></li>
-                        <li><a href="recharge_monthly.html"><span class="title">充值月报表</span></a></li>
-                        <li><a href="reward_daily.html"><span class="title">打赏日报表</span></a></li>
-                        <li><a href="reward_monthly.html"><span class="title">打赏月报表</span></a></li>
-                        <li><a href="subscription_daily.html"><span class="title">全站订阅日报表</span></a></li>
-                        <li><a href="subscription_monthly.html"><span class="title">全站订阅月报表</span></a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript:;"><i class="fa fa-exchange"></i> <span class="title">包月数据</span></a>
-                    <ul>
-                        <li><a href="payMonth_daily.html"><span class="title">包月数据日报表</span></a></li>
-                        <li><a href="payMonth_monthly.html"><span class="title">包月数据月报表</span></a></li>
-                    </ul>
-                </li>
-                <li class="active opened">
-                    <a href="javascript:;"><i class="fa fa-wrench"></i> <span class="title">后台管理</span></a>
-                    <ul>
-                        <li><a href="member.html"><span class="title">用户列表</span></a></li>
-                        <li class="active"><a href="demo.html"><span class="title">demo页</span></a></li>
-                    </ul>
-                </li>
-            </ul>
+  <!-- sidebar [start] -->
+  <div class="sidebar-menu toggle-others collapsed">
+    <div class="sidebar-menu-inner">
+      <header class="logo-env">
+        <div class="logo">
+          <a class="logo-expanded" href="index.html">
+            <img alt="logo" height="50" src="../public/img/default/60.png" width="50"/>
+            <span>四月天数据报表平台</span>
+          </a>
+          <a class="logo-collapsed" href="index.html">
+            <img alt="logo" height="50" src="../public/img/default/60.png" width="50"/>
+          </a>
         </div>
+        <div class="mobile-menu-toggle visible-xs">
+          <a data-toggle="mobile-menu" href="#">
+            <i class="fa-bars"></i>
+          </a>
+        </div>
+      </header>
+      <ul class="main-menu" id="main-menu">
+        <li>
+          <a href="javascript:;"><i class="fa fa-book"></i> <span class="title">图书报表</span></a>
+          <ul>
+            <li><a href="bookReport_daily.html"><span class="title">图书数据日报表</span></a></li>
+            <li><a href="bookReport_monthly.html"><span class="title">图书数据月报表</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="javascript:;"><i class="fa fa-tags"></i> <span class="title">稿费结算报表</span></a>
+          <ul>
+            <li><a href="bookFinal_buy.html"><span class="title">买断图书结算报表</span></a></li>
+            <li><a href="bookFinal_divide.html"><span class="title">分成图书结算报表</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="javascript:;"><i class="fa fa-tasks"></i> <span class="title">运营报表</span></a>
+          <ul>
+            <li><a href="recharge_daily.html"><span class="title">充值日报表</span></a></li>
+            <li><a href="recharge_monthly.html"><span class="title">充值月报表</span></a></li>
+            <li><a href="reward_daily.html"><span class="title">打赏日报表</span></a></li>
+            <li><a href="reward_monthly.html"><span class="title">打赏月报表</span></a></li>
+            <li><a href="subscription_daily.html"><span class="title">全站订阅日报表</span></a></li>
+            <li><a href="subscription_monthly.html"><span class="title">全站订阅月报表</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="javascript:;"><i class="fa fa-exchange"></i> <span class="title">包月数据</span></a>
+          <ul>
+            <li><a href="payMonth_daily.html"><span class="title">包月数据日报表</span></a></li>
+            <li><a href="payMonth_monthly.html"><span class="title">包月数据月报表</span></a></li>
+          </ul>
+        </li>
+        <li class="active opened">
+          <a href="javascript:;"><i class="fa fa-wrench"></i> <span class="title">后台管理</span></a>
+          <ul>
+            <li><a href="member.html"><span class="title">用户列表</span></a></li>
+            <li class="active"><a href="demo.html"><span class="title">demo页</span></a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
-    <!-- sidebar [end] -->
+  </div>
+  <!-- sidebar [end] -->
 
-    <div class="main-content">
+  <div class="main-content">
 
-        <!-- searchbar [start] -->
-        <nav class="navbar user-info-navbar user-info-navbar-skin-facebook" role="navigation">
-            <ul class="user-info-menu left-links list-inline list-unstyled">
-                <li class="hidden-xs">
-                    <a href="javascript:;" data-toggle="sidebar"><i class="fa-bars"></i></a>
-                </li>
-            </ul>
-            <ul class="user-info-menu right-links list-inline list-unstyled">
-                <li class="dropdown user-profile">
-                    <a href="#" data-toggle="dropdown">
-                        <img src="../public/img/default/uface.png" alt="user-image" class="img-circle img-inline userpic-32" width="28" />
-                        <span>管理员 <i class="fa-angle-down"></i></span>
-                    </a>
-                    <ul class="dropdown-menu user-profile-menu list-unstyled">
-                        <li><a href="javascript:;" class="modify_info"><i class="fa fa-user"></i> 个人信息</a></li>
-                        <li><a href="javascript:;" class="modify_pass"><i class="fa fa-wrench"></i> 密码修改</a></li>
-                        <li><a href="../logout"><i class="fa fa-sign-out"></i> 退出</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <!-- searchbar [end] -->
+    <!-- searchbar [start] -->
+    <nav class="navbar user-info-navbar user-info-navbar-skin-facebook" role="navigation">
+      <ul class="user-info-menu left-links list-inline list-unstyled">
+        <li class="hidden-xs">
+          <a data-toggle="sidebar" href="javascript:;"><i class="fa-bars"></i></a>
+        </li>
+      </ul>
+      <ul class="user-info-menu right-links list-inline list-unstyled">
+        <li class="dropdown user-profile">
+          <a data-toggle="dropdown" href="#">
+            <img alt="user-image" class="img-circle img-inline userpic-32" src="../public/img/default/uface.png"
+                 width="28"/>
+            <span>管理员 <i class="fa-angle-down"></i></span>
+          </a>
+          <ul class="dropdown-menu user-profile-menu list-unstyled">
+            <li><a class="modify_info" href="javascript:;"><i class="fa fa-user"></i> 个人信息</a></li>
+            <li><a class="modify_pass" href="javascript:;"><i class="fa fa-wrench"></i> 密码修改</a></li>
+            <li><a href="../logout"><i class="fa fa-sign-out"></i> 退出</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <!-- searchbar [end] -->
 
-        <div class="page-title">
-            <div class="title-env">
-                <h1 class="title">demo页面</h1>
-                <p class="description">这里成列页面可有布局元素</p>
-            </div>
-            <div class="breadcrumb-env">
-                <ol class="breadcrumb bc-1">
-                    <li><a href="index.html"><i class="fa-home"></i>主页</a></li>
-                    <li><a href="member.html">后台管理</a></li>
-                    <li class="active"><strong>demo页面</strong></li>
-                </ol>
-            </div>
-        </div>
-
-        <!-- alert [start] -->
-        <div class="alert alert-success">
-            <button type="button" class="close" data-dismiss="alert">
-                <span aria-hidden="true">&times;</span>
-                <span class="sr-only">Close</span>
-            </button>
-            <span><i class="fa fa-bell"></i> 欢迎来到四月天数据报表平台...</span>
-        </div>
-        <div class="alert alert-info">
-            <button type="button" class="close" data-dismiss="alert">
-                <span aria-hidden="true">&times;</span>
-                <span class="sr-only">Close</span>
-            </button>
-            <span><i class="fa fa-bell"></i> 欢迎来到四月天数据报表平台...</span>
-        </div>
-        <div class="alert alert-warning">
-            <button type="button" class="close" data-dismiss="alert">
-                <span aria-hidden="true">&times;</span>
-                <span class="sr-only">Close</span>
-            </button>
-            <span><i class="fa fa-bell"></i> 欢迎来到四月天数据报表平台...</span>
-        </div>
-        <div class="alert alert-danger">
-            <button type="button" class="close" data-dismiss="alert">
-                <span aria-hidden="true">&times;</span>
-                <span class="sr-only">Close</span>
-            </button>
-            <span><i class="fa fa-bell"></i> 欢迎来到四月天数据报表平台...</span>
-        </div>
-        <!-- alert [end] -->
-
-        <!-- search [start] -->
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">表单</h3>
-                <div class="panel-options">
-                    <a href="#" data-toggle="panel">
-                        <span class="collapse-icon">&ndash;</span>
-                        <span class="expand-icon">+</span>
-                    </a>
-                    <a href="#" data-toggle="remove">&times;</a>
-                </div>
-            </div>
-            <div class="panel-body">
-                <form id="form2" class="form-horizontal" action="demo.html" method="GET">
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">日期选择</label>
-                        <div class="col-sm-2">
-                            <div class="input-group">
-                                <input type="text" class="form-control datepick" data-format="yyyy/mm/dd" placeholder="年/月/日" value="" />
-                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">文本框</label>
-                        <div class="col-sm-2">
-                            <input type="text" class="form-control" placeholder="文本框提示信息" value="" />
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">下拉框</label>
-                        <div class="col-sm-2">
-                            <select class="form-control">
-                                <option value="">请选择</option>
-                                <option value="">选项1</option>
-                                <option value="">选项2</option>
-                                <option value="">选项3</option>
-                                <option value="">选项4</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">单选按钮 - 垂直</label>
-                        <div class="col-sm-10">
-                            <div class="rdio rdio-primary">
-                                <input type="radio" name="radio" value="1" id="radio_1" checked />
-                                <label for="radio_1">选项1</label>
-                            </div>
-                            <div class="rdio rdio-primary">
-                                <input type="radio" name="radio" value="2" id="radio_2" />
-                                <label for="radio_2">选项2</label>
-                            </div>
-                            <div class="rdio rdio-primary">
-                                <input type="radio" name="radio" value="3" id="radio_3" />
-                                <label for="radio_3">选项3</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">单选按钮 - 水平</label>
-                        <div class="col-sm-2">
-                            <div class="rdio rdio-primary">
-                                <input type="radio" name="radio2" value="1" id="radio2_1" checked />
-                                <label for="radio2_1">选项1</label>
-                            </div>
-                        </div>
-                        <div class="col-sm-2">
-                            <div class="rdio rdio-primary">
-                                <input type="radio" name="radio2" value="2" id="radio2_2" />
-                                <label for="radio2_2">选项2</label>
-                            </div>
-                        </div>
-                        <div class="col-sm-2">
-                            <div class="rdio rdio-primary">
-                                <input type="radio" name="radio2" value="3" id="radio2_3" />
-                                <label for="radio2_3">选项3</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">复选框 - 垂直</label>
-                        <div class="col-sm-10">
-                            <div class="ckbox ckbox-primary">
-                                <input type="checkbox" name="checkbox" value="1" id="checkbox_1" checked />
-                                <label for="checkbox_1">选项1</label>
-                            </div>
-                            <div class="ckbox ckbox-primary">
-                                <input type="checkbox" name="checkbox" value="2" id="checkbox_2" />
-                                <label for="checkbox_2">选项2</label>
-                            </div>
-                            <div class="ckbox ckbox-primary">
-                                <input type="checkbox" name="checkbox" value="3" id="checkbox_3" />
-                                <label for="checkbox_3">选项3</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">单选按钮 - 水平</label>
-                        <div class="col-sm-2">
-                            <div class="ckbox ckbox-primary">
-                                <input type="checkbox" name="checkbox2" value="1" id="checkbox2_1" checked />
-                                <label for="checkbox2_1">选项1</label>
-                            </div>
-                        </div>
-                        <div class="col-sm-2">
-                            <div class="ckbox ckbox-primary">
-                                <input type="checkbox" name="checkbox2" value="1" id="checkbox2_1" />
-                                <label for="checkbox2_1">选项1</label>
-                            </div>
-                        </div>
-                        <div class="col-sm-2">
-                            <div class="ckbox ckbox-primary">
-                                <input type="checkbox" name="checkbox2" value="1" id="checkbox2_1" />
-                                <label for="checkbox2_1">选项1</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">文本域</label>
-                        <div class="col-sm-5">
-                            <textarea class="form-control" placeholder="文本域提示信息" rows="4" maxlength="100"></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">文件上传</label>
-                        <div class="col-sm-2">
-                            <div class="frm_upload">
-                                <div class="btn btn-sm btn-white upload" data-url="3" data-mode="image" data-type="circle"><i class="fa fa-upload"></i> 上传图片</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">按钮</label>
-                        <div class="col-sm-10">
-                            <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-search"></i> 查询</button>
-                            <button type="button" class="btn btn-sm btn-success"><i class="fa fa-download"></i> 导出</button>
-                            <button type="button" class="btn btn-sm btn-danger"><i class="fa fa-download"></i> 按钮</button>
-                            <button type="button" class="btn btn-sm btn-warning"><i class="fa fa-download"></i> 按钮</button>
-                            <button type="button" class="btn btn-sm btn-white"><i class="fa fa-download"></i> 按钮</button>
-                            <button type="button" class="btn btn-sm btn-white disabled"><i class="fa fa-download"></i> 禁用</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <!-- search [end] -->
-
-        <!-- modal [start] -->
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">模态框</h3>
-                <div class="panel-options">
-                    <a href="#" data-toggle="panel">
-                        <span class="collapse-icon">&ndash;</span>
-                        <span class="expand-icon">+</span>
-                    </a>
-                    <a href="#" data-toggle="remove">&times;</a>
-                </div>
-            </div>
-            <div class="panel-body">
-                <div class="form-horizontal">
-                    <div class="form-group">
-                        <div class="col-sm-12">
-                            <button type="button" class="btn btn-sm btn-white btn-modal" for="alert">提示框</button>
-                            <button type="button" class="btn btn-sm btn-white btn-modal" for="alert_fn">提示框 - 回调</button>
-                            <button type="button" class="btn btn-sm btn-white btn-modal" for="confirm">确认框</button>
-                            <button type="button" class="btn btn-sm btn-white btn-modal" for="modal_sm">模态框 - 小(默认)</button>
-                            <button type="button" class="btn btn-sm btn-white btn-modal" for="modal_df">模态框 - 大</button>
-                            <button type="button" class="btn btn-sm btn-white btn-modal" for="modal_lg">模态框 - 超大</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- modal [end] -->
-
-        <!-- data list [start] -->
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">表格</h3>
-                <div class="panel-options">
-                    <a href="#" data-toggle="panel">
-                        <span class="collapse-icon">&ndash;</span>
-                        <span class="expand-icon">+</span>
-                    </a>
-                    <a href="#" data-toggle="remove">&times;</a>
-                </div>
-            </div>
-            <div class="panel-body panel-operation">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="table-responsive">
-                            <table class="table table-striped demo-data-list">
-                                <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>时间</th>
-                                        <th>图书ID</th>
-                                        <th>书名</th>
-                                        <th>作者</th>
-                                        <th>访问PV</th>
-                                        <th>访问UV</th>
-                                        <th>订阅次数</th>
-                                        <th>订阅收入(金币)</th>
-                                        <th>操作</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="data-list">
-                                    <tr class="data-item" data-id="" data-type="">
-                                        <td>1</td>
-                                        <td>2017-09-09</td>
-                                        <td>123456</td>
-                                        <td>美好的季节</td>
-                                        <td>嘎菜</td>
-                                        <td>123</td>
-                                        <td>22</td>
-                                        <td>10</td>
-                                        <td>330</td>
-                                        <td>
-                                            <a href="javascript:;" class="btn-link btn-view">查看</a>
-                                            <a href="javascript:;" class="btn-link btn-delete">删除</a>
-                                        </td>
-                                    </tr>
-                                    <tr class="data-item" data-id="" data-type="">
-                                        <td>2</td>
-                                        <td>2017-09-10</td>
-                                        <td>123457</td>
-                                        <td>一座城池</td>
-                                        <td>韩寒</td>
-                                        <td>123</td>
-                                        <td>22</td>
-                                        <td>10</td>
-                                        <td>330</td>
-                                        <td>
-                                            <a href="javascript:;" class="btn-link btn-view">查看</a>
-                                            <a href="javascript:;" class="btn-link btn-delete">删除</a>
-                                        </td>
-                                    </tr>
-                                    <tr class="data-item" data-id="" data-type="">
-                                        <td>3</td>
-                                        <td>2017-09-10</td>
-                                        <td>123457</td>
-                                        <td>一座城池</td>
-                                        <td>韩寒</td>
-                                        <td>123</td>
-                                        <td>22</td>
-                                        <td>10</td>
-                                        <td>330</td>
-                                        <td>
-                                            <a href="javascript:;" class="btn-link btn-view">查看</a>
-                                            <a href="javascript:;" class="btn-link btn-delete">删除</a>
-                                        </td>
-                                    </tr>
-                                    <tr class="data-item" data-id="" data-type="">
-                                        <td>4</td>
-                                        <td>2017-09-10</td>
-                                        <td>123457</td>
-                                        <td>一座城池</td>
-                                        <td>韩寒</td>
-                                        <td>123</td>
-                                        <td>22</td>
-                                        <td>10</td>
-                                        <td>330</td>
-                                        <td>
-                                            <a href="javascript:;" class="btn-link btn-view">查看</a>
-                                            <a href="javascript:;" class="btn-link btn-delete">删除</a>
-                                        </td>
-                                    </tr>
-                                    <tr class="data-item" data-id="" data-type="">
-                                        <td>5</td>
-                                        <td>2017-09-10</td>
-                                        <td>123457</td>
-                                        <td>一座城池</td>
-                                        <td>韩寒</td>
-                                        <td>123</td>
-                                        <td>22</td>
-                                        <td>10</td>
-                                        <td>330</td>
-                                        <td>
-                                            <a href="javascript:;" class="btn-link btn-view">查看</a>
-                                            <a href="javascript:;" class="btn-link btn-delete">删除</a>
-                                        </td>
-                                    </tr>
-
-                                    <!-- for no data [start] -->
-                                    <tr class="no-data">
-                                        <td colspan="10">没有数据 >_< ...</td>
-                                    </tr>
-                                    <!-- for no data [end] -->
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-
-                        <!-- pagination [start] -->
-                        <span>1-10 共计500000条</span>
-                        <ul class="pagination">
-                            <li class="disabled"><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                            <li><a href="#">1</a></li>
-                            <li class="active"><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                            <li class="page-input">
-                                <input type="text" class="form-control" value="1" />
-                            </li>
-                        </ul>
-                        <!-- pagination [end] -->
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- data list [end] -->
+    <div class="page-title">
+      <div class="title-env">
+        <h1 class="title">demo页面</h1>
+        <p class="description">这里成列页面可有布局元素</p>
+      </div>
+      <div class="breadcrumb-env">
+        <ol class="breadcrumb bc-1">
+          <li><a href="index.html"><i class="fa-home"></i>主页</a></li>
+          <li><a href="member.html">后台管理</a></li>
+          <li class="active"><strong>demo页面</strong></li>
+        </ol>
+      </div>
     </div>
+
+    <!-- alert [start] -->
+    <div class="alert alert-success">
+      <button class="close" data-dismiss="alert" type="button">
+        <span aria-hidden="true">&times;</span>
+        <span class="sr-only">Close</span>
+      </button>
+      <span><i class="fa fa-bell"></i> 欢迎来到四月天数据报表平台...</span>
+    </div>
+    <div class="alert alert-info">
+      <button class="close" data-dismiss="alert" type="button">
+        <span aria-hidden="true">&times;</span>
+        <span class="sr-only">Close</span>
+      </button>
+      <span><i class="fa fa-bell"></i> 欢迎来到四月天数据报表平台...</span>
+    </div>
+    <div class="alert alert-warning">
+      <button class="close" data-dismiss="alert" type="button">
+        <span aria-hidden="true">&times;</span>
+        <span class="sr-only">Close</span>
+      </button>
+      <span><i class="fa fa-bell"></i> 欢迎来到四月天数据报表平台...</span>
+    </div>
+    <div class="alert alert-danger">
+      <button class="close" data-dismiss="alert" type="button">
+        <span aria-hidden="true">&times;</span>
+        <span class="sr-only">Close</span>
+      </button>
+      <span><i class="fa fa-bell"></i> 欢迎来到四月天数据报表平台...</span>
+    </div>
+    <!-- alert [end] -->
+
+    <!-- search [start] -->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">表单</h3>
+        <div class="panel-options">
+          <a data-toggle="panel" href="#">
+            <span class="collapse-icon">&ndash;</span>
+            <span class="expand-icon">+</span>
+          </a>
+          <a data-toggle="remove" href="#">&times;</a>
+        </div>
+      </div>
+      <div class="panel-body">
+        <form action="demo.html" class="form-horizontal" id="form2" method="GET">
+          <div class="form-group">
+            <label class="col-sm-2 control-label">日期选择</label>
+            <div class="col-sm-2">
+              <div class="input-group">
+                <input class="form-control datepick" data-format="yyyy/mm/dd" placeholder="年/月/日" type="text"
+                       value=""/>
+                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">文本框</label>
+            <div class="col-sm-2">
+              <input class="form-control" placeholder="文本框提示信息" type="text" value=""/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">下拉框</label>
+            <div class="col-sm-2">
+              <select class="form-control">
+                <option value="">请选择</option>
+                <option value="">选项1</option>
+                <option value="">选项2</option>
+                <option value="">选项3</option>
+                <option value="">选项4</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">单选按钮 - 垂直</label>
+            <div class="col-sm-10">
+              <div class="rdio rdio-primary">
+                <input checked id="radio_1" name="radio" type="radio" value="1"/>
+                <label for="radio_1">选项1</label>
+              </div>
+              <div class="rdio rdio-primary">
+                <input id="radio_2" name="radio" type="radio" value="2"/>
+                <label for="radio_2">选项2</label>
+              </div>
+              <div class="rdio rdio-primary">
+                <input id="radio_3" name="radio" type="radio" value="3"/>
+                <label for="radio_3">选项3</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">单选按钮 - 水平</label>
+            <div class="col-sm-2">
+              <div class="rdio rdio-primary">
+                <input checked id="radio2_1" name="radio2" type="radio" value="1"/>
+                <label for="radio2_1">选项1</label>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="rdio rdio-primary">
+                <input id="radio2_2" name="radio2" type="radio" value="2"/>
+                <label for="radio2_2">选项2</label>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="rdio rdio-primary">
+                <input id="radio2_3" name="radio2" type="radio" value="3"/>
+                <label for="radio2_3">选项3</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">复选框 - 垂直</label>
+            <div class="col-sm-10">
+              <div class="ckbox ckbox-primary">
+                <input checked id="checkbox_1" name="checkbox" type="checkbox" value="1"/>
+                <label for="checkbox_1">选项1</label>
+              </div>
+              <div class="ckbox ckbox-primary">
+                <input id="checkbox_2" name="checkbox" type="checkbox" value="2"/>
+                <label for="checkbox_2">选项2</label>
+              </div>
+              <div class="ckbox ckbox-primary">
+                <input id="checkbox_3" name="checkbox" type="checkbox" value="3"/>
+                <label for="checkbox_3">选项3</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">单选按钮 - 水平</label>
+            <div class="col-sm-2">
+              <div class="ckbox ckbox-primary">
+                <input checked id="checkbox2_1" name="checkbox2" type="checkbox" value="1"/>
+                <label for="checkbox2_1">选项1</label>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="ckbox ckbox-primary">
+                <input id="checkbox2_1" name="checkbox2" type="checkbox" value="1"/>
+                <label for="checkbox2_1">选项1</label>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="ckbox ckbox-primary">
+                <input id="checkbox2_1" name="checkbox2" type="checkbox" value="1"/>
+                <label for="checkbox2_1">选项1</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">文本域</label>
+            <div class="col-sm-5">
+              <textarea class="form-control" maxlength="100" placeholder="文本域提示信息" rows="4"></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">文件上传</label>
+            <div class="col-sm-2">
+              <div class="frm_upload">
+                <div class="btn btn-sm btn-white upload" data-mode="image" data-type="circle" data-url="3"><i
+                  class="fa fa-upload"></i> 上传图片
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">按钮</label>
+            <div class="col-sm-10">
+              <button class="btn btn-sm btn-primary" type="submit"><i class="fa fa-search"></i> 查询</button>
+              <button class="btn btn-sm btn-success" type="button"><i class="fa fa-download"></i> 导出</button>
+              <button class="btn btn-sm btn-danger" type="button"><i class="fa fa-download"></i> 按钮</button>
+              <button class="btn btn-sm btn-warning" type="button"><i class="fa fa-download"></i> 按钮</button>
+              <button class="btn btn-sm btn-white" type="button"><i class="fa fa-download"></i> 按钮</button>
+              <button class="btn btn-sm btn-white disabled" type="button"><i class="fa fa-download"></i> 禁用</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- search [end] -->
+
+    <!-- modal [start] -->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">模态框</h3>
+        <div class="panel-options">
+          <a data-toggle="panel" href="#">
+            <span class="collapse-icon">&ndash;</span>
+            <span class="expand-icon">+</span>
+          </a>
+          <a data-toggle="remove" href="#">&times;</a>
+        </div>
+      </div>
+      <div class="panel-body">
+        <div class="form-horizontal">
+          <div class="form-group">
+            <div class="col-sm-12">
+              <button class="btn btn-sm btn-white btn-modal" for="alert" type="button">提示框</button>
+              <button class="btn btn-sm btn-white btn-modal" for="alert_fn" type="button">提示框 - 回调</button>
+              <button class="btn btn-sm btn-white btn-modal" for="confirm" type="button">确认框</button>
+              <button class="btn btn-sm btn-white btn-modal" for="modal_sm" type="button">模态框 - 小(默认)</button>
+              <button class="btn btn-sm btn-white btn-modal" for="modal_df" type="button">模态框 - 大</button>
+              <button class="btn btn-sm btn-white btn-modal" for="modal_lg" type="button">模态框 - 超大</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal [end] -->
+
+    <!-- data list [start] -->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">表格</h3>
+        <div class="panel-options">
+          <a data-toggle="panel" href="#">
+            <span class="collapse-icon">&ndash;</span>
+            <span class="expand-icon">+</span>
+          </a>
+          <a data-toggle="remove" href="#">&times;</a>
+        </div>
+      </div>
+      <div class="panel-body panel-operation">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="table-responsive">
+              <table class="table table-striped demo-data-list">
+                <thead>
+                <tr>
+                  <th>#</th>
+                  <th>时间</th>
+                  <th>图书ID</th>
+                  <th>书名</th>
+                  <th>作者</th>
+                  <th>访问PV</th>
+                  <th>访问UV</th>
+                  <th>订阅次数</th>
+                  <th>订阅收入(金币)</th>
+                  <th>操作</th>
+                </tr>
+                </thead>
+                <tbody class="data-list">
+                <tr class="data-item" data-id="" data-type="">
+                  <td>1</td>
+                  <td>2017-09-09</td>
+                  <td>123456</td>
+                  <td>美好的季节</td>
+                  <td>嘎菜</td>
+                  <td>123</td>
+                  <td>22</td>
+                  <td>10</td>
+                  <td>330</td>
+                  <td>
+                    <a class="btn-link btn-view" href="javascript:;">查看</a>
+                    <a class="btn-link btn-delete" href="javascript:;">删除</a>
+                  </td>
+                </tr>
+                <tr class="data-item" data-id="" data-type="">
+                  <td>2</td>
+                  <td>2017-09-10</td>
+                  <td>123457</td>
+                  <td>一座城池</td>
+                  <td>韩寒</td>
+                  <td>123</td>
+                  <td>22</td>
+                  <td>10</td>
+                  <td>330</td>
+                  <td>
+                    <a class="btn-link btn-view" href="javascript:;">查看</a>
+                    <a class="btn-link btn-delete" href="javascript:;">删除</a>
+                  </td>
+                </tr>
+                <tr class="data-item" data-id="" data-type="">
+                  <td>3</td>
+                  <td>2017-09-10</td>
+                  <td>123457</td>
+                  <td>一座城池</td>
+                  <td>韩寒</td>
+                  <td>123</td>
+                  <td>22</td>
+                  <td>10</td>
+                  <td>330</td>
+                  <td>
+                    <a class="btn-link btn-view" href="javascript:;">查看</a>
+                    <a class="btn-link btn-delete" href="javascript:;">删除</a>
+                  </td>
+                </tr>
+                <tr class="data-item" data-id="" data-type="">
+                  <td>4</td>
+                  <td>2017-09-10</td>
+                  <td>123457</td>
+                  <td>一座城池</td>
+                  <td>韩寒</td>
+                  <td>123</td>
+                  <td>22</td>
+                  <td>10</td>
+                  <td>330</td>
+                  <td>
+                    <a class="btn-link btn-view" href="javascript:;">查看</a>
+                    <a class="btn-link btn-delete" href="javascript:;">删除</a>
+                  </td>
+                </tr>
+                <tr class="data-item" data-id="" data-type="">
+                  <td>5</td>
+                  <td>2017-09-10</td>
+                  <td>123457</td>
+                  <td>一座城池</td>
+                  <td>韩寒</td>
+                  <td>123</td>
+                  <td>22</td>
+                  <td>10</td>
+                  <td>330</td>
+                  <td>
+                    <a class="btn-link btn-view" href="javascript:;">查看</a>
+                    <a class="btn-link btn-delete" href="javascript:;">删除</a>
+                  </td>
+                </tr>
+
+                <!-- for no data [start] -->
+                <tr class="no-data">
+                  <td colspan="10">没有数据 >_< ...</td>
+                </tr>
+                <!-- for no data [end] -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-md-12">
+
+            <!-- pagination [start] -->
+            <span>1-10 共计500000条</span>
+            <ul class="pagination">
+              <li class="disabled"><a href="#"><i class="fa fa-angle-left"></i></a></li>
+              <li><a href="#">1</a></li>
+              <li class="active"><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+              <li class="page-input">
+                <input class="form-control" type="text" value="1"/>
+              </li>
+            </ul>
+            <!-- pagination [end] -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- data list [end] -->
+  </div>
 </div>
 
 <!-- footer public [start] -->
 <!-- loading -->
 <div class="page-loading-overlay">
-    <div class="loader-2"></div>
+  <div class="loader-2"></div>
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="_modal" tabindex="-1" role="dialog" aria-labelledby="myModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">提示</h4>
-            </div>
-            <div class="modal-body">内容</div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal" data-value="sure">确定</button>
-                <button type="button" class="btn btn-sm btn-white" data-dismiss="modal" data-value="cancel">取消</button>
-            </div>
-        </div>
+<div aria-labelledby="myModal" class="modal fade" id="_modal" role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
+          aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">提示</h4>
+      </div>
+      <div class="modal-body">内容</div>
+      <div class="modal-footer">
+        <button class="btn btn-sm btn-primary" data-dismiss="modal" data-value="sure" type="button">确定</button>
+        <button class="btn btn-sm btn-white" data-dismiss="modal" data-value="cancel" type="button">取消</button>
+      </div>
     </div>
+  </div>
 </div>
 
 <!-- Alert -->
-<div class="modal fade" id="_alert" tabindex="-1" role="dialog" aria-labelledby="myAlert">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">提示</h4>
-            </div>
-            <div class="modal-body">内容</div>
-        </div>
+<div aria-labelledby="myAlert" class="modal fade" id="_alert" role="dialog" tabindex="-1">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
+          aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">提示</h4>
+      </div>
+      <div class="modal-body">内容</div>
     </div>
+  </div>
 </div>
 <!-- JAVASCRIPT FILES LIB -->
 <script src="../public/lib/TweenMax.min.js"></script>

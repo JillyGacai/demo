@@ -1,118 +1,118 @@
 /* ------ basic ------ */
 
 html {
-    font-family: 'Microsoft YaHei', 'PingFang SC', 'Arial';
-    font-size: 14px;
-    font-weight: 100;
-    color: #2c3e50;
+  font-family: 'Microsoft YaHei', 'PingFang SC', 'Arial';
+  font-size: 14px;
+  font-weight: 100;
+  color: #2c3e50;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
-    font-weight: 200;
-    margin: 0;
-    padding: 0;
+  font-weight: 200;
+  margin: 0;
+  padding: 0;
 }
 
 ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 
 /* ------ common ------ */
 
 .fx-lt {
-    float: left;
+  float: left;
 }
 
 .fx-rt {
-    float: right;
+  float: right;
 }
 
 .fx-clear {
-    clear: both;
+  clear: both;
 }
 
 
 /* ------ navigator ------ */
 
 .navigator {
-    /*border: 1px solid #eee;*/
-    /*box-shadow: 0 0 2px 1px #eee;*/
+  /*border: 1px solid #eee;*/
+  /*box-shadow: 0 0 2px 1px #eee;*/
 }
 
 .navigator .navigator-page {
-    overflow: hidden;
-    width: 1020px;
-    height: 70px;
-    margin: 0 auto;
+  overflow: hidden;
+  width: 1020px;
+  height: 70px;
+  margin: 0 auto;
 }
 
 .navigator .logo {
-    width: 52px;
-    height: 52px;
-    margin-top: 16px;
-    border: 1px solid #2c3e50;
-    border-radius: 50px;
-    background: url('../img/wayoncss/jilly_180.png') center center no-repeat;
-    background-size: 52px 52px;
+  width: 52px;
+  height: 52px;
+  margin-top: 16px;
+  border: 1px solid #2c3e50;
+  border-radius: 50px;
+  background: url('../img/wayoncss/jilly_180.png') center center no-repeat;
+  background-size: 52px 52px;
 }
 
 
 /* ------ banner ------ */
 
 .banner .banner-page {
-    font-size: 100px;
-    line-height: 300px;
-    width: 1020px;
-    margin: 0 auto;
-    text-align: center;
+  font-size: 100px;
+  line-height: 300px;
+  width: 1020px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .banner .banner-tab {
-    width: 1020px;
-    margin: 0 auto;
-    text-align: center;
+  width: 1020px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .banner .banner-tab ul.list {
-    display: inline-block;
+  display: inline-block;
 }
 
 .banner .banner-tab ul.list li {
-    font-size: 30px;
-    line-height: 118px;
-    float: left;
-    width: 120px;
-    height: 120px;
-    margin: 50px;
-    transition: background-color .3s, color .3s;
-    border: 1px solid #2c3e50;
-    border-radius: 120px;
+  font-size: 30px;
+  line-height: 118px;
+  float: left;
+  width: 120px;
+  height: 120px;
+  margin: 50px;
+  transition: background-color .3s, color .3s;
+  border: 1px solid #2c3e50;
+  border-radius: 120px;
 }
 
 .banner .banner-tab ul.list li:hover {
-    color: #fff;
-    background-color: #2c3e50;
+  color: #fff;
+  background-color: #2c3e50;
 }
 
 
 /* ------ footer ------ */
 
 .footer {
-    background-color: #ecf0f1;
+  background-color: #ecf0f1;
 }
 
 .footer .footer-page {
-    width: 1020px;
-    height: 150px;
-    margin: 0 auto;
+  width: 1020px;
+  height: 150px;
+  margin: 0 auto;
 }
 
 

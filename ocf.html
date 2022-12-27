@@ -1,72 +1,81 @@
 <html>
 
 <head>
-    <title>Apache Tomcat/7.0.55 - Error report</title>
-    <style>
+  <title>Apache Tomcat/7.0.55 - Error report</title>
+  <style>
     H1 {
-        font-family: Tahoma, Arial, sans-serif;
-        color: white;
-        background-color: #525D76;
-        font-size: 22px;
+      font-family: Tahoma, Arial, sans-serif;
+      color: white;
+      background-color: #525D76;
+      font-size: 22px;
     }
-    
+
     H2 {
-        font-family: Tahoma, Arial, sans-serif;
-        color: white;
-        background-color: #525D76;
-        font-size: 16px;
+      font-family: Tahoma, Arial, sans-serif;
+      color: white;
+      background-color: #525D76;
+      font-size: 16px;
     }
-    
+
     H3 {
-        font-family: Tahoma, Arial, sans-serif;
-        color: white;
-        background-color: #525D76;
-        font-size: 14px;
+      font-family: Tahoma, Arial, sans-serif;
+      color: white;
+      background-color: #525D76;
+      font-size: 14px;
     }
-    
+
     BODY {
-        font-family: Tahoma, Arial, sans-serif;
-        color: black;
-        background-color: white;
+      font-family: Tahoma, Arial, sans-serif;
+      color: black;
+      background-color: white;
     }
-    
+
     B {
-        font-family: Tahoma, Arial, sans-serif;
-        color: white;
-        background-color: #525D76;
+      font-family: Tahoma, Arial, sans-serif;
+      color: white;
+      background-color: #525D76;
     }
-    
+
     P {
-        font-family: Tahoma, Arial, sans-serif;
-        background: white;
-        color: black;
-        font-size: 12px;
+      font-family: Tahoma, Arial, sans-serif;
+      background: white;
+      color: black;
+      font-size: 12px;
     }
-    
+
     A {
-        color: black;
+      color: black;
     }
-    
+
     A.name {
-        color: black;
+      color: black;
     }
-    
+
     HR {
-        color: #525D76;
+      color: #525D76;
     }
-    </style>
+  </style>
 </head>
 
 <body>
-    <h1>HTTP Status 500 - Handler processing failed; nested exception is java.lang.ExceptionInInitializerError</h1>
-    <HR size=\ "1\" noshade=\ "noshade\">
-    <p><b>type</b> Exception report</p>
-    <p><b>message</b> <u>Handler processing failed; nested exception is java.lang.ExceptionInInitializerError</u></p>
-    <p><b>description</b> <u>The server encountered an internal error that prevented it from fulfilling this request.</u></p>
-    <p><b>exception</b> <pre>org.springframework.web.util.NestedServletException: Handler processing failed; nested exception is java.lang.ExceptionInInitializerError<br />org.springframework.web.servlet.DispatcherServlet.triggerAfterCompletionWithError(DispatcherServlet.java:1276)<br />org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:958)<br />org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:870)<br />org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:961)<br />org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:863)<br />javax.servlet.http.HttpServlet.service(HttpServlet.java:646)<br />org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:837)<br />javax.servlet.http.HttpServlet.service(HttpServlet.java:727)<br />org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)<br />org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)<br />org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:108)<br />org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:186)<br />org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)<br />org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:344)<br />org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:261)\n</pre></p>
-    <p><b>root cause</b> <pre>java.lang.ExceptionInInitializerError<br />com.yuelan.web.interfaces.UGCInterface.buildThirdPlatform(UGCInterface.java:138)<br />sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)<br />sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />java.lang.reflect.Method.invoke(Method.java:606)<br />org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:215)<br />org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)<br />org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)<br />org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:749)<br />org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:689)<br />org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:83)<br />org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:938)<br />org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:870)<br />org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:961)<br />org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:863)<br />javax.servlet.http.HttpServlet.service(HttpServlet.java:646)<br />org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:837)<br />javax.servlet.http.HttpServlet.service(HttpServlet.java:727)<br />org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)<br />org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)<br />org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:108)<br />org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:186)<br />org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)<br />org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:344)<br />org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:261)\n</pre></p>
-    <p><b>root cause</b> <pre>java.util.MissingResourceException: Can't find resource for bundle java.util.PropertyResourceBundle, key ocf_ftp<br />java.util.ResourceBundle.getObject(ResourceBundle.java:395)<br />java.util.ResourceBundle.getString(ResourceBundle.java:355)<br />com.yuelan.util.ResourceUtil.getValue(ResourceUtil.java:35)<br />com.yuelan.util.OcfUtil.&lt;clinit&gt;(OcfUtil.java:38)<br />com.yuelan.web.interfaces.UGCInterface.buildThirdPlatform(UGCInterface.java:138)<br />sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)<br />sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />java.lang.reflect.Method.invoke(Method.java:606)<br />org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:215)<br />org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)<br />org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)<br />org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:749)<br />org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:689)<br />org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:83)<br />org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:938)<br />org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:870)<br />org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:961)<br />org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:863)<br />javax.servlet.http.HttpServlet.service(HttpServlet.java:646)<br />org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:837)<br />javax.servlet.http.HttpServlet.service(HttpServlet.java:727)<br />org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)<br />org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)<br />org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:108)<br />org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:186)<br />org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)<br />org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:344)<br />org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:261)\n</pre></p>
-    <p><b>note</b> <u>The full stack trace of the root cause is available in the Apache Tomcat/7.0.55 logs.</u></p>
-    <HR size=\ "1\" noshade=\ "noshade\">
-    <h3>Apache Tomcat/7.0.55</h3></body>
+<h1>HTTP Status 500 - Handler processing failed; nested exception is java.lang.ExceptionInInitializerError</h1>
+<HR size=\
+"1\" noshade=\ "noshade\">
+<p><b>type</b> Exception report</p>
+<p><b>message</b> <u>Handler processing failed; nested exception is java.lang.ExceptionInInitializerError</u></p>
+<p><b>description</b> <u>The server encountered an internal error that prevented it from fulfilling this request.</u>
+</p>
+<p><b>exception</b>
+<pre>org.springframework.web.util.NestedServletException: Handler processing failed; nested exception is java.lang.ExceptionInInitializerError<br/>org.springframework.web.servlet.DispatcherServlet.triggerAfterCompletionWithError(DispatcherServlet.java:1276)<br/>org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:958)<br/>org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:870)<br/>org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:961)<br/>org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:863)<br/>javax.servlet.http.HttpServlet.service(HttpServlet.java:646)<br/>org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:837)<br/>javax.servlet.http.HttpServlet.service(HttpServlet.java:727)<br/>org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)<br/>org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)<br/>org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:108)<br/>org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:186)<br/>org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)<br/>org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:344)<br/>org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:261)\n</pre>
+</p>
+<p><b>root cause</b>
+<pre>java.lang.ExceptionInInitializerError<br/>com.yuelan.web.interfaces.UGCInterface.buildThirdPlatform(UGCInterface.java:138)<br/>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)<br/>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>java.lang.reflect.Method.invoke(Method.java:606)<br/>org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:215)<br/>org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)<br/>org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)<br/>org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:749)<br/>org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:689)<br/>org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:83)<br/>org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:938)<br/>org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:870)<br/>org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:961)<br/>org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:863)<br/>javax.servlet.http.HttpServlet.service(HttpServlet.java:646)<br/>org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:837)<br/>javax.servlet.http.HttpServlet.service(HttpServlet.java:727)<br/>org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)<br/>org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)<br/>org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:108)<br/>org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:186)<br/>org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)<br/>org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:344)<br/>org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:261)\n</pre>
+</p>
+<p><b>root cause</b>
+<pre>java.util.MissingResourceException: Can't find resource for bundle java.util.PropertyResourceBundle, key ocf_ftp<br/>java.util.ResourceBundle.getObject(ResourceBundle.java:395)<br/>java.util.ResourceBundle.getString(ResourceBundle.java:355)<br/>com.yuelan.util.ResourceUtil.getValue(ResourceUtil.java:35)<br/>com.yuelan.util.OcfUtil.&lt;clinit&gt;(OcfUtil.java:38)<br/>com.yuelan.web.interfaces.UGCInterface.buildThirdPlatform(UGCInterface.java:138)<br/>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)<br/>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>java.lang.reflect.Method.invoke(Method.java:606)<br/>org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:215)<br/>org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)<br/>org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)<br/>org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:749)<br/>org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:689)<br/>org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:83)<br/>org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:938)<br/>org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:870)<br/>org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:961)<br/>org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:863)<br/>javax.servlet.http.HttpServlet.service(HttpServlet.java:646)<br/>org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:837)<br/>javax.servlet.http.HttpServlet.service(HttpServlet.java:727)<br/>org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)<br/>org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)<br/>org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:108)<br/>org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:186)<br/>org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)<br/>org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:344)<br/>org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:261)\n</pre>
+</p>
+<p><b>note</b> <u>The full stack trace of the root cause is available in the Apache Tomcat/7.0.55 logs.</u></p>
+<HR size=\
+"1\" noshade=\ "noshade\">
+<h3>Apache Tomcat/7.0.55</h3></body>
 </html>

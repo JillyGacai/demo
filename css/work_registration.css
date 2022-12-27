@@ -10,15 +10,15 @@ table.MsoNormalTable {
 }
 
 table.MsoNormalTable td {
-    padding: 0.0000pt 5.4000pt 0.0000pt 5.4000pt;
-    border: 0.7500pt solid rgb(51, 51, 51);
-    mso-border-left-alt: 0.7500pt solid rgb(51, 51, 51);
-    mso-border-right-alt: 0.7500pt solid rgb(51, 51, 51);
-    mso-border-top-alt: 0.7500pt solid rgb(51, 51, 51);
-    mso-border-bottom-alt: 0.7500pt solid rgb(51, 51, 51);
+  padding: 0.0000pt 5.4000pt 0.0000pt 5.4000pt;
+  border: 0.7500pt solid rgb(51, 51, 51);
+  mso-border-left-alt: 0.7500pt solid rgb(51, 51, 51);
+  mso-border-right-alt: 0.7500pt solid rgb(51, 51, 51);
+  mso-border-top-alt: 0.7500pt solid rgb(51, 51, 51);
+  mso-border-bottom-alt: 0.7500pt solid rgb(51, 51, 51);
 }
 
 p.MsoNormal {
-    text-align: center;
-    mso-pagination: widow-orphan;
+  text-align: center;
+  mso-pagination: widow-orphan;
 }

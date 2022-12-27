@@ -2,176 +2,176 @@
 <html>
 
 <head>
-    <title>flex布局</title>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <style>
-        :root {
-            --avatar-bg-color: #0a5e42;
-            --img-bg-color: cornflowerblue;
-        }
+  <title>flex布局</title>
+  <meta content="text/html;charset=UTF-8" http-equiv="Content-Type">
+  <style>
+    :root {
+      --avatar-bg-color: #0a5e42;
+      --img-bg-color: cornflowerblue;
+    }
 
-        html,
-        body {
-            padding: 0;
-            margin: 0;
-        }
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+    }
 
-        .list {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px;
-            border-bottom: 1px solid #eee;
-        }
+    .list {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+    }
 
-        .list .list-avatar {
-            width: 100px;
-        }
+    .list .list-avatar {
+      width: 100px;
+    }
 
-        .list .list-content {
-            display: flex;
-            justify-content: space-between;
-            width: calc(100% - 110px);
-            margin-left: 10px;
-        }
+    .list .list-content {
+      display: flex;
+      justify-content: space-between;
+      width: calc(100% - 110px);
+      margin-left: 10px;
+    }
 
-        .list .list-content .content-left {
-            word-break: break-all;
-        }
+    .list .list-content .content-left {
+      word-break: break-all;
+    }
 
-        .list .list-content .content-right {
-            width: 120px;
-            margin-left: 10px;
-        }
+    .list .list-content .content-right {
+      width: 120px;
+      margin-left: 10px;
+    }
 
-        .avatar {
-            width: 100px;
-            height: 100px;
-            border-radius: 100px;
-            background-color: var(--avatar-bg-color);
-        }
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 100px;
+      background-color: var(--avatar-bg-color);
+    }
 
-        .img {
-            width: 120px;
-            height: 120px;
-            border-radius: 3px;
-            background-color: var(--img-bg-color);
-        }
+    .img {
+      width: 120px;
+      height: 120px;
+      border-radius: 3px;
+      background-color: var(--img-bg-color);
+    }
 
-        .panel {
-            width: 100%;
-        }
+    .panel {
+      width: 100%;
+    }
 
-        .panel-body {
-            width: 70vw;
-            height: 40vw;
-            margin: 0 auto;
-            background-color: aqua;
-        }
-    </style>
+    .panel-body {
+      width: 70vw;
+      height: 40vw;
+      margin: 0 auto;
+      background-color: aqua;
+    }
+  </style>
 </head>
 
 <body>
-    <div class="box">
+<div class="box">
 
-        <!-- demo - 1 -->
-        <div class="list">
-            <div class="list-avater">
-                <div class="avatar"></div>
-            </div>
-            <div class="list-content">
-                <div class="content-left">
-                    <div class="title">1. 标题</div>
-                    <div class="content">1. 这是内容这是内容这是内容这是内容这是内容</div>
-                </div>
-                <div class="content-right">
-                    <div class="img"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="list">
-            <div class="list-avater">
-                <div class="avatar"></div>
-            </div>
-            <div class="list-content">
-                <div class="content-left">
-                    <div class="title">2. 标题</div>
-                    <div class="content">2.
-                        123456896459694694769546123456896459694694769546123456896459694694769546123456896459694694769546123456896459694694769546
-                        这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容
-                    </div>
-                </div>
-                <div class="content-right">
-                    <div class="img"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="list">
-            <div class="list-avater">
-                <div class="avatar"></div>
-            </div>
-            <div class="list-content">
-                <div class="content-left">
-                    <div class="title">3. 标题</div>
-                    <div class="content">3.
-                        123456896459694694769546123456896459694694769546123456896459694694769546123456896459694694769546123456896459694694769546
-                        这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容
-                    </div>
-                </div>
-            </div>
-        </div>
-
+  <!-- demo - 1 -->
+  <div class="list">
+    <div class="list-avater">
+      <div class="avatar"></div>
     </div>
-
-    <div class="panel">
-        <div class="panel-body"></div>
+    <div class="list-content">
+      <div class="content-left">
+        <div class="title">1. 标题</div>
+        <div class="content">1. 这是内容这是内容这是内容这是内容这是内容</div>
+      </div>
+      <div class="content-right">
+        <div class="img"></div>
+      </div>
     </div>
+  </div>
+
+  <div class="list">
+    <div class="list-avater">
+      <div class="avatar"></div>
+    </div>
+    <div class="list-content">
+      <div class="content-left">
+        <div class="title">2. 标题</div>
+        <div class="content">2.
+          123456896459694694769546123456896459694694769546123456896459694694769546123456896459694694769546123456896459694694769546
+          这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容
+        </div>
+      </div>
+      <div class="content-right">
+        <div class="img"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="list">
+    <div class="list-avater">
+      <div class="avatar"></div>
+    </div>
+    <div class="list-content">
+      <div class="content-left">
+        <div class="title">3. 标题</div>
+        <div class="content">3.
+          123456896459694694769546123456896459694694769546123456896459694694769546123456896459694694769546123456896459694694769546
+          这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="panel">
+  <div class="panel-body"></div>
+</div>
 </body>
 
 <script>
-    // function print(n) {
-    //     setTimeout(() => {
-    //         console.log(n);
-    //     }, 1, Math.floor(Math.random() * 1000));
-    // }
+  // function print(n) {
+  //     setTimeout(() => {
+  //         console.log(n);
+  //     }, 1, Math.floor(Math.random() * 1000));
+  // }
 
-    // for (var i = 0; i < 100; i++) {
-    //     print(i);
-    // }
+  // for (var i = 0; i < 100; i++) {
+  //     print(i);
+  // }
 
-    // async function async1() {
-    //     console.log('async1 start');
-    //     await async2();
-    //     console.log('async1 end');
-    // }
-    // async function async2() {
-    //     console.log('async2');
-    // }
+  // async function async1() {
+  //     console.log('async1 start');
+  //     await async2();
+  //     console.log('async1 end');
+  // }
+  // async function async2() {
+  //     console.log('async2');
+  // }
 
-    // console.log('script start');
+  // console.log('script start');
 
-    // setTimeout(function () {
-    //     console.log('setTimeout');
-    // }, 0)
+  // setTimeout(function () {
+  //     console.log('setTimeout');
+  // }, 0)
 
-    // async1();
+  // async1();
 
-    // new Promise(function (resolve) {
-    //     console.log('promise1');
-    //     resolve();
-    // }).then(function () {
-    //     console.log('promise2');
-    // });
+  // new Promise(function (resolve) {
+  //     console.log('promise1');
+  //     resolve();
+  // }).then(function () {
+  //     console.log('promise2');
+  // });
 
-    // console.log('script end');
+  // console.log('script end');
 
-    var a = 'true';
-    if (a == 1 && a == 2 && a == 3) {
-        console.log(1);
-    } else {
-        console.log(2);
-    }
+  var a = 'true';
+  if (a == 1 && a == 2 && a == 3) {
+    console.log(1);
+  } else {
+    console.log(2);
+  }
 
 </script>
 

@@ -1,135 +1,143 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta name="renderer" content="webkit">
-    <title>色彩管理</title>
-    <link rel="stylesheet" type="text/css" href="css/color.css"/>
-    <script language="JavaScript" src="lib/jquery.min.js"></script>
-    <!-- <script language="JavaScript" src="js/color.js"></script> -->
+  <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport">
+  <meta content="webkit" name="renderer">
+  <title>色彩管理</title>
+  <link href="css/color.css" rel="stylesheet" type="text/css"/>
+  <script language="JavaScript" src="lib/jquery.min.js"></script>
+  <!-- <script language="JavaScript" src="js/color.js"></script> -->
 </head>
 <body>
 <!--<div class="loading"></div>-->
 <div class="navigator">
-    <div class="navigator-page">
-        <div class="logo"></div>
-        <div class="name">嘎菜</div>
-    </div>
+  <div class="navigator-page">
+    <div class="logo"></div>
+    <div class="name">嘎菜</div>
+  </div>
 </div>
 <div class="main" style="color: rgb(123, 123, 123);">
-    <div class="main-page" data-index="1">
-        <div class="container">
-            <div class="title">色彩管理</div>
-            <div class="content">
-                <ul class="list tx-large tx-center">
-                    <li><span class="color-item color-default"></span></li>
-                    <li><span>Closer Yellow</span></li>
-                    <li><span>#FDDB00</span></li>
-                    <li><span>rgb(253, 219, 0)</span></li>
-                    <li><span title="Hue-色调 Saturation-饱和度 Lightness-亮度">hsl(52, 100%, 50%)</span></li>
-                </ul>
-            </div>
-        </div>
+  <div class="main-page" data-index="1">
+    <div class="container">
+      <div class="title">色彩管理</div>
+      <div class="content">
+        <ul class="list tx-large tx-center">
+          <li><span class="color-item color-default"></span></li>
+          <li><span>Closer Yellow</span></li>
+          <li><span>#FDDB00</span></li>
+          <li><span>rgb(253, 219, 0)</span></li>
+          <li><span title="Hue-色调 Saturation-饱和度 Lightness-亮度">hsl(52, 100%, 50%)</span></li>
+        </ul>
+      </div>
     </div>
-    <div class="main-page" data-index="2">
-        <div class="container">
-            <div class="title">事因</div>
-            <div class="content">
-                <p class="tx-large">设计师特喜欢和程序员怼细节，其中必会抠颜色；然而，明明设置正确的颜色值，取色工具却显示不同的值</p>
-            </div>
-        </div>
+  </div>
+  <div class="main-page" data-index="2">
+    <div class="container">
+      <div class="title">事因</div>
+      <div class="content">
+        <p class="tx-large">
+          设计师特喜欢和程序员怼细节，其中必会抠颜色；然而，明明设置正确的颜色值，取色工具却显示不同的值</p>
+      </div>
     </div>
-    <div class="main-page" data-index="3">
-        <div class="container">
-            <div class="title">咦，颜色值不对？</div>
-            <div class="desc">Sip、QQ截图、浏览器自带取色工具(#FDDB00)</div>
-            <div class="content">
-                <div class="img-list">
-                    <div class="img-item">
-                        <div class="img"><img src="img/color/legend_1.jpg" width="200" height="200"></div>
-                        <div class="name">Sip在Chrome中吸取<br/><code>#F4DB65</code></div>
-                    </div>
-                    <div class="img-item">
-                        <div class="img"><img src="img/color/legend_2.jpg" width="200" height="200"></div>
-                        <div class="name">QQ截图在Chrome中吸取<br/><code>#F8DB4A</code></div>
-                    </div>
-                    <div class="img-item">
-                        <div class="img"><img src="img/color/legend_3.jpg" width="200" height="200"></div>
-                        <div class="name">Chrome自带吸取<br/><code>#FDDB01</code></div>
-                    </div>
-                    <div class="img-item">
-                        <div class="img"><img src="img/color/legend_4.jpg" width="200" height="200"></div>
-                        <div class="name">Sip在Firefox中吸取<br/><code>#FDDB00</code></div>
-                    </div>
-                    <div class="img-item">
-                        <div class="img"><img src="img/color/legend_5.jpg" width="200" height="200"></div>
-                        <div class="name">QQ截图在Firefox中吸取<br/><code>#FDDB00</code></div>
-                    </div>
-                    <div class="img-item">
-                        <div class="img"><img src="img/color/legend_6.jpg" width="200" height="200"></div>
-                        <div class="name">Firefox自带吸取<br/><code>#FDDB00</code></div>
-                    </div>
-                </div>
-            </div>
+  </div>
+  <div class="main-page" data-index="3">
+    <div class="container">
+      <div class="title">咦，颜色值不对？</div>
+      <div class="desc">Sip、QQ截图、浏览器自带取色工具(#FDDB00)</div>
+      <div class="content">
+        <div class="img-list">
+          <div class="img-item">
+            <div class="img"><img height="200" src="img/color/legend_1.jpg" width="200"></div>
+            <div class="name">Sip在Chrome中吸取<br/><code>#F4DB65</code></div>
+          </div>
+          <div class="img-item">
+            <div class="img"><img height="200" src="img/color/legend_2.jpg" width="200"></div>
+            <div class="name">QQ截图在Chrome中吸取<br/><code>#F8DB4A</code></div>
+          </div>
+          <div class="img-item">
+            <div class="img"><img height="200" src="img/color/legend_3.jpg" width="200"></div>
+            <div class="name">Chrome自带吸取<br/><code>#FDDB01</code></div>
+          </div>
+          <div class="img-item">
+            <div class="img"><img height="200" src="img/color/legend_4.jpg" width="200"></div>
+            <div class="name">Sip在Firefox中吸取<br/><code>#FDDB00</code></div>
+          </div>
+          <div class="img-item">
+            <div class="img"><img height="200" src="img/color/legend_5.jpg" width="200"></div>
+            <div class="name">QQ截图在Firefox中吸取<br/><code>#FDDB00</code></div>
+          </div>
+          <div class="img-item">
+            <div class="img"><img height="200" src="img/color/legend_6.jpg" width="200"></div>
+            <div class="name">Firefox自带吸取<br/><code>#FDDB00</code></div>
+          </div>
         </div>
+      </div>
     </div>
-    <div class="main-page" data-index="4">
-        <div class="container">
-            <div class="title">为何出现这种问题？</div>
-            <div class="content">
-                <div class="content-left">
-                    <div class="img-list">
-                        <div class="img-item">
-                            <div class="img"><img src="img/color/img_1.png" width="377" height="671"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="content-right">
-                    <p class="tips">Sip的色彩配置文件(icc)</p>
-                    <p>最常用的是：</p>
-                    <p>1) sRGB</p>
-                    <p>2) Adobe RGB (1998)</p>
-                </div>
+  </div>
+  <div class="main-page" data-index="4">
+    <div class="container">
+      <div class="title">为何出现这种问题？</div>
+      <div class="content">
+        <div class="content-left">
+          <div class="img-list">
+            <div class="img-item">
+              <div class="img"><img height="671" src="img/color/img_1.png" width="377"></div>
             </div>
+          </div>
         </div>
-    </div>
-    <div class="main-page" data-index="5">
-        <div class="container">
-            <div class="title">什么是ICC文件</div>
-            <div class="content">
-                <p>国际色彩协会（International Color Consortium）制定了一套通过建立设备的色彩特征文件来管理色彩的体系，这种色彩特征文件被称为ICC色彩特征文件，简称ICC文件。</p>
-                <p>ICC文件描述的是设备在与硬件无关的色彩空间内的色域特性。</p>
-                <p>通俗的说，当色彩在扫描仪、数字相机、显示器、彩色打印机等计算机外设产品转换过程时，可以透由这个体系，修正各机器在描述相同的颜色时的差异，减少色彩转换时所可能产生的色差或失真。</p>
-            </div>
+        <div class="content-right">
+          <p class="tips">Sip的色彩配置文件(icc)</p>
+          <p>最常用的是：</p>
+          <p>1) sRGB</p>
+          <p>2) Adobe RGB (1998)</p>
         </div>
+      </div>
     </div>
-    <div class="main-page" data-index="6">
-        <div class="container">
-            <div class="title">sRGB && Adobe RGB (1998)</div>
-            <div class="content">
-                <p><strong>sRGB</strong></p>
-                <p>sRGB色彩空间是惠普和微软于1997年共同开发的标准色彩空间（standard Red Green Blue），反映普通PC显示器的色彩特征的色彩空间，是一些低端扫描仪，打印机，数码相机和软件的标准预置色彩空间。</p>
-                <p>但sRGB色域小，甚至CMYK的部分颜色都落在其色域之外，工作在这个空间就意味着一开始就会抛弃某些颜色，包括CMYK打印。因此，sRGB色彩空间更适于处理Web图像, 网上出版和在显示器上作图像、数码相片显示或者是精度要求不高的图片的打印工作。</p>
+  </div>
+  <div class="main-page" data-index="5">
+    <div class="container">
+      <div class="title">什么是ICC文件</div>
+      <div class="content">
+        <p>国际色彩协会（International Color
+          Consortium）制定了一套通过建立设备的色彩特征文件来管理色彩的体系，这种色彩特征文件被称为ICC色彩特征文件，简称ICC文件。</p>
+        <p>ICC文件描述的是设备在与硬件无关的色彩空间内的色域特性。</p>
+        <p>
+          通俗的说，当色彩在扫描仪、数字相机、显示器、彩色打印机等计算机外设产品转换过程时，可以透由这个体系，修正各机器在描述相同的颜色时的差异，减少色彩转换时所可能产生的色差或失真。</p>
+      </div>
+    </div>
+  </div>
+  <div class="main-page" data-index="6">
+    <div class="container">
+      <div class="title">sRGB && Adobe RGB (1998)</div>
+      <div class="content">
+        <p><strong>sRGB</strong></p>
+        <p>sRGB色彩空间是惠普和微软于1997年共同开发的标准色彩空间（standard Red Green
+          Blue），反映普通PC显示器的色彩特征的色彩空间，是一些低端扫描仪，打印机，数码相机和软件的标准预置色彩空间。</p>
+        <p>但sRGB色域小，甚至CMYK的部分颜色都落在其色域之外，工作在这个空间就意味着一开始就会抛弃某些颜色，包括CMYK打印。因此，sRGB色彩空间更适于处理Web图像,
+          网上出版和在显示器上作图像、数码相片显示或者是精度要求不高的图片的打印工作。</p>
 
-                <p><strong>Adobe RGB (1998)</strong></p>
-                <p>Adobe RGB色彩空间是由Adobe公司1998年推出的色彩空间标准。本就是为了适合严谨的专业输出和商业印刷的要求制定的标准，所以它拥有宽广的色彩空间和良好的色彩层次表现，与sRGB色彩空间相比，包含了sRGB所没有完全覆盖的CMYK色彩空间。这使得Adobe RGB色彩空间在印刷等领域具有更明显的优势。</p>
-                <p>也是目前世界上所有彩色数字影象记录设备厂商所公认，目前大多专业数码相机，扫描仪均在其系统中嵌入了Adobe RGB(1998)的标准设置。故可以很容易地在Adobe公司的图像软件之间保持色彩一致。</p>
-            </div>
-        </div>
+        <p><strong>Adobe RGB (1998)</strong></p>
+        <p>Adobe
+          RGB色彩空间是由Adobe公司1998年推出的色彩空间标准。本就是为了适合严谨的专业输出和商业印刷的要求制定的标准，所以它拥有宽广的色彩空间和良好的色彩层次表现，与sRGB色彩空间相比，包含了sRGB所没有完全覆盖的CMYK色彩空间。这使得Adobe
+          RGB色彩空间在印刷等领域具有更明显的优势。</p>
+        <p>也是目前世界上所有彩色数字影象记录设备厂商所公认，目前大多专业数码相机，扫描仪均在其系统中嵌入了Adobe
+          RGB(1998)的标准设置。故可以很容易地在Adobe公司的图像软件之间保持色彩一致。</p>
+      </div>
     </div>
+  </div>
 </div>
 </body>
 <script>
-    let main = document.querySelector('.main');
-    console.log('main == ', main);
+  let main = document.querySelector('.main');
+  console.log('main == ', main);
 
-    let style = main.style;
-    console.log('style == ', style);
+  let style = main.style;
+  console.log('style == ', style);
 
-    let color = main.style.color;
-    console.log('color == ', color);
+  let color = main.style.color;
+  console.log('color == ', color);
 
-    // main.style.color = '#eee';
+  // main.style.color = '#eee';
 </script>
 </html>

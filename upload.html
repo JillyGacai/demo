@@ -1,294 +1,294 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <title>上传</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <style>
-        body {
-            padding: 0;
-            margin: 0;
-        }
+  <title>上传</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
 
-        .upload-panel {
-        }
+    .upload-panel {
+    }
 
-        .upload-panel .add {
-            width: 160px;
-            height: 90px;
-            position: relative;
-            border: 2px dashed #ecf0f1;
-            overflow: hidden;
-            background: none;
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-around;
-        }
+    .upload-panel .add {
+      width: 160px;
+      height: 90px;
+      position: relative;
+      border: 2px dashed #ecf0f1;
+      overflow: hidden;
+      background: none;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+    }
 
-        .upload-panel .add[data-status="2"] {
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
-        }
+    .upload-panel .add[data-status="2"] {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
 
-        .upload-panel .add[data-status="2"][data-type="image"] {
-            background-image: url('img/default/banner_1.png');
-        }
+    .upload-panel .add[data-status="2"][data-type="image"] {
+      background-image: url('img/default/banner_1.png');
+    }
 
-        .upload-panel .add[data-status="2"][data-type="file"] {
-            background-image: url('img/default/icon-file.png');
-            background-size: 48px;
-            background-position-y: 14px;
-        }
+    .upload-panel .add[data-status="2"][data-type="file"] {
+      background-image: url('img/default/icon-file.png');
+      background-size: 48px;
+      background-position-y: 14px;
+    }
 
-        /* 提示 */
-        .upload-panel .add::before {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-        }
+    /* 提示 */
+    .upload-panel .add::before {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
 
-        .upload-panel .add[data-status="0"]::before {
-            content: '请选择文件';
-            color: #34495e;
-        }
+    .upload-panel .add[data-status="0"]::before {
+      content: '请选择文件';
+      color: #34495e;
+    }
 
-        .upload-panel .add[data-status="1"]::before {
-            content: '上传中...';
-            color: #3498db;
-        }
+    .upload-panel .add[data-status="1"]::before {
+      content: '上传中...';
+      color: #3498db;
+    }
 
-        .upload-panel .add[data-status="2"]::before {
-            content: '已上传';
-            color: #1abc9c;
-            display: none;
-        }
+    .upload-panel .add[data-status="2"]::before {
+      content: '已上传';
+      color: #1abc9c;
+      display: none;
+    }
 
-        .upload-panel .add[data-status="3"]::before {
-            content: '失败，请重选';
-            color: #e74c3c;
-        }
+    .upload-panel .add[data-status="3"]::before {
+      content: '失败，请重选';
+      color: #e74c3c;
+    }
 
-        /* 文件域 */
-        .upload-panel .add input[type="file"] {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            opacity: 0;
-            filter: opacity(0);
-            display: none;
-            cursor: pointer;
-        }
+    /* 文件域 */
+    .upload-panel .add input[type="file"] {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      filter: opacity(0);
+      display: none;
+      cursor: pointer;
+    }
 
-        .upload-panel .add[data-status="0"] input[type="file"],
-        .upload-panel .add[data-status="3"] input[type="file"] {
-            display: block;
-        }
+    .upload-panel .add[data-status="0"] input[type="file"],
+    .upload-panel .add[data-status="3"] input[type="file"] {
+      display: block;
+    }
 
-        /* 视频 */
-        .upload-panel .add video {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            z-index: -1;
-        }
+    /* 视频 */
+    .upload-panel .add video {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: -1;
+    }
 
-        /* 进度条 */
-        .upload-panel .progress {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background-color: #eee;
-            opacity: .88;
-            display: none;
-        }
+    /* 进度条 */
+    .upload-panel .progress {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: #eee;
+      opacity: .88;
+      display: none;
+    }
 
-        .upload-panel .progress-bar {
-            position: absolute;
-            width: 23%;
-            height: 4px;
-            background-color: #3498db;
-        }
+    .upload-panel .progress-bar {
+      position: absolute;
+      width: 23%;
+      height: 4px;
+      background-color: #3498db;
+    }
 
-        .upload-panel .add[data-status="1"] .progress {
-            display: block;
-        }
+    .upload-panel .add[data-status="1"] .progress {
+      display: block;
+    }
 
-        /* 按钮 */
-        .upload-panel .add span {
-            font-size: 12px;
-            display: none;
-            background-color: rgba(0, 0, 0, .3);
-            color: #ecf0f1;
-            padding: 3px 0;
-            transition: all .3s;
-            cursor: pointer;
-            width: 100%;
-            text-align: center;
-        }
+    /* 按钮 */
+    .upload-panel .add span {
+      font-size: 12px;
+      display: none;
+      background-color: rgba(0, 0, 0, .3);
+      color: #ecf0f1;
+      padding: 3px 0;
+      transition: all .3s;
+      cursor: pointer;
+      width: 100%;
+      text-align: center;
+    }
 
-        .upload-panel .add span:hover {
-            color: #fff;
-            background-color: rgba(0, 0, 0, .56);
-        }
+    .upload-panel .add span:hover {
+      color: #fff;
+      background-color: rgba(0, 0, 0, .56);
+    }
 
-        .upload-panel .add[data-status="2"] span {
-            display: block;
-        }
-    </style>
+    .upload-panel .add[data-status="2"] span {
+      display: block;
+    }
+  </style>
 </head>
 <body>
 <div class="upload-panel">
-    <!-- 图片 - 待上传 -->
-    <div class="add" data-status="0" data-type="image">
-        <span class="delete">删除</span>
-        <span class="view" data-src="">查看</span>
-        <input type="file" id="file" name="file" multiple/>
-        <div class="progress progress-striped active">
-            <div class="progress-bar progress-bar-info" role="progressbar"></div>
-        </div>
+  <!-- 图片 - 待上传 -->
+  <div class="add" data-status="0" data-type="image">
+    <span class="delete">删除</span>
+    <span class="view" data-src="">查看</span>
+    <input id="file" multiple name="file" type="file"/>
+    <div class="progress progress-striped active">
+      <div class="progress-bar progress-bar-info" role="progressbar"></div>
     </div>
+  </div>
 
-    <!-- 图片 - 上传中 -->
-    <div class="add" data-status="1" data-type="image">
-        <span class="delete">删除</span>
-        <span class="view" data-src="">查看</span>
-        <input type="file" id="file2" name="file" multiple/>
-        <div class="progress progress-striped active">
-            <div class="progress-bar progress-bar-info" role="progressbar"></div>
-        </div>
+  <!-- 图片 - 上传中 -->
+  <div class="add" data-status="1" data-type="image">
+    <span class="delete">删除</span>
+    <span class="view" data-src="">查看</span>
+    <input id="file2" multiple name="file" type="file"/>
+    <div class="progress progress-striped active">
+      <div class="progress-bar progress-bar-info" role="progressbar"></div>
     </div>
+  </div>
 
-    <!-- 图片 - 已上传 -->
-    <div class="add" data-status="2" data-type="image">
-        <span class="delete">删除</span>
-        <span class="view" data-src="">查看</span>
-        <input type="file" id="file3" name="file" multiple/>
-        <div class="progress progress-striped active">
-            <div class="progress-bar progress-bar-info" role="progressbar"></div>
-        </div>
+  <!-- 图片 - 已上传 -->
+  <div class="add" data-status="2" data-type="image">
+    <span class="delete">删除</span>
+    <span class="view" data-src="">查看</span>
+    <input id="file3" multiple name="file" type="file"/>
+    <div class="progress progress-striped active">
+      <div class="progress-bar progress-bar-info" role="progressbar"></div>
     </div>
+  </div>
 
-    <!-- 图片 - 失败 -->
-    <div class="add" data-status="3" data-type="image">
-        <span class="delete">删除</span>
-        <span class="view" data-src="">查看</span>
-        <input type="file" id="file4" name="file" multiple/>
-        <div class="progress progress-striped active">
-            <div class="progress-bar progress-bar-info" role="progressbar"></div>
-        </div>
+  <!-- 图片 - 失败 -->
+  <div class="add" data-status="3" data-type="image">
+    <span class="delete">删除</span>
+    <span class="view" data-src="">查看</span>
+    <input id="file4" multiple name="file" type="file"/>
+    <div class="progress progress-striped active">
+      <div class="progress-bar progress-bar-info" role="progressbar"></div>
     </div>
+  </div>
 
-    <!-- 文件 - 已上传 -->
-    <div class="add" data-status="2" data-type="file">
-        <span class="delete">删除</span>
-        <span class="view" data-src="">查看</span>
-        <input type="file" id="file5" name="file" multiple/>
-        <div class="progress progress-striped active">
-            <div class="progress-bar progress-bar-info" role="progressbar"></div>
-        </div>
+  <!-- 文件 - 已上传 -->
+  <div class="add" data-status="2" data-type="file">
+    <span class="delete">删除</span>
+    <span class="view" data-src="">查看</span>
+    <input id="file5" multiple name="file" type="file"/>
+    <div class="progress progress-striped active">
+      <div class="progress-bar progress-bar-info" role="progressbar"></div>
     </div>
+  </div>
 
-    <!-- 视频 - 已上传 -->
-    <div class="add" data-status="2" data-type="video">
-        <video src="http://zkchangzhou.nos-eastchina1.126.net/xinan/admin/1563178868113.mp4"></video>
-        <span class="delete">删除</span>
-        <span class="view" data-src="">查看</span>
-        <input type="file" id="file6" name="file" multiple/>
-        <div class="progress progress-striped active">
-            <div class="progress-bar progress-bar-info" role="progressbar"></div>
-        </div>
+  <!-- 视频 - 已上传 -->
+  <div class="add" data-status="2" data-type="video">
+    <video src="http://zkchangzhou.nos-eastchina1.126.net/xinan/admin/1563178868113.mp4"></video>
+    <span class="delete">删除</span>
+    <span class="view" data-src="">查看</span>
+    <input id="file6" multiple name="file" type="file"/>
+    <div class="progress progress-striped active">
+      <div class="progress-bar progress-bar-info" role="progressbar"></div>
     </div>
+  </div>
 
-    <!-- 视频 - 已上传 -->
-    <div class="add" data-status="0" data-type="video">
-        <video src=""></video>
-        <span class="delete">删除</span>
-        <span class="view" data-src="">查看</span>
-        <input type="file" id="file7" name="file" multiple/>
-        <div class="progress progress-striped active">
-            <div class="progress-bar progress-bar-info" role="progressbar"></div>
-        </div>
+  <!-- 视频 - 已上传 -->
+  <div class="add" data-status="0" data-type="video">
+    <video src=""></video>
+    <span class="delete">删除</span>
+    <span class="view" data-src="">查看</span>
+    <input id="file7" multiple name="file" type="file"/>
+    <div class="progress progress-striped active">
+      <div class="progress-bar progress-bar-info" role="progressbar"></div>
     </div>
+  </div>
 
 </div>
 </body>
 <script src="lib/jquery.min.js"></script>
 <script type="application/javascript">
-    $(function () {
-        var uploadImage = function (files) {
-            if (!files || !files.length) {
-                return false;
-            }
+  $(function () {
+    var uploadImage = function (files) {
+      if (!files || !files.length) {
+        return false;
+      }
 
-            var formFile = new FormData();
-            formFile.append('mulFile', files[0]);
+      var formFile = new FormData();
+      formFile.append('mulFile', files[0]);
 
-            Upload({
-                data: formFile,
-                progress: function (res) {
-                    console.log('res == ', res);
-                },
-                success: function (res) {
-                    console.log('res == ', res);
-                },
-                fail: function (err) {
-                }
-            });
-        };
+      Upload({
+        data: formFile,
+        progress: function (res) {
+          console.log('res == ', res);
+        },
+        success: function (res) {
+          console.log('res == ', res);
+        },
+        fail: function (err) {
+        }
+      });
+    };
 
-        var Progress = function (fun) {
-            return function () {
-                var xhr = $.ajaxSettings.xhr();
-                if (typeof fun !== 'function') return xhr;
-                if (fun && xhr.upload) {
-                    xhr.upload.onprogress = fun;
-                }
-                return xhr;
-            };
-        };
+    var Progress = function (fun) {
+      return function () {
+        var xhr = $.ajaxSettings.xhr();
+        if (typeof fun !== 'function') return xhr;
+        if (fun && xhr.upload) {
+          xhr.upload.onprogress = fun;
+        }
+        return xhr;
+      };
+    };
 
-        var Upload = function (options) {
-            var data = options.data || null;
-            var progress = options.progress || null;
-            var success = options.success || null;
-            var fail = options.fail || null;
+    var Upload = function (options) {
+      var data = options.data || null;
+      var progress = options.progress || null;
+      var success = options.success || null;
+      var fail = options.fail || null;
 
-            $.ajax({
-                url: 'http://118.178.182.6:8080/zw_shaoxing/api/bbs/post/upload/picture?token=b1d5781111d84f7b3fe45a0852e59758cd7a87e5',
-                dataType: 'json',
-                type: 'POST',
-                data: data,
-                contentType: false,
-                processData: false,
-                xhr: Progress(function (e) {
-                    var percent = 0;
-                    if (e.lengthComputable) {
-                        percent = e.loaded / e.total;
-                        progress && progress(percent);
-                    }
-                }),
-                success: function (res) {
-                    console.log('res == ', res);
-                    success && success(res);
-                },
-                error: function (err) {
-                    fail && fail(err);
-                }
-            });
-        };
+      $.ajax({
+        url: 'http://118.178.182.6:8080/zw_shaoxing/api/bbs/post/upload/picture?token=b1d5781111d84f7b3fe45a0852e59758cd7a87e5',
+        dataType: 'json',
+        type: 'POST',
+        data: data,
+        contentType: false,
+        processData: false,
+        xhr: Progress(function (e) {
+          var percent = 0;
+          if (e.lengthComputable) {
+            percent = e.loaded / e.total;
+            progress && progress(percent);
+          }
+        }),
+        success: function (res) {
+          console.log('res == ', res);
+          success && success(res);
+        },
+        error: function (err) {
+          fail && fail(err);
+        }
+      });
+    };
 
-        $('#file').on('change', function (e) {
-            var files = e.target.files;
+    $('#file').on('change', function (e) {
+      var files = e.target.files;
 
-            uploadImage(files);
-        });
+      uploadImage(files);
     });
+  });
 </script>
 </html>

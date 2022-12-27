@@ -1,15 +1,15 @@
 /**
  * test for js
- * 
+ *
  * @author Gacai
  * @date 2019-03-07
  */
 // "use struct";
 
 require(['modal'], function (module) {
-    console.log('module == ', module);
-    
-    console.log('this is test ...');
+  console.log('module == ', module);
+
+  console.log('this is test ...');
 });
 
 // ------------------------------------- //
@@ -69,9 +69,9 @@ require(['modal'], function (module) {
 // });
 
 try {
-    var json = '{kk}';
-    JSON.parse(json);
-    console.log('success');
+  var json = '{kk}';
+  JSON.parse(json);
+  console.log('success');
 } catch (error) {
-    console.log('error == ', error);
+  console.log('error == ', error);
 }

@@ -1,258 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>统战地图</title>
-    <link rel="stylesheet" href="css/map.css"/>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=eZOd7Hlrkxp4fFvZar5ueG6XppgBYvCe"></script>
-    <script type="text/javascript" src="js/laytpl.min.js"></script>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
+  <meta content="initial-scale=1.0, user-scalable=no" name="viewport"/>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>统战地图</title>
+  <link href="css/map.css" rel="stylesheet"/>
+  <script src="http://api.map.baidu.com/api?v=3.0&ak=eZOd7Hlrkxp4fFvZar5ueG6XppgBYvCe" type="text/javascript"></script>
+  <script src="js/laytpl.min.js" type="text/javascript"></script>
+  <script src="js/jquery.min.js" type="text/javascript"></script>
 </head>
 <body>
 <div class="aside">
-    <div class="row">
-        <div class="form-header">统战地图</div>
+  <div class="row">
+    <div class="form-header">统战地图</div>
+  </div>
+  <div class="row">
+    <div class="form-label">统计</div>
+    <div class="from-text">
+      <span class="text-label">工作阵地</span>
+      <span class="text-value text-warning">10</span>
+      <span class="text-unit">个</span>
     </div>
-    <div class="row">
-        <div class="form-label">统计</div>
-        <div class="from-text">
-            <span class="text-label">工作阵地</span>
-            <span class="text-value text-warning">10</span>
-            <span class="text-unit">个</span>
-        </div>
-        <div class="from-text">
-            <span class="text-label">阵地总面积</span>
-            <span class="text-value text-success">1688</span>
-            <span class="text-unit">m<sup>2</sup></span>
-        </div>
+    <div class="from-text">
+      <span class="text-label">阵地总面积</span>
+      <span class="text-value text-success">1688</span>
+      <span class="text-unit">m<sup>2</sup></span>
     </div>
-    <div class="row">
-        <div class="form-label">组织</div>
-        <ul class="form-list depart-list">
-            <li data-type="1" class="active">中国国民党革命委员会中央委员会</li>
-            <li data-type="2" class="active">中国民主同盟</li>
-            <li data-type="3" class="active">中国民主建国会</li>
-            <li data-type="4" class="active">中国民主促进会</li>
-            <li data-type="5" class="active">中国农工民主党</li>
-            <li data-type="6" class="active">中国致公党</li>
-            <li data-type="7" class="active">九三学社中央委员会</li>
-            <li data-type="8" class="active">台湾民主自治同盟</li>
-        </ul>
+  </div>
+  <div class="row">
+    <div class="form-label">组织</div>
+    <ul class="form-list depart-list">
+      <li class="active" data-type="1">中国国民党革命委员会中央委员会</li>
+      <li class="active" data-type="2">中国民主同盟</li>
+      <li class="active" data-type="3">中国民主建国会</li>
+      <li class="active" data-type="4">中国民主促进会</li>
+      <li class="active" data-type="5">中国农工民主党</li>
+      <li class="active" data-type="6">中国致公党</li>
+      <li class="active" data-type="7">九三学社中央委员会</li>
+      <li class="active" data-type="8">台湾民主自治同盟</li>
+    </ul>
+  </div>
+  <div class="row">
+    <div class="form-label">名称</div>
+    <div class="form-control">
+      <input placeholder="输入阵地名称" type="text"/>
     </div>
-    <div class="row">
-        <div class="form-label">名称</div>
-        <div class="form-control">
-            <input type="text" placeholder="输入阵地名称"/>
-        </div>
+  </div>
+  <div class="row">
+    <div class="form-button">
+      <button class="search-button">搜索</button>
     </div>
-    <div class="row">
-        <div class="form-button">
-            <button class="search-button">搜索</button>
-        </div>
-    </div>
+  </div>
 </div>
 <div class="main">
-    <div id="map"></div>
-    <div class="content-panel" data-index="1"></div>
-    <div class="content-panel" data-index="2"></div>
+  <div id="map"></div>
+  <div class="content-panel" data-index="1"></div>
+  <div class="content-panel" data-index="2"></div>
 </div>
 </body>
-<script type="text/html" id="TPL_INFO_WINDOW_CONENT">
-    <div class="info-window-content" data-id="{{ d.id }}">
-        <div class="info-window-content-hd">
-            <img src="{{ d.icon }}">
-        </div>
-        <div class="info-window-content-bd">
-            <p class="address">{{ d.address }}</p>
-            <p class="count">容纳 {{ d.count }}人</p>
-            <p class="area">面积 {{ d.area }}m<sup>2</sup></p>
-        </div>
+<script id="TPL_INFO_WINDOW_CONENT" type="text/html">
+  <div class="info-window-content" data-id="{{ d.id }}">
+    <div class="info-window-content-hd">
+      <img src="{{ d.icon }}">
     </div>
+    <div class="info-window-content-bd">
+      <p class="address">{{ d.address }}</p>
+      <p class="count">容纳 {{ d.count }}人</p>
+      <p class="area">面积 {{ d.area }}m<sup>2</sup></p>
+    </div>
+  </div>
 </script>
-<script type="text/html" id="TPL_DEPARTMENT">
-    <div class="close"></div>
-    <div class="row">
-        <div class="form-header">{{ d.title }}</div>
-    </div>
-    <div class="row">
-        <div class="form-label">负责人</div>
-        <ul class="form-list leader-list" data-type="leader">
-            <li><img class="avatar" src="images/demo-avatar.png"/><span>书记 xxx</span></li>
-            <li><img class="avatar" src="images/demo-avatar.png"/><span>副书记 xxx</span></li>
-            <li><img class="avatar" src="images/demo-avatar.png"/><span>副书记 xxx</span></li>
-        </ul>
-    </div>
-    <div class="row">
-        <div class="form-label">大事记</div>
-        <ul class="form-list data-list" data-type="events">
-            <li>xxxxxxxxxxxx大事记</li>
-            <li>xxxxxxxxxxxxxxxxxxxxx大事记</li>
-            <li>xxxxxxxxxxxxxxxxx大事记</li>
-        </ul>
-    </div>
-    <div class="row">
-        <div class="form-label">主要任务</div>
-        <ul class="form-list data-list" data-type="mission">
-            <li>xxxxxxxxxxxx主要任务</li>
-            <li>xxxxxxxxxxxxxxxxxxxxx主要任务</li>
-            <li>xxxxxxxxxxxxxxxxx主要任务</li>
-        </ul>
-    </div>
-    <div class="row">
-        <div class="form-label">获奖</div>
-        <ul class="form-list data-list" data-type="prize">
-            <li>xxxxxxxxxxxx获奖</li>
-            <li>xxxxxxxxxxxxxxxxxxxxx获奖</li>
-            <li>xxxxxxxxxxxxxxxxx获奖</li>
-        </ul>
-    </div>
+<script id="TPL_DEPARTMENT" type="text/html">
+  <div class="close"></div>
+  <div class="row">
+    <div class="form-header">{{ d.title }}</div>
+  </div>
+  <div class="row">
+    <div class="form-label">负责人</div>
+    <ul class="form-list leader-list" data-type="leader">
+      <li><img class="avatar" src="images/demo-avatar.png"/><span>书记 xxx</span></li>
+      <li><img class="avatar" src="images/demo-avatar.png"/><span>副书记 xxx</span></li>
+      <li><img class="avatar" src="images/demo-avatar.png"/><span>副书记 xxx</span></li>
+    </ul>
+  </div>
+  <div class="row">
+    <div class="form-label">大事记</div>
+    <ul class="form-list data-list" data-type="events">
+      <li>xxxxxxxxxxxx大事记</li>
+      <li>xxxxxxxxxxxxxxxxxxxxx大事记</li>
+      <li>xxxxxxxxxxxxxxxxx大事记</li>
+    </ul>
+  </div>
+  <div class="row">
+    <div class="form-label">主要任务</div>
+    <ul class="form-list data-list" data-type="mission">
+      <li>xxxxxxxxxxxx主要任务</li>
+      <li>xxxxxxxxxxxxxxxxxxxxx主要任务</li>
+      <li>xxxxxxxxxxxxxxxxx主要任务</li>
+    </ul>
+  </div>
+  <div class="row">
+    <div class="form-label">获奖</div>
+    <ul class="form-list data-list" data-type="prize">
+      <li>xxxxxxxxxxxx获奖</li>
+      <li>xxxxxxxxxxxxxxxxxxxxx获奖</li>
+      <li>xxxxxxxxxxxxxxxxx获奖</li>
+    </ul>
+  </div>
 </script>
-<script type="text/html" id="TPL_LEADER_DETAIL">
-    <div class="close"></div>
-    <div class="row">
-        <div class="form-header">负责人</div>
+<script id="TPL_LEADER_DETAIL" type="text/html">
+  <div class="close"></div>
+  <div class="row">
+    <div class="form-header">负责人</div>
+  </div>
+  <div class="row">
+    <div class="form-card">
+      <div class="form-card-hd">
+        <img src="images/demo-avatar.png"/>
+      </div>
+      <div class="form-card-bd">
+        <div class="text-line">获取 xxxxxxxxxxxxxxx</div>
+        <div class="text-line">获取 xxxxxxxxxxx</div>
+        <div class="text-line">获取 xxxxxxxxxxxxxxxxxx</div>
+        <div class="text-line">获取 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+        <div class="text-line">获取 xxxxxxxxxxxxxxx</div>
+        <div class="text-line">获取 xxxxxxxxxxxxxxx</div>
+      </div>
     </div>
-    <div class="row">
-        <div class="form-card">
-            <div class="form-card-hd">
-                <img src="images/demo-avatar.png"/>
-            </div>
-            <div class="form-card-bd">
-                <div class="text-line">获取 xxxxxxxxxxxxxxx</div>
-                <div class="text-line">获取 xxxxxxxxxxx</div>
-                <div class="text-line">获取 xxxxxxxxxxxxxxxxxx</div>
-                <div class="text-line">获取 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-                <div class="text-line">获取 xxxxxxxxxxxxxxx</div>
-                <div class="text-line">获取 xxxxxxxxxxxxxxx</div>
-            </div>
-        </div>
-        <div class="form-content">
-            <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-            <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-            <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-            <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-            <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-            <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-            <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-            <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-            <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-            <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-            <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-        </div>
+    <div class="form-content">
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
     </div>
+  </div>
 </script>
-<script type="text/html" id="TPL_EVENTS_DETAIL">
-    <div class="close"></div>
-    <div class="row">
-        <div class="form-header">大事记</div>
+<script id="TPL_EVENTS_DETAIL" type="text/html">
+  <div class="close"></div>
+  <div class="row">
+    <div class="form-header">大事记</div>
+  </div>
+  <div class="row">
+    <div class="form-cover">
+      <img src="images/demo-events.jpg"/>
     </div>
-    <div class="row">
-        <div class="form-cover">
-            <img src="images/demo-events.jpg"/>
-        </div>
-        <div class="form-content">
-            <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-            <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-            <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-            <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-            <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-            <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-            <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-            <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-            <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-            <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-            <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-        </div>
+    <div class="form-content">
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
     </div>
+  </div>
 </script>
-<script type="text/html" id="TPL_MISSION_DETAIL">
-    <div class="close"></div>
-    <div class="row">
-        <div class="form-header">主要任务</div>
+<script id="TPL_MISSION_DETAIL" type="text/html">
+  <div class="close"></div>
+  <div class="row">
+    <div class="form-header">主要任务</div>
+  </div>
+  <div class="row">
+    <div class="form-cover">
+      <img src="images/demo-mission.jpg"/>
     </div>
-    <div class="row">
-        <div class="form-cover">
-            <img src="images/demo-mission.jpg"/>
-        </div>
-        <div class="form-content">
-            <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-            <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-            <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-            <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-            <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-            <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-            <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-            <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-            <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-            <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-            <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-        </div>
+    <div class="form-content">
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx，xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
     </div>
+  </div>
 </script>
-<script type="text/html" id="TPL_PRIZE_DETAIL">
-    <div class="close"></div>
-    <div class="row">
-        <div class="form-header">获奖</div>
+<script id="TPL_PRIZE_DETAIL" type="text/html">
+  <div class="close"></div>
+  <div class="row">
+    <div class="form-header">获奖</div>
+  </div>
+  <div class="row">
+    <div class="form-label">2019年05月</div>
+    <div class="form-card">
+      <div class="form-card-hd">
+        <img src="images/demo-cup.png"/>
+      </div>
+      <div class="form-card-bd">
+        <div class="text-line">获取 xxxxxxxxxxxxxxx</div>
+        <div class="text-line">获取 xxxxxxxxxxx</div>
+        <div class="text-line">获取 xxxxxxxxxxxxxxxxxx</div>
+        <div class="text-line">获取 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+        <div class="text-line">获取 xxxxxxxxxxxxxxx</div>
+        <div class="text-line">获取 xxxxxxxxxxxxxxx</div>
+      </div>
     </div>
-    <div class="row">
-        <div class="form-label">2019年05月</div>
-        <div class="form-card">
-            <div class="form-card-hd">
-                <img src="images/demo-cup.png"/>
-            </div>
-            <div class="form-card-bd">
-                <div class="text-line">获取 xxxxxxxxxxxxxxx</div>
-                <div class="text-line">获取 xxxxxxxxxxx</div>
-                <div class="text-line">获取 xxxxxxxxxxxxxxxxxx</div>
-                <div class="text-line">获取 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-                <div class="text-line">获取 xxxxxxxxxxxxxxx</div>
-                <div class="text-line">获取 xxxxxxxxxxxxxxx</div>
-            </div>
-        </div>
+  </div>
+  <div class="row">
+    <div class="form-label">2019年04月</div>
+    <div class="form-card">
+      <div class="form-card-hd">
+        <img src="images/demo-cup.png"/>
+      </div>
+      <div class="form-card-bd">
+        <div class="text-line">获取 xxxxxxxxxxxxxxx</div>
+        <div class="text-line">获取 xxxxxxxxxxx</div>
+        <div class="text-line">获取 xxxxxxxxxxxxxxxxxx</div>
+        <div class="text-line">获取 xxxxxxxxxxxxxxx</div>
+      </div>
     </div>
-    <div class="row">
-        <div class="form-label">2019年04月</div>
-        <div class="form-card">
-            <div class="form-card-hd">
-                <img src="images/demo-cup.png"/>
-            </div>
-            <div class="form-card-bd">
-                <div class="text-line">获取 xxxxxxxxxxxxxxx</div>
-                <div class="text-line">获取 xxxxxxxxxxx</div>
-                <div class="text-line">获取 xxxxxxxxxxxxxxxxxx</div>
-                <div class="text-line">获取 xxxxxxxxxxxxxxx</div>
-            </div>
-        </div>
+  </div>
+  <div class="row">
+    <div class="form-label">2019年03月</div>
+    <div class="form-card">
+      <div class="form-card-hd">
+        <img src="images/demo-cup.png"/>
+      </div>
+      <div class="form-card-bd">
+        <div class="text-line">获取 xxxxxxxxxxxxxxx</div>
+        <div class="text-line">获取 xxxxxxxxxxx</div>
+        <div class="text-line">获取 xxxxxxxxxxxxxxxxxx</div>
+        <div class="text-line">获取 xxxxxxxxxxxxxxx</div>
+      </div>
     </div>
-    <div class="row">
-        <div class="form-label">2019年03月</div>
-        <div class="form-card">
-            <div class="form-card-hd">
-                <img src="images/demo-cup.png"/>
-            </div>
-            <div class="form-card-bd">
-                <div class="text-line">获取 xxxxxxxxxxxxxxx</div>
-                <div class="text-line">获取 xxxxxxxxxxx</div>
-                <div class="text-line">获取 xxxxxxxxxxxxxxxxxx</div>
-                <div class="text-line">获取 xxxxxxxxxxxxxxx</div>
-            </div>
-        </div>
+  </div>
+  <div class="row">
+    <div class="form-label">2019年02月</div>
+    <div class="form-card">
+      <div class="form-card-hd">
+        <img src="images/demo-cup.png"/>
+      </div>
+      <div class="form-card-bd">
+        <div class="text-line">获取 xxxxxxxxxxxxxxx</div>
+        <div class="text-line">获取 xxxxxxxxxxx</div>
+        <div class="text-line">获取 xxxxxxxxxxxxxxxxxx</div>
+        <div class="text-line">获取 xxxxxxxxxxxxxxx</div>
+      </div>
     </div>
-    <div class="row">
-        <div class="form-label">2019年02月</div>
-        <div class="form-card">
-            <div class="form-card-hd">
-                <img src="images/demo-cup.png"/>
-            </div>
-            <div class="form-card-bd">
-                <div class="text-line">获取 xxxxxxxxxxxxxxx</div>
-                <div class="text-line">获取 xxxxxxxxxxx</div>
-                <div class="text-line">获取 xxxxxxxxxxxxxxxxxx</div>
-                <div class="text-line">获取 xxxxxxxxxxxxxxx</div>
-            </div>
-        </div>
-    </div>
+  </div>
 </script>
-<script type="text/javascript" src="js/map.js"></script>
+<script src="js/map.js" type="text/javascript"></script>
 </html>
